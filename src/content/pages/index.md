@@ -4,7 +4,8 @@ head:
   description: A template made by fulldev to create new projects internally.
 
 content:
-  heading: Heading
+  heading: This is a heading
+  text: This is a text
 
 blocks:
   - _bookshop_name: Content

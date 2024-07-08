@@ -11,6 +11,9 @@ const { blocks, hero, content } = page.data
 ---
 
 <Layout>
-  <Content {...content} />
+  <Content
+    bookshop:live
+    {...content}
+  />
   <Blocks {blocks} />
 </Layout>

@@ -7,7 +7,7 @@ interface Props extends ComponentProps<typeof Section> {
   text?: string
   image?: string
   buttons?: ComponentProps<typeof Button>[]
-  'bookshop:live': boolean
+  'bookshop:live'?: boolean
 }
 
 const { heading, text, buttons, image, ...rest } = Astro.props
