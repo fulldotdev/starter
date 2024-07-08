@@ -14,15 +14,19 @@ const { heading, text, buttons, image, ...rest } = Astro.props
 ---
 
 <Section
-  structure="split"
+  align="center"
   {...rest}
 >
-  <Column>
+  <Column align="center">
     <Heading
       level={1}
+      size="lg"
       html={heading}
     />
-    <Text html={text} />
+    <Text
+      html={text}
+      style={{ textAlign: 'center' }}
+    />
     <Row>
       {buttons?.map((button) => <Button {...button} />)}
     </Row>
