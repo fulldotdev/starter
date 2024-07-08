@@ -56,6 +56,7 @@ export const pageSchema = baseSchema
     title: z.string(),
     description: z.string(),
     hero: blockSchema,
+    content: blockSchema,
     blocks: blockSchema.array(),
     head: z
       .object({

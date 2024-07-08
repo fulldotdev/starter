@@ -1,0 +1,14 @@
+spec:
+  structures:
+    - blocks
+    - content
+  label: Content
+
+blueprint:
+  heading: Heading
+  text: Text
+  buttons:
+    - text: Button
+      href: /
+
+_inputs:

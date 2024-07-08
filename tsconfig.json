@@ -1,12 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "noErrorTruncation": true,
     "baseUrl": ".",
     "paths": {
       "@blocks/*": [
-        "src/blocks/*"
+        "src/components/blocks/*"
       ],
       "@components/*": [
         "src/components/*"
@@ -17,6 +17,7 @@
       "@schemas/*": [
         "src/schemas/*"
       ]
-    }
+    },
+    "jsxImportSource": "react"
   }
 }
