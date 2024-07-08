@@ -1,0 +1,33 @@
+{
+  "name": "fulldev-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Fulldev https://full.dev",
+  "license": "Unlicense",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "build:prod": "astro build && jampack ./dist",
+    "check": "astro check",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "astro check && astro build && astro preview",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|astro)\" --write"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@divriots/jampack": "^0.24.3",
+    "astro": "^4.11.5",
+    "fulldev-ui": "^0.3.2",
+    "sass": "^1.77.6",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5",
+    "prettier-plugin-astro": "0.13.0",
+    "prettier-plugin-astro-organize-imports": "^0.4.9",
+    "prettier-plugin-css-order": "^2.1.2",
+    "prettier-plugin-organize-imports": "^3.2.4"
+  }
+}

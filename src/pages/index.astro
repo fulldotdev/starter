@@ -1,0 +1,17 @@
+---
+import Hero from '@blocks/Hero.astro'
+import Layout from '@layouts/Layout.astro'
+
+import { getEntry } from 'astro:content'
+
+const page = await getEntry('pages', 'index')
+
+const { hero } = page.data
+---
+
+<Layout>
+  <Hero
+    {...hero}
+    size="lg"
+  />
+</Layout>
