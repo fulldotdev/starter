@@ -1,0 +1,26 @@
+---
+import type { ComponentProps } from 'astro/types'
+import { Column, Heading, Section, Text } from 'fulldev-ui'
+
+interface Props extends ComponentProps<typeof Section> {
+  heading?: string
+  text?: string
+  stats?: { heading: string; text: string }[]
+}
+
+const { heading, text, stats, ...rest } = Astro.props
+---
+
+<Section
+  structure="spread"
+  {...rest}
+>
+  {
+    stats?.map((stat) => (
+      <Column>
+        <Heading html={stat.heading} />
+        <Text html={stat.text} />
+      </Column>
+    ))
+  }
+</Section>
