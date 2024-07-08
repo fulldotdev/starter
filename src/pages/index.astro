@@ -1,16 +1,14 @@
 ---
-import Hero from '@blocks/Hero.astro'
+import Blocks from '@components/Blocks.astro'
 import Layout from '@layouts/Layout.astro'
 
 import { getEntry } from 'astro:content'
 
 const page = await getEntry('pages', 'index')
 
-console.log(page)
-
-const { hero } = page.data
+const { blocks, hero } = page.data
 ---
 
 <Layout>
-  <Hero {...hero} />
+  <Blocks {blocks} />
 </Layout>
