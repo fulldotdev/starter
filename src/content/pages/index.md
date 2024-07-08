@@ -12,15 +12,13 @@ blocks:
         href: https://github.com/fulldotdev/fulldev-starter
       - text: FullUI Docs
         href: https://ui.full.dev/overview/introduction/
-        variant: secondary
         
   - _block: Content
     heading: Fulldev-starter
-    paragraph: Get started with fulldev-starter by editing this page in src/content/pages/index.md.
+    text: Get started with fulldev-starter by editing this page in src/content/pages/index.md.
     buttons:
       - text: Starter Template
         href: https://github.com/fulldotdev/fulldev-starter
       - text: FullUI Docs
         href: https://ui.full.dev/overview/introduction/
-        variant: secondary
 ---
