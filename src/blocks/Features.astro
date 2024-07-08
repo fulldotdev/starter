@@ -43,9 +43,12 @@ const { tagline, heading, text, buttons, image, cards, ...rest } = Astro.props
   <Grid>
     {
       cards?.map(({ icon, heading, text }) => (
-        <Card>
+        <Card frame="none">
           <Icon name={icon} />
-          <Heading html={heading} />
+          <Heading
+            level={3}
+            html={heading}
+          />
           <Text html={text} />
         </Card>
       ))

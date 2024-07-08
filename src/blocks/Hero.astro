@@ -1,10 +1,10 @@
 ---
 import type { ComponentProps } from 'astro/types'
-import { Button, Column, Heading, Image, Row, Section, Text } from 'fulldev-ui'
+import { Button, Heading, Image, Row, Section, Text } from 'fulldev-ui'
 
 interface Props extends ComponentProps<typeof Section> {
   heading?: string
-  paragraph?: string
+  text?: string
   image?: string
   buttons?: ComponentProps<typeof Button>[]
 }
@@ -13,18 +13,17 @@ const { heading, text, buttons, image, ...rest } = Astro.props
 ---
 
 <Section
-  structure="split"
+  size="xl"
+  align="center"
   {...rest}
 >
-  <Column>
-    <Heading
-      level={1}
-      html={heading}
-    />
-    <Text html={text} />
-    <Row>
-      {buttons?.map((button) => <Button {...button} />)}
-    </Row>
-  </Column>
+  <Heading
+    level={1}
+    html={heading}
+  />
+  <Text html={text} />
+  <Row>
+    {buttons?.map((button) => <Button {...button} />)}
+  </Row>
   <Image src={image} />
 </Section>

@@ -12,7 +12,25 @@ blocks:
         href: https://github.com/fulldotdev/fulldev-starter
       - text: FullUI Docs
         href: https://ui.full.dev/overview/introduction/
-        
+    image: placeholder.webp
+
+  - _block: Features
+    heading: Fulldev-starter
+    text: Get started with fulldev-starter by editing this page in src/content/pages/index.md.
+    buttons:
+      - text: Click me
+        href: /
+    cards: 
+      - icon: circle
+        heading: Feature 1
+        text: Lorem ipsum dolor sit amet
+      - icon: circle
+        heading: Feature 1
+        text: Lorem ipsum dolor sit amet
+      - icon: circle
+        heading: Feature 1
+        text: Lorem ipsum dolor sit amet
+
   - _block: Content
     heading: Fulldev-starter
     text: Get started with fulldev-starter by editing this page in src/content/pages/index.md.

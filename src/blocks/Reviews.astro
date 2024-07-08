@@ -1,0 +1,67 @@
+---
+import type { ComponentProps } from 'astro/types'
+import {
+  Button,
+  Card,
+  Deck,
+  Group,
+  Heading,
+  Paragraph,
+  Rating,
+  Section,
+  Spread,
+} from 'fulldev-ui'
+
+interface Props {
+  heading?: ComponentProps<typeof Heading>['html']
+  buttons?: ComponentProps<typeof Button>[]
+  cards?: {
+    href?: string
+    rating?: number
+    heading?: string
+    text?: string
+  }[]
+}
+
+const { heading, buttons, cards } = Astro.props
+
+const randomReviews = cards?.sort(() => Math.random() - 0.5).slice(0, 5)
+---
+
+<Section class="reviews">
+  <Spread>
+    <Heading html={heading} />
+    <Group>
+      {buttons?.map((button) => <Button {...button} />)}
+    </Group>
+  </Spread>
+  <Deck
+    structure="carousel"
+    frame="fill"
+  >
+    {
+      randomReviews?.map(({ href, rating, heading, paragraph }) => (
+        <Card
+          {href}
+          frame="panel"
+          variant="raised"
+        >
+          <Rating value={rating} />
+          <Heading html={heading} />
+          <Paragraph
+            variant="muted"
+            html={paragraph}
+          />
+        </Card>
+      ))
+    }
+  </Deck>
+</Section>
+
+<style is:global lang="scss">
+  .reviews {
+    .rating .icon {
+      color: var(--primary-background);
+    }
+  }
+</style>
