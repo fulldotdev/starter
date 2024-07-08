@@ -36,8 +36,8 @@ dependencies:
     specifier: ^4.11.5
     version: 4.11.5(sass@1.77.6)(typescript@5.5.3)
   fulldev-ui:
-    specifier: ^0.3.5
-    version: 0.3.5(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3)
+    specifier: ^0.3.6
+    version: 0.3.6(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3)
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -3091,6 +3091,7 @@ packages:
 
   /color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
+    requiresBuild: true
     dependencies:
       color-name: 1.1.4
       simple-swizzle: 0.2.2
@@ -3926,8 +3927,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /fulldev-ui@0.3.5(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3):
-    resolution: {integrity: sha512-AgkGTckM0PMxAwQ+CpiwNuLYSRMAanVDngtu5av0wiMDEaUmNlHaQhf1QsNAdYQy1oZ65dpicPTFYW8FLxl83w==}
+  /fulldev-ui@0.3.6(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3):
+    resolution: {integrity: sha512-/nJrYl4o7+DcW3UM76WV870n6ZD4g9QC1XVdFmbbSJugFxzyH/MTYyB4XBjqDOi9rtF1v9egDoO6izzJus8Lgg==}
     dependencies:
       '@iconify-json/tabler': 1.1.116
       astro-seo: 0.8.4(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.5.3)
@@ -4358,6 +4359,7 @@ packages:
 
   /is-arrayish@0.3.2:
     resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==}
+    requiresBuild: true
     dev: false
 
   /is-binary-path@2.1.0:
@@ -6824,6 +6826,7 @@ packages:
 
   /simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
+    requiresBuild: true
     dependencies:
       is-arrayish: 0.3.2
     dev: false
