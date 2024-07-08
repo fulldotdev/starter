@@ -1,17 +1,15 @@
 ---
-import Content from '@blocks/Content.astro'
-import Features from '@blocks/Features.astro'
-import Hero from '@blocks/Hero.astro'
 import Layout from '@layouts/Layout.astro'
 import { getEntry } from 'astro:content'
+import { Blocks as FullBlocks } from 'fulldev-ui'
 
 const page = await getEntry('pages', 'blocks')
 
-const { hero, content, features } = page.data
+const { blocks, hero, content, features } = page.data
+
+console.log(blocks)
 ---
 
 <Layout>
-  <Hero {...hero} />
-  <Content {...content} />
-  <Features {...features} />
+  <FullBlocks {...blocks} />
 </Layout>

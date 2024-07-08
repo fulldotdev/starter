@@ -19,7 +19,7 @@
     "@astrojs/check": "^0.7.0",
     "@divriots/jampack": "^0.24.3",
     "astro": "^4.11.5",
-    "fulldev-ui": "^0.3.2",
+    "fulldev-ui": "^0.3.4",
     "sass": "^1.77.6",
     "typescript": "^5.5.3"
   },
