@@ -15,8 +15,8 @@ dependencies:
     specifier: ^4.11.5
     version: 4.11.5(sass@1.77.6)(typescript@5.5.3)
   fulldev-ui:
-    specifier: ^0.3.4
-    version: 0.3.4(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3)
+    specifier: ^0.3.5
+    version: 0.3.5(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3)
   sass:
     specifier: ^1.77.6
     version: 1.77.6
@@ -2870,8 +2870,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /fulldev-ui@0.3.4(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3):
-    resolution: {integrity: sha512-6CoHyzG/41US1DVjllokUORRdkLuflujb/WxETSmQIvkIpEBh+PJvfPcSNPDA2dgzDEl8PajAgJeLDuPUod23A==}
+  /fulldev-ui@0.3.5(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3):
+    resolution: {integrity: sha512-AgkGTckM0PMxAwQ+CpiwNuLYSRMAanVDngtu5av0wiMDEaUmNlHaQhf1QsNAdYQy1oZ65dpicPTFYW8FLxl83w==}
     dependencies:
       '@iconify-json/tabler': 1.1.116
       astro-seo: 0.8.4(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.5.3)
