@@ -6,6 +6,8 @@ import { getEntry } from 'astro:content'
 
 const page = await getEntry('pages', 'index')
 
+console.log(page)
+
 const { hero } = page.data
 ---
 
