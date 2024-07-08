@@ -22,7 +22,7 @@ You will be greeted with a starter page, to edit the content of this page, see `
 
 ### Schemas
 
-We use schemas to define the structure of the content. This is used to validate the content and to provide a better and typesafe editing experience. To create a new schema, see `src/schemas/`.
+We use schemas to define the structure of the content. This is used to validate the content and to provide a better and typesafe editing experience. To create a new schema, see `src/schemas/` and add it by to a collection in `src/content/config.ts`
 
 ### Blocks (sections)
 

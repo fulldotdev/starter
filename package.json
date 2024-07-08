@@ -28,6 +28,7 @@
     "prettier-plugin-astro": "0.13.0",
     "prettier-plugin-astro-organize-imports": "^0.4.9",
     "prettier-plugin-css-order": "^2.1.2",
-    "prettier-plugin-organize-imports": "^3.2.4"
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "unocss": "^0.61.0"
   }
 }
