@@ -17,10 +17,7 @@ const { heading, text, buttons, image, ...rest } = Astro.props
   {...rest}
 >
   <Column>
-    <Heading
-      level={1}
-      html={heading}
-    />
+    <Heading html={heading} />
     <Text html={text} />
     <Row>
       {buttons?.map((button) => <Button {...button} />)}

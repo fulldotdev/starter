@@ -1,30 +1,17 @@
 ---
-// page for testing/building all blocks
-
 import Content from '@blocks/Content.astro'
 import Features from '@blocks/Features.astro'
 import Hero from '@blocks/Hero.astro'
-
 import Layout from '@layouts/Layout.astro'
-
 import { getEntry } from 'astro:content'
 
-const blocks = await getEntry('pages', 'blocks')
+const page = await getEntry('pages', 'blocks')
 
-const { hero, content, features } = blocks.data
+const { hero, content, features } = page.data
 ---
 
 <Layout>
-  <Hero
-    {...hero}
-    size="lg"
-  />
-  <Content
-    {...content}
-    size="lg"
-  />
-  <Features
-    {...features}
-    size="lg"
-  />
+  <Hero {...hero} />
+  <Content {...content} />
+  <Features {...features} />
 </Layout>
