@@ -16,7 +16,7 @@ const { heading, text, buttons, image, ...rest } = Astro.props
 <Section
   align="center"
   frame="panel"
-  variant="outline"
+  variant="subtle"
   size="lg"
   {...rest}
 >
@@ -26,7 +26,7 @@ const { heading, text, buttons, image, ...rest } = Astro.props
   />
   <Text html={text} />
   <Row>
-    {buttons?.map((button) => <Button {...button} />)}
+    {buttons?.map((button, i) => <Button {...button} />)}
   </Row>
   <Image src={image} />
 </Section>

@@ -1,7 +1,6 @@
 spec:
   structures:
     - blocks
-    - content
   label: Content
 
 blueprint:
@@ -10,14 +9,16 @@ blueprint:
   buttons:
     - text:
       href:
+  image:
 
 preview:
-  heading: Hello worldddd
-  text: Lorem ipsum
+  heading: Lorem ipsum dolor sit amet
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   buttons:
-    - text: Button
-      href: /
-    - text: Button
-      href: /
+    - text: Lorem ipsum
+      href: '#'
+    - text: Lorem ipsum
+      href: '#'
+  image: /placeholder.webp
 
 _inputs:
