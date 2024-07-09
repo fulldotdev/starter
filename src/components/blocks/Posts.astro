@@ -33,10 +33,7 @@ const { heading, text, posts, ...rest } = Astro.props
 ---
 
 <Section {...rest}>
-  <Heading
-    level={2}
-    html={heading}
-  />
+  <Heading html={heading} />
   <Text html={text} />
   <Row align="center">
     {

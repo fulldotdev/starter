@@ -40,15 +40,9 @@ const { heading, text, plans, tagline } = Astro.props
     {
       plans?.map(({ href, heading, text, button, price, features }) => (
         <Card variant="subtle">
-          <Heading
-            html={heading}
-            level={2}
-          />
+          <Heading html={heading} />
           <Text html={text} />
-          <Heading
-            level={2}
-            html={price}
-          />
+          <Heading html={price} />
           <Button
             href={href}
             html={button}

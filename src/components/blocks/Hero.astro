@@ -18,7 +18,10 @@ const { heading, text, buttons, image, ...rest } = Astro.props
   align="center"
   {...rest}
 >
-  <Heading html={heading} />
+  <Heading
+    level={1}
+    html={heading}
+  />
   <Text html={text} />
   <Row>
     {buttons?.map((button) => <Button {...button} />)}

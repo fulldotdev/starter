@@ -31,10 +31,7 @@ const { tagline, heading, text, buttons, image, employees, ...rest } =
 ---
 
 <Section {...rest}>
-  <Heading
-    level={2}
-    html={heading}
-  />
+  <Heading html={heading} />
   <Text html={text} />
   <Row align="center">
     {
@@ -44,7 +41,7 @@ const { tagline, heading, text, buttons, image, employees, ...rest } =
           <Tagline html={tagline} />
           <Heading
             html={name}
-            level={4}
+            level={3}
           />
           <Text html={text} />
         </Card>
