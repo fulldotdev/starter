@@ -3,9 +3,9 @@ import type { ComponentProps } from 'astro/types'
 import {
   Button,
   Card,
-  Column,
   Heading,
   Image,
+  Row,
   Section,
   Tagline,
   Text,
@@ -22,6 +22,7 @@ interface Props extends ComponentProps<typeof Section> {
     image?: string
     name?: string
     text?: string
+    tagline?: string
   }[]
 }
 
@@ -30,21 +31,24 @@ const { tagline, heading, text, buttons, image, employees, ...rest } =
 ---
 
 <Section {...rest}>
-  <Column>
+  <Heading
+    level={1}
+    html={heading}
+  />
+  <Text html={text} />
+  <Row align="center">
     {
-      employees?.map(({ image, name, text }) => (
+      employees?.map(({ image, name, text, tagline }) => (
         <Card frame="none">
           <Image src={image} />
+          <Tagline html={tagline} />
           <Heading
-            level={4}
             html={name}
+            level={4}
           />
           <Text html={text} />
         </Card>
       ))
     }
-    <Tagline html={tagline} />
-    <Heading html={heading} />
-    <Text html={text} />
-  </Column>
+  </Row>
 </Section>
