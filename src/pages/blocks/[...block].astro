@@ -1,5 +1,5 @@
 ---
-import Layout from '@layouts/Layout.astro'
+import BlocksLayout from '@layouts/BlocksLayout.astro'
 
 export async function getStaticPaths() {
   const bookshops: any = await Astro.glob('../../components/blocks/**/*.yml')
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   }))
 }
 
-const { spec, blueprint, preview } = Astro.props as any
+const { spec, preview } = Astro.props as any
 
 const blocks: any = await Astro.glob('../../components/blocks/**/*.astro')
 const Block = blocks.find((block: any) => {
@@ -21,6 +21,6 @@ const Block = blocks.find((block: any) => {
 })?.default
 ---
 
-<Layout>
-  <Block {...blueprint} />
-</Layout>
+<BlocksLayout>
+  <Block {...preview} />
+</BlocksLayout>

@@ -1,22 +1,5 @@
 ---
-import { Button, Header } from 'fulldev-ui'
-import Layout from '../../layouts/Layout.astro'
-
-const bookshops = await Astro.glob('../../components/blocks/**/*.yml')
+import BlocksLayout from '../../layouts/BlocksLayout.astro'
 ---
 
-<Layout>
-  <Header structure="row">
-    {
-      bookshops.map((block) => (
-        <>
-          <Button
-            variant="link"
-            href={`/blocks/${block.spec.label}/`}
-            text={block.spec.label}
-          />
-        </>
-      ))
-    }
-  </Header>
-</Layout>
+<BlocksLayout />

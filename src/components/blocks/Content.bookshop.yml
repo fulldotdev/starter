@@ -12,7 +12,7 @@ blueprint:
       href:
 
 preview:
-  heading: Hello world
+  heading: Hello worldddd
   text: Lorem ipsum
   buttons:
     - text: Button
