@@ -1,0 +1,30 @@
+spec:
+  structures:
+    - blocks
+  label: Categories
+
+blueprint:
+  heading: Shop by collection
+  text: Handpicked collections for you.
+  categories:
+    - name:
+      text:
+      href:
+      image:
+
+preview:
+  heading: Shop by collection
+  text: Handpicked collections for you.
+  categories:
+    - name: Summer Collection
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      href: /
+      image: https://images.ctfassets.net/lx44f9tom4n2/2uHXYdt1lAO0VGKwSukTjQ/f2206ed5f12794ffac56f0771dab0871/St__ssy_Summer_2022_Collection_24.jpg?q=75&w=1313
+    - name: Summer Collection
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      image: https://images.ctfassets.net/lx44f9tom4n2/2uHXYdt1lAO0VGKwSukTjQ/f2206ed5f12794ffac56f0771dab0871/St__ssy_Summer_2022_Collection_24.jpg?q=75&w=1313
+    - name: Summer Collection
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      image: https://images.ctfassets.net/lx44f9tom4n2/2uHXYdt1lAO0VGKwSukTjQ/f2206ed5f12794ffac56f0771dab0871/St__ssy_Summer_2022_Collection_24.jpg?q=75&w=1313
+
+_inputs:
