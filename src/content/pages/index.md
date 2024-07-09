@@ -125,4 +125,96 @@ blocks:
         description: Best for hydratation errors
         price: $100
         image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+
+  - _block: Employees
+    heading: Meet the team
+    text: Our team of experts.
+    employees:
+      - name: John Doe
+        tagline: CEO
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        image: https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg
+      - name: John Doe
+        tagline: CEO
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        image: https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg
+      - name: John Doe
+        tagline: CEO
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        image: https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg
+
+  - _block: Pricing
+    tagline: Pricing
+    heading: Choose the plan that suits you
+    text: Our plans are designed to meet the requirements of both beginners and advanced users.
+    plans:
+      - heading: Free
+        text: A free plan to help you get started
+        price: $0
+        features:
+          - text: 1 GB of space
+          - text: Support at $0
+          - text: 1 email
+          - text: 1 domain
+        button: Get started
+        href: /
+      - heading: Premium
+        text: Suitable for small to medium businesses with a larger team
+        price: $29
+        features:
+          - text: 10 GB of space
+          - text: Support at $29
+          - text: 10 email
+          - text: 10 domain
+        button: Get started
+        href: /
+      - heading: Enterprise
+        text: Our best plan for large companies with larger teams
+        price: $99
+        features:
+          - text: 100 GB of space
+          - text: Support at $99
+          - text: 100 email
+          - text: 100 domain
+        button: Get started
+        href: /
+
+  - _block: Categories
+    heading: Shop by collection
+    text: Handpicked collections for you.
+    categories:
+      - name: Summer Collection
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        href: /
+        image: https://images.ctfassets.net/lx44f9tom4n2/2uHXYdt1lAO0VGKwSukTjQ/f2206ed5f12794ffac56f0771dab0871/St__ssy_Summer_2022_Collection_24.jpg?q=75&w=1313
+      - name: Summer Collection
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        image: https://images.ctfassets.net/lx44f9tom4n2/2uHXYdt1lAO0VGKwSukTjQ/f2206ed5f12794ffac56f0771dab0871/St__ssy_Summer_2022_Collection_24.jpg?q=75&w=1313
+      - name: Summer Collection
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        image: https://images.ctfassets.net/lx44f9tom4n2/2uHXYdt1lAO0VGKwSukTjQ/f2206ed5f12794ffac56f0771dab0871/St__ssy_Summer_2022_Collection_24.jpg?q=75&w=1313
+
+  - _block: Posts
+    heading: Latest posts
+    text: Read the latest articles from our blog.
+    posts:
+      - name: Summer Collection
+        date: "2024-06-09"
+        text: Today we have launched our new summer collection in europe. Ranging from new graphic tees to swim shorts. Check it out now!
+        href: /
+        image: https://blog.klekt.com/wp-content/uploads/2022/04/Stussy-Our-Legacy-Work-Shop-SP22-Editorial-3_1512x.webp
+        author:
+          name: David Sinatra
+          tagline: Ceo @ Stussy
+          image: https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg
+      - name: Summer Collection
+        date: "2024-06-09"
+        text: Today we have launched our new summer collection in europe. Ranging from new graphic tees to swim shorts. Check it out now!
+        href: /
+        image: https://blog.klekt.com/wp-content/uploads/2022/04/Stussy-Our-Legacy-Work-Shop-SP22-Editorial-3_1512x.webp
+      - name: Summer Collection
+        date: "2024-06-09"
+        text: Today we have launched our new summer collection in europe. Ranging from new graphic tees to swim shorts. Check it out now!
+        href: /
+        image: https://blog.klekt.com/wp-content/uploads/2022/04/Stussy-Our-Legacy-Work-Shop-SP22-Editorial-3_1512x.webp
 ---
