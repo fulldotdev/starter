@@ -1,10 +1,12 @@
 ---
+import Avatar from '@components/base/Avatar.astro'
 import type { ComponentProps } from 'astro/types'
 import {
   Button,
   Card,
+  Column,
   Heading,
-  Image,
+  Row,
   Section,
   Split,
   Tagline,
@@ -37,12 +39,16 @@ const { tagline, heading, text, buttons, image, employees, ...rest } =
     {
       employees?.map(({ image, name, text, tagline }) => (
         <Card frame="none">
-          <Image src={image} />
-          <Tagline html={tagline} />
-          <Heading
-            html={name}
-            level={3}
-          />
+          <Row>
+            <Avatar src={image} />
+            <Column>
+              <Tagline html={tagline} />
+              <Heading
+                html={name}
+                level={3}
+              />
+            </Column>
+          </Row>
           <Text html={text} />
         </Card>
       ))
