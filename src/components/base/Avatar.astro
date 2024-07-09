@@ -8,15 +8,15 @@ const { ...rest } = Astro.props
 ---
 
 <Image
-  class:list={['logo']}
+  class:list={['avatar']}
   {...rest}
 />
 
 <style is:global lang="scss">
   @import '../../css/utils.scss';
 
-  @include component('logo') {
-    .logo {
+  @include component('avatar') {
+    img {
       max-width: var(--space-6);
     }
   }
