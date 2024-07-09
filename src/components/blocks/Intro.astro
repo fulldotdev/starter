@@ -26,7 +26,10 @@ const { heading, text, tagline, buttons, ...rest } = Astro.props
 >
   <Column>
     <Tagline html={tagline} />
-    <Heading html={heading} />
+    <Heading
+      level={1}
+      html={heading}
+    />
     <Text html={text} />
     <Row>
       {buttons?.map((button) => <Button {...button} />)}

@@ -21,7 +21,10 @@ const { heading, text, stats, ...rest } = Astro.props
     {
       stats?.map((stat) => (
         <Row>
-          <Heading html={stat.heading} />
+          <Heading
+            level={3}
+            html={stat.heading}
+          />
           <Text html={stat.text} />
         </Row>
       ))
