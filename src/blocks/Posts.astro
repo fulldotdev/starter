@@ -1,0 +1,45 @@
+---
+import type { ComponentProps } from 'astro/types'
+import { Card, Heading, Image, Row, Section, Tagline, Text } from 'fulldev-ui'
+
+interface Props extends ComponentProps<typeof Section> {
+  heading?: string
+  paragraph?: string
+  text?: string
+  posts?: {
+    image?: string
+    name?: string
+    text?: string
+    href?: string
+    date?: string
+  }[]
+}
+
+const { heading, text, posts, ...rest } = Astro.props
+---
+
+<Section {...rest}>
+  <Heading
+    level={1}
+    html={heading}
+  />
+  <Text html={text} />
+  <Row align="center">
+    {
+      posts?.map(({ image, href, name, text, date }) => (
+        <Card
+          {href}
+          frame="panel"
+        >
+          <Image src={image} />
+          <Tagline html={date} />
+          <Heading
+            html={name}
+            level={4}
+          />
+          <Text html={text} />
+        </Card>
+      ))
+    }
+  </Row>
+</Section>
