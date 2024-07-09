@@ -1,6 +1,6 @@
 ---
 import type { ComponentProps } from 'astro/types'
-import { Heading, Image, Row, Section, Spread, Text } from 'fulldev-ui'
+import { Heading, Image, Section, Text, Wrap } from 'fulldev-ui'
 
 interface Props extends ComponentProps<typeof Section> {
   heading?: string
@@ -12,19 +12,22 @@ const { logos, heading, text, ...rest } = Astro.props
 ---
 
 <Section
-  structure="column"
+  align="center"
   {...rest}
 >
   <Heading html={heading} />
   <Text html={text} />
-  <Spread>
+  <Wrap
+    align="center"
+    style={{ justifyContent: 'center' }}
+  >
     {
       logos?.map((logo) => (
-        <Row>
-          <Image src={logo} />
-        </Row>
+        <Image
+          style={{ maxWidth: '200px' }}
+          src={logo}
+        />
       ))
     }
-    <Spread />
-  </Spread>
+  </Wrap>
 </Section>
