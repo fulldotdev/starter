@@ -1,0 +1,17 @@
+spec:
+  structures:
+    - blocks
+  label: Logos
+
+blueprint:
+  logos:
+    -
+
+preview:
+  logos:
+    - /images/logos/logo-1.svg
+    - /images/logos/logo-2.svg
+    - /images/logos/logo-3.svg
+    - /images/logos/logo-4.svg
+
+_inputs:
