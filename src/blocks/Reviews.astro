@@ -2,8 +2,8 @@
 import type { ComponentProps } from 'astro/types'
 import {
   Card,
-  Carousel,
   Heading,
+  Masonry,
   Paragraph,
   Rating,
   Section,
@@ -29,7 +29,7 @@ const randomReviews = cards?.sort(() => Math.random() - 0.5).slice(0, 5)
 <Section>
   <Heading html={heading} />
   <Text html={text} />
-  <Carousel>
+  <Masonry>
     {
       randomReviews?.map(({ href, rating, heading, paragraph }) => (
         <Card
@@ -46,5 +46,5 @@ const randomReviews = cards?.sort(() => Math.random() - 0.5).slice(0, 5)
         </Card>
       ))
     }
-  </Carousel>
+  </Masonry>
 </Section>

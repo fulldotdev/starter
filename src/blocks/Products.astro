@@ -2,7 +2,7 @@
 import type { ComponentProps } from 'astro/types'
 import {
   Card,
-  Grid,
+  Carousel,
   Heading,
   Image,
   Paragraph,
@@ -29,12 +29,11 @@ const { heading, text, products } = Astro.props
 <Section>
   <Heading html={heading} />
   <Text html={text} />
-  <Grid>
+  <Carousel>
     {
       products?.map(({ href, heading, description, price, image }) => (
         <Card
           {href}
-          frame="panel"
           variant="subtle"
         >
           <Image
@@ -51,5 +50,5 @@ const { heading, text, products } = Astro.props
         </Card>
       ))
     }
-  </Grid>
+  </Carousel>
 </Section>

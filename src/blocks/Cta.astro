@@ -15,11 +15,13 @@ const { heading, text, buttons, image, ...rest } = Astro.props
 
 <Section
   align="center"
+  frame="panel"
+  variant="outline"
+  size="lg"
   {...rest}
 >
   <Heading
     level={1}
-    size="lg"
     html={heading}
   />
   <Text html={text} />

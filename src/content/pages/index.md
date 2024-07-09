@@ -41,8 +41,6 @@ blocks:
         href: https://ui.full.dev/overview/introduction/
 
   - _block: Cta
-    frame: panel
-    variant: raised
     heading: Do i grab your attention
     text: This is a premade block for use in projects bootstrapped with fulldev-starter.
     buttons:
@@ -93,8 +91,6 @@ blocks:
         text: Fork
 
   - _block: Newsletter
-    frame: panel
-    variant: raised
     heading: Never miss an update again..
     text: No actual emails get sent out as this is just another premade block for use in projects bootstrapped with fulldev-starter.
     input:
