@@ -4,10 +4,14 @@ spec:
   label: Logos
 
 blueprint:
+  heading:
+  text:
   logos:
     -
 
 preview:
+  heading: Trusted by many
+  text: Businesses such as microsoft, google, and apple all use our product.
   logos:
     - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
     - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png

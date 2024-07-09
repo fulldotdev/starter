@@ -4,8 +4,8 @@ spec:
   label: Categories
 
 blueprint:
-  heading: Shop by collection
-  text: Handpicked collections for you.
+  heading:
+  text:
   categories:
     - heading:
       text:
