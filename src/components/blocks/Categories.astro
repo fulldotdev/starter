@@ -4,9 +4,9 @@ import {
   Button,
   Card,
   Column,
+  Grid,
   Heading,
   Image,
-  Row,
   Section,
   Spread,
   Text,
@@ -39,7 +39,7 @@ const { heading, text, categories, buttons, ...rest } = Astro.props
       {buttons?.map((button, i) => <Button {...button} />)}
     </Wrap>
   </Spread>
-  <Row align="center">
+  <Grid align="center">
     {
       categories?.map(({ image, href, heading, text }) => (
         <Card
@@ -58,5 +58,5 @@ const { heading, text, categories, buttons, ...rest } = Astro.props
         </Card>
       ))
     }
-  </Row>
+  </Grid>
 </Section>

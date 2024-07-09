@@ -4,11 +4,11 @@ import {
   Button,
   Card,
   Column,
-  Grid,
   Heading,
   Icon,
   Row,
   Section,
+  Split,
   Spread,
   Tagline,
   Text,
@@ -42,7 +42,7 @@ const { tagline, heading, text, buttons, image, cards, ...rest } = Astro.props
       {buttons?.map((button) => <Button {...button} />)}
     </Row>
   </Spread>
-  <Grid>
+  <Split>
     {
       cards?.map(({ icon, heading, text }) => (
         <Card frame="none">
@@ -55,5 +55,5 @@ const { tagline, heading, text, buttons, image, cards, ...rest } = Astro.props
         </Card>
       ))
     }
-  </Grid>
+  </Split>
 </Section>

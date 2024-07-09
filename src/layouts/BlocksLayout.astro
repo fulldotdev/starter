@@ -6,7 +6,7 @@ const bookshops = await Astro.glob('../components/blocks/**/*.yml')
 ---
 
 <Layout>
-  <Header structure="row">
+  <Header structure="wrap">
     {
       bookshops.map((block) => (
         <>

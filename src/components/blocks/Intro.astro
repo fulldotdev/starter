@@ -20,10 +20,7 @@ interface Props extends ComponentProps<typeof Section> {
 const { heading, text, tagline, buttons, ...rest } = Astro.props
 ---
 
-<Section
-  structure="split"
-  {...rest}
->
+<Section {...rest}>
   <Column>
     <Tagline html={tagline} />
     <Heading
