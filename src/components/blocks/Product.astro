@@ -18,22 +18,26 @@ interface Props extends ComponentProps<typeof Section> {
   price?: string
   rating?: number
   image?: string
+  subheading?: string
+  description?: string
+  list?: string[]
   buttons?: {
     text?: string
     href?: string
   }[]
-  paragraphs?: {
-    title?: string
-    text?: string
-    listitems?: string
-    list?: {
-      items?: string
-    }[]
-  }[]
 }
 
-const { heading, price, image, rating, buttons, paragraphs, ...rest } =
-  Astro.props
+const {
+  heading,
+  list,
+  price,
+  image,
+  rating,
+  buttons,
+  subheading,
+  description,
+  ...rest
+} = Astro.props
 ---
 
 <Section
@@ -55,21 +59,15 @@ const { heading, price, image, rating, buttons, paragraphs, ...rest } =
         />
       ))
     }
-    {
-      paragraphs?.map(({ title, text, list }) => (
-        <Column>
-          <Text
-            html={title}
-            contrast={true}
-          />
-          <Text html={text} />
-          <List>
-            {listitems?.map((listitem) => (
-              <ListItem html={listitem} />
-            ))}
-          </List>
-        </Column>
-      ))
-    }
+    <Column>
+      <Text
+        html={subheading}
+        contrast={true}
+      />
+      <Text html={description} />
+      <List>
+        {list?.map((listitem) => <ListItem html={listitem} />)}
+      </List>
+    </Column>
   </Column>
 </Section>

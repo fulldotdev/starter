@@ -19,20 +19,17 @@ preview:
   heading: 8 BALL TEE PIGMENT DYED
   price: €48
   rating: 5
-  image: https://eu.stussy.com/cdn/shop/files/1905022_BLAC_1.jpg?v=1718210005&width=1920
+  image: /placeholder.webp
   buttons:
     - text: Add to cart
       href: /
-  paragraphs:
-    - title: Description
-      text: Oversized tee in pigment dyed cotton with screenprinted graphics.
-    - listitems:
-        - Shortsleeve
-        - Ribbed collar
-        - Runs large
-        - Unisex
-        - 'Material: 100% cotton'
-        - Imported
-    - text: This garment has been individually dyed, producing a one-of-a-kind result. Color may fade or bleed.
-
+  subheading: Details
+  description: Oversized tee in pigment dyed cotton with screenprinted graphics.
+  list:
+    - Shortsleeve
+    - Ribbed collar
+    - Runs large
+    - Unisex
+    - 'Material: 100% cotton'
+    - Imported
 _inputs:
