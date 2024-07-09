@@ -12,7 +12,7 @@ blueprint:
 
 preview:
   heading: Never miss an update again..
-  text: No actual emails get sent out as this is just another premade block for use in projects bootstrapped with fulldev-starter.
+  text: No actual emails get sent out as this is just another.
   input:
     placeholder: Enter your email..
     button: Subscribe

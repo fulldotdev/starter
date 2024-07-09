@@ -43,16 +43,16 @@ const { heading, text, plans, tagline } = Astro.props
           <Heading html={heading} />
           <Text html={text} />
           <Heading html={price} />
-          <Button
-            href={href}
-            html={button}
-          />
           {features?.map(({ text }) => (
             <Row>
               <Icon name="check" />
               <Text html={text} />
             </Row>
           ))}
+          <Button
+            href={href}
+            html={button}
+          />
         </Card>
       ))
     }

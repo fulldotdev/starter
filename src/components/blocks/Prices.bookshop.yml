@@ -1,7 +1,7 @@
 spec:
   structures:
     - blocks
-  label: Pricing
+  label: Prices
 
 blueprint:
   tagline:

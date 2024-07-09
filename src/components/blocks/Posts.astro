@@ -40,9 +40,12 @@ const { heading, text, posts, ...rest } = Astro.props
       posts?.map(({ image, href, name, text, date, author }) => (
         <Card
           {href}
-          frame="none"
+          variant="outline"
         >
-          <Image src={image} />
+          <Image
+            src={image}
+            position="inset"
+          />
           <Tagline html={date} />
           <Heading
             html={name}
