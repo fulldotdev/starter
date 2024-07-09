@@ -19,14 +19,14 @@ preview:
     - name: John Doe
       tagline: CEO
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      image: /avatar-placeholder.png
+      image: /avatar-placeholder.jpg
     - name: John Doe
       tagline: CEO
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      image: /avatar-placeholder.png
+      image: /avatar-placeholder.jpg
     - name: John Doe
       tagline: CEO
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      image: /avatar-placeholder.png
+      image: /avatar-placeholder.jpg
 
 _inputs:
