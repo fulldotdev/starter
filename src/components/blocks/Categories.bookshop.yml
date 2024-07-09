@@ -18,15 +18,15 @@ preview:
   categories:
     - heading: Summer Collection
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      image: /long-placeholder.png
+      image: /placeholder.webp
       href: '#'
     - heading: Summer Collection
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      image: /long-placeholder.png
+      image: /placeholder.webp
       href: '#'
     - heading: Summer Collection
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      image: /long-placeholder.png
+      image: /placeholder.webp
       href: '#'
 
 _inputs:

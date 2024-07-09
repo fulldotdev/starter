@@ -39,7 +39,7 @@ const { heading, text, categories, buttons, ...rest } = Astro.props
       {buttons?.map((button, i) => <Button {...button} />)}
     </Wrap>
   </Spread>
-  <Grid align="center">
+  <Grid>
     {
       categories?.map(({ image, href, heading, text }) => (
         <Card
