@@ -1,6 +1,7 @@
 ---
+import Logo from '@components/base/Logo.astro'
 import type { ComponentProps } from 'astro/types'
-import { Heading, Image, Section, Text, Wrap } from 'fulldev-ui'
+import { Heading, Section, Text, Wrap } from 'fulldev-ui'
 
 interface Props extends ComponentProps<typeof Section> {
   heading?: string
@@ -21,13 +22,6 @@ const { logos, heading, text, ...rest } = Astro.props
     align="center"
     style={{ justifyContent: 'center' }}
   >
-    {
-      logos?.map((logo) => (
-        <Image
-          style={{ maxWidth: '200px' }}
-          src={logo}
-        />
-      ))
-    }
+    {logos?.map((logo) => <Logo src={logo} />)}
   </Wrap>
 </Section>
