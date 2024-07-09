@@ -13,8 +13,9 @@ blueprint:
       price:
       features:
         - text:
-      button:
-      href:
+      buttons:
+        - text:
+          href:
 
 preview:
   tagline: Pricing
@@ -29,8 +30,9 @@ preview:
         - text: Support at $0
         - text: 1 email
         - text: 1 domain
-      button: Get started
-      href: /
+      buttons:
+        - text: Get started
+          href: /
     - heading: Premium
       text: Suitable for small to medium businesses with a larger team
       price: $29
@@ -39,8 +41,9 @@ preview:
         - text: Support at $29
         - text: 10 email
         - text: 10 domain
-      button: Get started
-      href: /
+      buttons:
+        - text: Get started
+          href: /
     - heading: Enterprise
       text: Our best plan for large companies with larger teams
       price: $99
@@ -49,7 +52,10 @@ preview:
         - text: Support at $99
         - text: 100 email
         - text: 100 domain
-      button: Get started
-      href: /
+      buttons:
+        - text: Get started
+          href: /
+        - text: Contact us
+          href: /
 
 _inputs:

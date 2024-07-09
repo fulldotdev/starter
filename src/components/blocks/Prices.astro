@@ -5,9 +5,9 @@ import {
   Card,
   Grid,
   Heading,
-  Icon,
+  List,
+  ListItem,
   Paragraph,
-  Row,
   Section,
   Tagline,
   Text,
@@ -18,13 +18,15 @@ interface Props {
   text?: ComponentProps<typeof Paragraph>['html']
   tagline?: ComponentProps<typeof Tagline>['html']
   plans?: {
-    href?: string
     heading?: string
     text?: string
     price?: string
-    button?: string
     features?: {
       text?: string
+    }[]
+    buttons?: {
+      text?: string
+      href?: string
     }[]
   }[]
 }
@@ -34,25 +36,35 @@ const { heading, text, plans, tagline } = Astro.props
 
 <Section align="center">
   <Tagline html={tagline} />
-  <Heading html={heading} />
+  <Heading
+    level={1}
+    html={heading}
+  />
   <Text html={text} />
   <Grid>
     {
-      plans?.map(({ href, heading, text, button, price, features }) => (
+      plans?.map(({ heading, text, buttons, price, features }) => (
         <Card variant="subtle">
-          <Heading html={heading} />
-          <Text html={text} />
-          <Heading html={price} />
-          {features?.map(({ text }) => (
-            <Row>
-              <Icon name="check" />
-              <Text html={text} />
-            </Row>
-          ))}
-          <Button
-            href={href}
-            html={button}
+          <Heading
+            html={heading}
+            level={3}
           />
+          <Text html={text} />
+          <Heading
+            level={4}
+            html={price}
+          />
+          <List>
+            {features?.map(({ text }) => (
+              <ListItem html={text} />
+            ))}
+          </List>
+          {buttons?.map(({ href, text }) => (
+            <Button
+              href={href}
+              html={text}
+            />
+          ))}
         </Card>
       ))
     }
