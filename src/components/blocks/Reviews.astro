@@ -38,10 +38,7 @@ const randomReviews = cards?.sort(() => Math.random() - 0.5).slice(0, 5)
           variant="subtle"
         >
           <Rating value={rating} />
-          <Heading
-            html={heading}
-            level={2}
-          />
+          <Heading html={heading} />
           <Paragraph html={paragraph} />
         </Card>
       ))

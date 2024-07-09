@@ -23,10 +23,7 @@ const { heading, text, image, input, ...rest } = Astro.props
   variant="outline"
   {...rest}
 >
-  <Heading
-    level={2}
-    html={heading}
-  />
+  <Heading html={heading} />
   <Text html={text} />
   <Row>
     <Input placeholder={input?.placeholder} />
