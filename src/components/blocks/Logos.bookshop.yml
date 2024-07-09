@@ -9,9 +9,9 @@ blueprint:
 
 preview:
   logos:
-    - /images/logos/logo-1.svg
-    - /images/logos/logo-2.svg
-    - /images/logos/logo-3.svg
-    - /images/logos/logo-4.svg
+    - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
+    - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
+    - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
+    - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
 
 _inputs:
