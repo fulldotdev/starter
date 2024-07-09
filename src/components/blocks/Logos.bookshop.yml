@@ -11,11 +11,11 @@ blueprint:
 
 preview:
   heading: Trusted by many
-  text: Businesses such as microsoft, google, and apple all use our product.
+  text: Businesses such as name and name already use our services.
   logos:
-    - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
-    - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
-    - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
-    - https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small/microsoft-logo-microsoft-icon-transparent-free-png.png
+    - /placeholder.webp
+    - /placeholder.webp
+    - /placeholder.webp
+    - /placeholder.webp
 
 _inputs:
