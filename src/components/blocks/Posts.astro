@@ -43,13 +43,13 @@ const { heading, text, posts, ...rest } = Astro.props
       posts?.map(({ image, href, name, text, date, author }) => (
         <Card
           {href}
-          frame="panel"
+          frame="none"
         >
           <Image src={image} />
           <Tagline html={date} />
           <Heading
             html={name}
-            level={4}
+            level={3}
           />
           <Text html={text} />
 
@@ -60,8 +60,11 @@ const { heading, text, posts, ...rest } = Astro.props
               height={60}
             />
             <Column>
-              <Text html={author?.name} />
-              <Tagline html={author?.tagline} />
+              <Heading
+                level={4}
+                html={author?.name}
+              />
+              <Text html={author?.tagline} />
             </Column>
           </Row>
         </Card>
