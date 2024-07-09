@@ -5,10 +5,7 @@ import { getEntry } from 'astro:content'
 
 const page = await getEntry('pages', 'index')
 
-const bookshops = await Astro.glob('../components/blocks/**/*.yml')
-console.log(bookshops)
-
-const { blocks, hero, content } = page.data
+const { blocks } = page.data
 ---
 
 <Layout>

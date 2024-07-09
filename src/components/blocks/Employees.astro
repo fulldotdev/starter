@@ -1,0 +1,54 @@
+---
+import type { ComponentProps } from 'astro/types'
+import {
+  Button,
+  Card,
+  Heading,
+  Image,
+  Row,
+  Section,
+  Tagline,
+  Text,
+} from 'fulldev-ui'
+
+interface Props extends ComponentProps<typeof Section> {
+  heading?: string
+  paragraph?: string
+  text?: string
+  tagline?: string
+  image?: string
+  buttons?: ComponentProps<typeof Button>[]
+  employees?: {
+    image?: string
+    name?: string
+    text?: string
+    tagline?: string
+  }[]
+}
+
+const { tagline, heading, text, buttons, image, employees, ...rest } =
+  Astro.props
+---
+
+<Section {...rest}>
+  <Heading
+    level={1}
+    html={heading}
+  />
+  <Text html={text} />
+  <Row align="center">
+    {
+      employees?.map(({ image, name, text, tagline }) => (
+        <Card frame="none">
+          <Image src={image} />
+          <Tagline html={tagline} />
+          <Heading
+            html={name}
+            level={4}
+          />
+          <Text html={text} />
+        </Card>
+      ))
+    }
+  </Row>
+</Section>
