@@ -21,14 +21,14 @@ preview:
     - text: Click me
       href: /
   cards:
-    - icon: circle
-      heading: Feature 1
-      text: Lorem ipsum dolor sit amet
-    - icon: circle
-      heading: Feature 1
-      text: Lorem ipsum dolor sit amet
-    - icon: circle
-      heading: Feature 1
-      text: Lorem ipsum dolor sit amet
+    - icon: rocket
+      heading: Ship websites fast
+      text: Pre-built components used in pre-built blocks.
+    - icon: pencil
+      heading: Customize with ease
+      text: Easily customize the look and feel of your website.
+    - icon: typography
+      heading: Repsonsive design
+      text: Automatically cascades to fit any screen size.
 
 _inputs:
