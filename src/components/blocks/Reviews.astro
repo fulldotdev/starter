@@ -34,12 +34,11 @@ const randomReviews = cards?.sort(() => Math.random() - 0.5).slice(0, 5)
       randomReviews?.map(({ href, rating, heading, paragraph }) => (
         <Card
           {href}
-          frame="panel"
-          variant="subtle"
+          variant="outline"
         >
           <Rating value={rating} />
           <Heading
-            level={4}
+            level={3}
             html={heading}
           />
           <Paragraph html={paragraph} />

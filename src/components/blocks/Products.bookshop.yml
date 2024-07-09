@@ -19,26 +19,32 @@ preview:
     - heading: NextJS Mug
       description: Best for hydratation errors
       price: $100
-      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+      image: /placeholder.webp
+      href: '#'
     - heading: NextJS Mug
       description: Best for hydratation errors
       price: $100
-      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+      image: /placeholder.webp
+      href: '#'
     - heading: NextJS Mug
       description: Best for hydratation errors
       price: $100
-      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+      image: /placeholder.webp
+      href: '#'
     - heading: NextJS Mug
       description: Best for hydratation errors
       price: $100
-      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+      image: /placeholder.webp
+      href: '#'
     - heading: NextJS Mug
       description: Best for hydratation errors
       price: $100
-      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+      image: /placeholder.webp
+      href: '#'
     - heading: NextJS Mug
       description: Best for hydratation errors
       price: $100
-      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+      image: /placeholder.webp
+      href: '#'
 
 _inputs:

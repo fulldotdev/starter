@@ -5,8 +5,8 @@ import {
   Card,
   Heading,
   Image,
-  Row,
   Section,
+  Split,
   Tagline,
   Text,
 } from 'fulldev-ui'
@@ -33,7 +33,7 @@ const { tagline, heading, text, buttons, image, employees, ...rest } =
 <Section {...rest}>
   <Heading html={heading} />
   <Text html={text} />
-  <Row align="center">
+  <Split align="center">
     {
       employees?.map(({ image, name, text, tagline }) => (
         <Card frame="none">
@@ -47,5 +47,5 @@ const { tagline, heading, text, buttons, image, employees, ...rest } =
         </Card>
       ))
     }
-  </Row>
+  </Split>
 </Section>

@@ -29,18 +29,14 @@ const { heading, text, products } = Astro.props
 <Section>
   <Heading html={heading} />
   <Text html={text} />
-  <Carousel>
+  <Carousel position="inset">
     {
       products?.map(({ href, heading, description, price, image }) => (
         <Card
           {href}
-          variant="subtle"
+          frame="none"
         >
-          <Image
-            src={image}
-            height={150}
-            width={200}
-          />
+          <Image src={image} />
           <Heading
             level={3}
             html={heading}
