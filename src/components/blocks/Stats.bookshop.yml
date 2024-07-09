@@ -1,0 +1,20 @@
+spec:
+  structures:
+    - blocks
+  label: Stats
+
+blueprint:
+  stats:
+    - heading:
+      text:
+
+preview:
+  stats:
+    - heading: 1000+
+      text: Downloads
+    - heading: 100+
+      text: Contributors
+    - heading: '1'
+      text: Fork
+
+_inputs:

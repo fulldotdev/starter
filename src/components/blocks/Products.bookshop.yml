@@ -1,0 +1,44 @@
+spec:
+  structures:
+    - blocks
+  label: Products
+
+blueprint:
+  heading:
+  text:
+  products:
+    - heading:
+      description:
+      price:
+      image:
+
+preview:
+  heading: Best selling
+  text: Our best selection of products.
+  products:
+    - heading: NextJS Mug
+      description: Best for hydratation errors
+      price: $100
+      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+    - heading: NextJS Mug
+      description: Best for hydratation errors
+      price: $100
+      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+    - heading: NextJS Mug
+      description: Best for hydratation errors
+      price: $100
+      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+    - heading: NextJS Mug
+      description: Best for hydratation errors
+      price: $100
+      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+    - heading: NextJS Mug
+      description: Best for hydratation errors
+      price: $100
+      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+    - heading: NextJS Mug
+      description: Best for hydratation errors
+      price: $100
+      image: https://pbs.twimg.com/media/E374pyaWEAMCT2R.jpg
+
+_inputs:
