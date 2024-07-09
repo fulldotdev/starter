@@ -26,6 +26,9 @@ dependencies:
   '@bookshop/sass':
     specifier: ^3.10.0
     version: 3.10.0
+  '@rollup/plugin-yaml':
+    specifier: ^4.1.2
+    version: 4.1.2
   '@types/react':
     specifier: ^18.3.3
     version: 18.3.3
@@ -36,8 +39,8 @@ dependencies:
     specifier: ^4.11.5
     version: 4.11.5(sass@1.77.6)(typescript@5.5.3)
   fulldev-ui:
-    specifier: ^0.3.6
-    version: 0.3.6(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3)
+    specifier: ^0.3.7
+    version: 0.3.7(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3)
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -1973,6 +1976,20 @@ packages:
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
     dev: true
 
+  /@rollup/plugin-yaml@4.1.2:
+    resolution: {integrity: sha512-RpupciIeZMUqhgFE97ba0s98mOFS7CWzN3EJNhJkqSv9XLlWYtwVdtE6cDw6ASOF/sZVFS7kRJXftaqM2Vakdw==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.1.0
+      js-yaml: 4.1.0
+      tosource: 2.0.0-alpha.3
+    dev: false
+
   /@rollup/pluginutils@5.1.0:
     resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
     engines: {node: '>=14.0.0'}
@@ -1985,7 +2002,6 @@ packages:
       '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
-    dev: true
 
   /@rollup/rollup-android-arm-eabi@4.18.0:
     resolution: {integrity: sha512-Tya6xypR10giZV1XzxmH5wr25VcZSncG0pZIjfePT0OVBvqNEurzValetGNarVrGiq66EBVAFn15iYX4w6FKgQ==}
@@ -3100,6 +3116,7 @@ packages:
   /color@4.2.3:
     resolution: {integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==}
     engines: {node: '>=12.5.0'}
+    requiresBuild: true
     dependencies:
       color-convert: 2.0.1
       color-string: 1.9.1
@@ -3704,7 +3721,6 @@ packages:
 
   /estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
-    dev: true
 
   /estree-walker@3.0.3:
     resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
@@ -3927,8 +3943,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /fulldev-ui@0.3.6(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3):
-    resolution: {integrity: sha512-/nJrYl4o7+DcW3UM76WV870n6ZD4g9QC1XVdFmbbSJugFxzyH/MTYyB4XBjqDOi9rtF1v9egDoO6izzJus8Lgg==}
+  /fulldev-ui@0.3.7(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.3.3):
+    resolution: {integrity: sha512-0QOLSvkdRKh++xBWeSdSCd0XQd12fxWyp8n9of+r92JqNEQXJBCm+6LfgXq3A8Y2NEDThtqUvdT7oBZlJ3CvVA==}
     dependencies:
       '@iconify-json/tabler': 1.1.116
       astro-seo: 0.8.4(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.5.3)
@@ -7154,6 +7170,11 @@ packages:
   /toidentifier@1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
+    dev: false
+
+  /tosource@2.0.0-alpha.3:
+    resolution: {integrity: sha512-KAB2lrSS48y91MzFPFuDg4hLbvDiyTjOVgaK7Erw+5AmZXNq4sFRVn8r6yxSLuNs15PaokrDRpS61ERY9uZOug==}
+    engines: {node: '>=10'}
     dev: false
 
   /totalist@3.0.1:

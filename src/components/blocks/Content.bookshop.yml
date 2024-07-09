@@ -5,9 +5,18 @@ spec:
   label: Content
 
 blueprint:
-  heading: Heading
-  text: Text
+  heading:
+  text:
   buttons:
+    - text:
+      href:
+
+preview:
+  heading: Hello world
+  text: Lorem ipsum
+  buttons:
+    - text: Button
+      href: /
     - text: Button
       href: /
 
