@@ -5,7 +5,7 @@ import { getEntry } from 'astro:content'
 
 const page = await getEntry('pages', 'index')
 
-const { blocks } = page.data
+const { content } = page.data
 ---
 
 <Layout>
