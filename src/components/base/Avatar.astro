@@ -8,12 +8,13 @@ const { ...rest } = Astro.props
 ---
 
 <Image
-  class="logo"
+  class="avatar"
   {...rest}
 />
 
 <style is:global lang="scss">
-  .logo {
-    max-width: var(--space-6);
+  .avatar {
+    max-width: calc(2.6 * var(--space-6));
+    height: auto;
   }
 </style>
