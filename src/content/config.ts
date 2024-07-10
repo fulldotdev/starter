@@ -75,4 +75,8 @@ export const collections = {
     type: 'content',
     schema: pageSchema,
   }),
+  globals: defineCollection({
+    type: 'content',
+    schema: z.any(),
+  }),
 }

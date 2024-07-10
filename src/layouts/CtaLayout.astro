@@ -1,0 +1,28 @@
+---
+import Cta from '@blocks/Cta.astro'
+import type { ComponentProps } from 'astro/types'
+import { getEntry } from 'astro:content'
+import NavLayout from './NavLayout.astro'
+
+interface Props extends ComponentProps<typeof NavLayout> {
+  cta?: any
+}
+
+const { cta, ...rest } = Astro.props
+
+const ctaGlobal = await getEntry('globals', 'cta')
+---
+
+<NavLayout {...rest}>
+  <slot
+    name="content"
+    slot="content"
+  />
+  <slot />
+  <Cta
+    {...ctaGlobal}
+    {...cta}
+  />
+</NavLayout>
+
+<style is:global lang="scss"></style>
