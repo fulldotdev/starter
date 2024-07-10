@@ -4,6 +4,7 @@ spec:
   label: Header
 
 blueprint:
+  logo:
   heading:
   href:
   buttons:
@@ -11,8 +12,8 @@ blueprint:
       href:
 
 preview:
+  logo: /logo-placeholder.svg
   heading: Header
-  href: /blocks
   links:
     - text: Link
       href: /
