@@ -1,0 +1,58 @@
+---
+import type { ComponentProps } from 'astro/types'
+import {
+  Column,
+  Footer as FullFooter,
+  Heading,
+  Link,
+  Row,
+  Text,
+} from 'fulldev-ui'
+
+interface Props extends ComponentProps<typeof FullFooter> {
+  heading?: string
+  href?: string
+  text?: string
+  categories?: {
+    category: string
+    links: {
+      text: string
+      href: string
+    }[]
+  }[]
+}
+
+const { heading, categories, href, text, ...rest } = Astro.props
+---
+
+<FullFooter
+  structure="spread"
+  size="sm"
+>
+  <Column>
+    <Heading
+      as="a"
+      text={heading}
+      href={href}
+    />
+    <Text text={text} />
+  </Column>
+  <Row align="start">
+    {
+      categories?.map((category) => (
+        <Column>
+          <Heading
+            text={category.category}
+            level={3}
+          />
+          {category.links.map((link) => (
+            <Link
+              href={link.href}
+              text={link.text}
+            />
+          ))}
+        </Column>
+      ))
+    }
+  </Row>
+</FullFooter>
