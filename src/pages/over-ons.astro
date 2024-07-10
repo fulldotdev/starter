@@ -1,0 +1,13 @@
+---
+import Content from '@blocks/Content.astro'
+import NavLayout from '@layouts/NavLayout.astro'
+import { getEntry } from 'astro:content'
+
+const page = await getEntry('pages', 'about')
+
+const { content } = page.data
+---
+
+<NavLayout>
+  <Content {...content} />
+</NavLayout>
