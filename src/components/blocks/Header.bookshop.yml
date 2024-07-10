@@ -1,0 +1,27 @@
+spec:
+  structures:
+    - blocks
+  label: Header
+
+blueprint:
+  heading:
+  href:
+  buttons:
+    - text:
+      href:
+
+preview:
+  heading: Header
+  href: /blocks
+  links:
+    - text: Link
+      href: /
+    - text: Blocks
+      href: /blocks
+  buttons:
+    - text: Button
+      href: /
+    - text: Blocks
+      href: /blocks
+
+_inputs:

@@ -1,0 +1,25 @@
+---
+import type { ComponentProps } from 'astro/types'
+import { Button, Header as FullHeader, Heading, Link, Row } from 'fulldev-ui'
+
+interface Props extends ComponentProps<typeof FullHeader> {
+  heading?: string
+  href?: string
+  links?: ComponentProps<typeof Link>[]
+  buttons?: ComponentProps<typeof Button>[]
+}
+
+const { heading, links, buttons, href, ...rest } = Astro.props
+---
+
+<FullHeader structure="spread">
+  <Heading
+    as="a"
+    text={heading}
+    href={href}
+  />
+  <Row>
+    {links?.map((link, i) => <Link {...link} />)}
+    {buttons?.map((button, i) => <Button {...button} />)}
+  </Row>
+</FullHeader>
