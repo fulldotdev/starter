@@ -16,6 +16,39 @@ Then start the development server.
 pnpm dev
 ```
 
+### Getting diffs/commits from the template
+
+To get the latest changes from the template, you need to set up a remote in your project repository:
+
+1. `cd` into your project directory (not this template).
+2. Run the following command
+
+```git
+git remote add template https://github.com/fulldotdev/fulldev-starter.git
+```
+
+3. When you want to merge the latest changes from the template, run the following command:
+
+```ts
+git fetch template
+```
+
+To merge:
+
+```git
+git checkout <branch-to-merge-to>
+git merge template/<branch-to-merge>
+```
+
+To rebase:
+
+```git
+git checkout <branch-to-merge-to>
+git rebase upstream/<branch-to-merge>
+```
+
+NOTE: When rebasing, you must run `git push origin <branch-name> --force` in order to override your old commits on your remote branch. This is why It's recommend to rebase only on private repos.
+
 ## Editing the content
 
 You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`. We use content collections for all of our websites for seemless integration with [CMS](https://cloudcannon.com/) for our customers to easily edit the contents of the website without needing to be technical.
