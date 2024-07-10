@@ -1,15 +1,17 @@
 ---
+import Logo from '@components/base/Logo.astro'
 import type { ComponentProps } from 'astro/types'
 import {
   Column,
   Footer as FullFooter,
   Heading,
   Link,
-  Row,
+  Split,
   Text,
 } from 'fulldev-ui'
 
 interface Props extends ComponentProps<typeof FullFooter> {
+  logo?: string
   heading?: string
   href?: string
   text?: string
@@ -22,22 +24,29 @@ interface Props extends ComponentProps<typeof FullFooter> {
   }[]
 }
 
-const { heading, categories, href, text, ...rest } = Astro.props
+const { logo, heading, categories, href, text, ...rest } = Astro.props
 ---
 
 <FullFooter
-  structure="spread"
+  structure="split"
   size="sm"
 >
   <Column>
-    <Heading
+    <Column
+      style={{ textDecoration: 'none' }}
       as="a"
-      text={heading}
-      href={href}
-    />
+      href="/"
+    >
+      <Logo src={logo} />
+      <Heading
+        as="p"
+        level={2}
+        text={heading}
+      />
+    </Column>
     <Text text={text} />
   </Column>
-  <Row align="start">
+  <Split align="start">
     {
       categories?.map((category) => (
         <Column>
@@ -54,5 +63,5 @@ const { heading, categories, href, text, ...rest } = Astro.props
         </Column>
       ))
     }
-  </Row>
+  </Split>
 </FullFooter>

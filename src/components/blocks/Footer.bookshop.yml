@@ -1,9 +1,9 @@
 spec:
   structures:
-    - blocks
   label: Footer
 
 blueprint:
+  logo:
   heading:
   href:
   buttons:
@@ -11,6 +11,7 @@ blueprint:
       href:
 
 preview:
+  logo: /logo-placeholder.svg
   heading: Footer
   text: The best place to find pages.
   categories:
@@ -28,4 +29,5 @@ preview:
           href: /hoodies
         - text: Hoodies
           href: /hoodies
+
 _inputs:
