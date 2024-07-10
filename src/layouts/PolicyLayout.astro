@@ -1,8 +1,9 @@
 ---
 import type { ComponentProps } from 'astro/types'
 import { getEntry } from 'astro:content'
-import { Footer, Header, Main } from 'fulldev-ui'
+import { Prose } from 'fulldev-ui'
 import Layout from './Layout.astro'
+import NavLayout from './NavLayout.astro'
 
 interface Props extends ComponentProps<typeof Layout> {
   hero?: any
@@ -11,16 +12,13 @@ interface Props extends ComponentProps<typeof Layout> {
 
 const { hero, blocks, ...rest } = Astro.props
 
-const header = await getEntry('globals', 'header')
-const footer = await getEntry('globals', 'footer')
+const cta = await getEntry('globals', 'cta')
 ---
 
-<Layout {...rest}>
-  <Header {...header.data} />
-  <Main>
-    <slot />
-  </Main>
-  <Footer {...footer.data} />
-</Layout>
+<NavLayout {...rest}>
+  <Prose>
+    <slot name="content" />
+  </Prose>
+</NavLayout>
 
 <style is:global lang="scss"></style>
