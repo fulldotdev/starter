@@ -15,9 +15,9 @@ export async function getStaticPaths() {
 const { data, render } = Astro.props
 
 const { Content } = await render()
-const footer = await getEntry('globals', 'footer')
-const header = await getEntry('globals', 'header')
-const cta = await getEntry('globals', 'cta')
+const footer = (await getEntry('globals', 'footer')).data
+const header = (await getEntry('globals', 'header')).data
+const cta = (await getEntry('globals', 'cta')).data
 ---
 
 <PageLayout
