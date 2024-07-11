@@ -1,13 +1,10 @@
 ---
-import Content from '@blocks/Content.astro'
-import NavLayout from '@layouts/NavLayout.astro'
 import { getEntry } from 'astro:content'
+import { PageLayout } from 'fulldev-blocks'
 
 const page = await getEntry('pages', 'contact')
-
-const { content } = page.data
 ---
 
-<NavLayout>
-  <Content {...content} />
-</NavLayout>
+<PageLayout {...page.data}>
+  <slot />
+</PageLayout>

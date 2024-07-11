@@ -1,13 +1,10 @@
 ---
-import Missing from '@blocks/Missing.astro'
-import Layout from '@layouts/Layout.astro'
 import { getEntry } from 'astro:content'
+import { PageLayout } from 'fulldev-blocks'
 
 const page = await getEntry('pages', '404')
-
-const { content } = page.data
 ---
 
-<Layout>
-  <Missing {...content} />
-</Layout>
+<PageLayout {...page.data}>
+  <slot />
+</PageLayout>

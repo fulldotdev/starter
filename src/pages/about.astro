@@ -2,7 +2,7 @@
 import { getEntry } from 'astro:content'
 import { PageLayout } from 'fulldev-blocks'
 
-const page = await getEntry('pages', 'index')
+const page = await getEntry('pages', 'about')
 ---
 
 <PageLayout {...page.data}>
