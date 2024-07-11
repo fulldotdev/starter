@@ -5,9 +5,6 @@ import { PageLayout } from 'fulldev-blocks'
 const page = await getEntry('pages', '404')
 ---
 
-<PageLayout
-  cta={false}
-  {...page.data}
->
+<PageLayout {...page.data}>
   <slot />
 </PageLayout>
