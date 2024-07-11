@@ -1,0 +1,13 @@
+spec:
+  structures:
+    - blocks
+  label: Stats
+
+blueprint:
+  heading:
+  text:
+  stats:
+    - heading:
+      text:
+
+_inputs:

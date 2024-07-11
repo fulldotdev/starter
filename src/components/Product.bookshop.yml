@@ -1,19 +1,18 @@
 spec:
   structures:
     - blocks
-  label: Hero
+  label: Product
 
 blueprint:
   heading:
-  text:
+  price:
+  rating:
+  image:
   buttons:
     - text:
       href:
-  image:
-  structure:
-  align:
-  frame:
-  variant:
-  position:
+  paragraphs:
+    - title:
+      text:
 
 _inputs:

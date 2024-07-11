@@ -1,0 +1,20 @@
+spec:
+  structures:
+    - blocks
+  label: Prices
+
+blueprint:
+  tagline:
+  heading:
+  text:
+  plans:
+    - heading:
+      text:
+      price:
+      features:
+        - text:
+      buttons:
+        - text:
+          href:
+
+_inputs:

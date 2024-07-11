@@ -1,0 +1,15 @@
+spec:
+  structures:
+    - blocks
+  label: Employees
+
+blueprint:
+  heading:
+  text:
+  employees:
+    - name:
+      tagline:
+      text:
+      image:
+
+_inputs:

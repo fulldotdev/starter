@@ -1,0 +1,12 @@
+spec:
+  structures:
+    - blocks
+  label: Logos
+
+blueprint:
+  heading:
+  text:
+  logos:
+    -
+
+_inputs:

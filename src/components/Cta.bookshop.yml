@@ -1,7 +1,7 @@
 spec:
   structures:
     - blocks
-  label: Hero
+  label: Cta
 
 blueprint:
   heading:
@@ -9,11 +9,8 @@ blueprint:
   buttons:
     - text:
       href:
-  image:
-  structure:
-  align:
-  frame:
-  variant:
-  position:
+  input:
+    placeholder:
+    button:
 
 _inputs:

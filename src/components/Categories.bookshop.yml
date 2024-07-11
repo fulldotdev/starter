@@ -1,0 +1,15 @@
+spec:
+  structures:
+    - blocks
+  label: Categories
+
+blueprint:
+  heading:
+  text:
+  categories:
+    - heading:
+      text:
+      href:
+      image:
+
+_inputs:

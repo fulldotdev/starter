@@ -1,0 +1,14 @@
+spec:
+  structures:
+    - blocks
+  label: Reviews
+
+blueprint:
+  heading:
+  text:
+  cards:
+    - rating:
+      heading:
+      paragraph:
+
+_inputs:

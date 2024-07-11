@@ -1,0 +1,15 @@
+spec:
+  structures:
+    - blocks
+  label: Products
+
+blueprint:
+  heading:
+  text:
+  products:
+    - heading:
+      description:
+      price:
+      image:
+
+_inputs:

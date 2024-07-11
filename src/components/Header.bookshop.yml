@@ -1,0 +1,14 @@
+spec:
+  structures:
+    - headers
+  label: Header
+
+blueprint:
+  logo:
+  heading:
+  href:
+  buttons:
+    - text:
+      href:
+
+_inputs:

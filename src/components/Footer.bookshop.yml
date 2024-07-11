@@ -1,0 +1,14 @@
+spec:
+  structures:
+    - footers
+  label: Footer
+
+blueprint:
+  logo:
+  heading:
+  href:
+  buttons:
+    - text:
+      href:
+
+_inputs:

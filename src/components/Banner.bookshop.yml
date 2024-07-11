@@ -1,0 +1,11 @@
+spec:
+  structures:
+    - blocks
+  label: Banner
+
+blueprint:
+  text:
+  href:
+  icon: arrow-right
+
+_inputs:

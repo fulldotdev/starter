@@ -1,0 +1,20 @@
+spec:
+  structures:
+    - blocks
+  label: Posts
+
+blueprint:
+  heading:
+  text:
+  posts:
+    - name:
+      date:
+      text:
+      href:
+      image:
+      author:
+        name:
+        tagline:
+        image:
+
+_inputs:

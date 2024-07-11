@@ -1,7 +1,7 @@
 spec:
   structures:
     - blocks
-  label: Hero
+  label: Features
 
 blueprint:
   heading:
@@ -9,11 +9,9 @@ blueprint:
   buttons:
     - text:
       href:
-  image:
-  structure:
-  align:
-  frame:
-  variant:
-  position:
+  cards:
+    - icon:
+      heading:
+      text:
 
 _inputs:
