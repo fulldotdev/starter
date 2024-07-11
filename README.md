@@ -49,6 +49,11 @@ git rebase upstream/<branch-to-merge>
 
 NOTE: When rebasing, you must run `git push origin <branch-name> --force` in order to override your old commits on your remote branch. This is why It's recommend to rebase only on private repos.
 
+### Working with a local version of the blocks package
+
+1. clone the blocks repo and run `pnpm link --global` in `/package`
+2. run `pnpm link --global` fulldev-blocks in the root of this project repo.
+
 ## Editing the content
 
 You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`. We use content collections for all of our websites for seemless integration with [CMS](https://cloudcannon.com/) for our customers to easily edit the contents of the website without needing to be technical.

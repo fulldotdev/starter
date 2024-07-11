@@ -1,5 +1,4 @@
 import react from '@astrojs/react'
-import bookshop from '@bookshop/astro-bookshop'
 import yaml from '@rollup/plugin-yaml'
 import { defineConfig } from 'astro/config'
 import UnoCSS from 'unocss/astro'
@@ -8,7 +7,7 @@ import UnoCSS from 'unocss/astro'
 export default defineConfig({
   output: 'static',
   site: 'https://example.com',
-  integrations: [UnoCSS(), react(), bookshop()],
+  integrations: [UnoCSS(), react()],
   vite: {
     plugins: [yaml()],
   },
