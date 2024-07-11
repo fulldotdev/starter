@@ -42,8 +42,8 @@ importers:
         specifier: ^4.11.5
         version: 4.11.5(sass@1.77.7)(typescript@5.5.3)
       fulldev-blocks:
-        specifier: ^0.0.6
-        version: 0.0.6(vite@5.3.3(sass@1.77.7))
+        specifier: ^0.0.8
+        version: 0.0.8(rollup@4.18.1)(vite@5.3.3(sass@1.77.7))
       fulldev-ui:
         specifier: ^0.3.11
         version: 0.3.11(astro@4.11.5(sass@1.77.7)(typescript@5.5.3))(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.5.3)(vite@5.3.3(sass@1.77.7))
@@ -2035,8 +2035,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  fulldev-blocks@0.0.6:
-    resolution: {integrity: sha512-W374o1hNGlexjoEvM9g+RwySUoPtRRbRob4kURIvZtL2tT+v0g2YxGFhBdX0uGOp8J6R5Kz0PJ93WbmJD7oiUA==}
+  fulldev-blocks@0.0.8:
+    resolution: {integrity: sha512-nrYKLg2xrA7XQCmsR1loTOMrerDtJI2L5iGO8eWtSRugbXLVJ4NfqdKOxs0AobvpjHf7mdKKz4rM8BvvQTWhjw==}
 
   fulldev-ui@0.3.11:
     resolution: {integrity: sha512-WGU4ko0dGreXNqaw4YpxzaGye4oWlRVVRQKGdaKSPB6veIQfG00UOZoojYjzhb5ZA6Ic10eBzqTncqP0XdWXkg==}
@@ -6313,10 +6313,12 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fulldev-blocks@0.0.6(vite@5.3.3(sass@1.77.7)):
+  fulldev-blocks@0.0.8(rollup@4.18.1)(vite@5.3.3(sass@1.77.7)):
     dependencies:
+      '@rollup/plugin-yaml': 4.1.2(rollup@4.18.1)
       vite-plugin-virtual: 0.3.0(vite@5.3.3(sass@1.77.7))
     transitivePeerDependencies:
+      - rollup
       - vite
 
   fulldev-ui@0.3.11(astro@4.11.5(sass@1.77.7)(typescript@5.5.3))(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.5.3)(vite@5.3.3(sass@1.77.7)):
