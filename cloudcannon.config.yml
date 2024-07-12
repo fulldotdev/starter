@@ -25,7 +25,7 @@ collections_config:
         path: src/schemas/page.md
 
 _inputs:
-  categories:
+  pages:
     label: Categorieën
     type: multiselect
     options:
