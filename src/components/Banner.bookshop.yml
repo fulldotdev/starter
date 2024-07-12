@@ -1,6 +1,6 @@
 spec:
   structures:
-    - blocks
+    - banners
   label: Banner
 
 blueprint:
