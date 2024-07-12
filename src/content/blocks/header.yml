@@ -1,0 +1,11 @@
+logo: /logo-placeholder.svg
+links:
+  - text: Home
+    href: /
+  - text: Over ons
+    href: /over-ons
+  - text: Blog
+    href: /blog
+buttons:
+  - text: Contact
+    href: /contact

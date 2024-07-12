@@ -1,15 +1,64 @@
 ---
-head:
-  title: fulldev-starter
-  description: A template made by fulldev to create new projects internally.
+hero:
+  badge: Lorem ipsum
+  heading: Lorem ipsum dolor sit
+  text: Lorem ipsum dolor sit amet conset adem pios coredur.
+  buttons:
+    - text: Lorem ipsum
+      href: '#'
+    - text: Lorem ipsum
+      href: '#'
+  image: /placeholder.webp
+  structure: column
+  align: center
+  position: background
 
 blocks:
+  - _block: Features
+    cards:
+      - icon: rocket
+        heading: Lorem ipsum dolor
+        text: Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum dolor sit amet. 
+      - icon: pencil
+        heading: Lorem ipsum dolor
+        text: Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum dolor sit amet. 
+      - icon: typography
+        heading: Lorem ipsum dolor
+        text: Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum dolor sit amet. 
   - _block: Content
-    heading: Welcome to fulldev-starter
-    text: Get started with fulldev-starter by editing this page in src/content/pages/index.md.
+    heading: Lorem ipsum dolor sit amet
+    text: Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit amet conset adem pios coredur.
     buttons:
-      - text: Starter Template
-        href: https://github.com/fulldotdev/fulldev-starter
-      - text: FullUI Docs
-        href: https://ui.full.dev/overview/introduction/
+      - text: Lorem ipsum
+        href: '#'
+      - text: Lorem ipsum
+        href: '#'
+    image: /placeholder.webp
+  - _block: Cta
+    heading: Lorem ipsum dolor sit
+    text: Lorem ipsum dolor sit amet conset adem pios coredur.
+    buttons:
+      - text: Lorem ipsum
+        href: '#'
+      - text: Lorem ipsum
+        href: '#'
+  - _block: Content
+    heading: Lorem ipsum dolor sit amet
+    text: Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit amet conset adem pios coredur.
+    buttons:
+      - text: Lorem ipsum
+        href: '#'
+      - text: Lorem ipsum
+        href: '#'
+    image: /placeholder.webp
+  - _block: Reviews
+    heading: Lorem ipsum dolor sit amet
+    text: Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit amet conset adem pios coredur.
+    buttons:
+      - text: Lorem ipsum
+        href: '#'
+      - text: Lorem ipsum
+        href: '#'
+    reviews:
+      - reviews/review
 ---
