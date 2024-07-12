@@ -1,6 +1,3 @@
 ---
-head:
-  title:
-  description:
-  image:
+pages:
 ---

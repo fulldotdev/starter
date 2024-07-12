@@ -18,8 +18,21 @@ collections_config:
     disable_add_folder: true
     _enabled_editors:
       - visual
+    schemas:
+      default:
+        remove_extra_inputs: false
+        remove_empty_inputs: true
+        path: src/schemas/page.md
 
 _inputs:
+  categories:
+    label: Categorieën
+    type: multiselect
+    options:
+      preview:
+        text:
+          - key: url
+
   head:
     label: SEO
   head.title:
