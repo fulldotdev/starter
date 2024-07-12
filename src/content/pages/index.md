@@ -13,8 +13,6 @@ hero:
   align: center
   position: background
 
-pages:
-
 blocks:
   - _block: Features
     cards:
