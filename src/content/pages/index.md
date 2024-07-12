@@ -1,7 +1,4 @@
 ---
-_schema: default
-pages:
-  - src/content/pages/over-ons.md
 hero:
   badge: Lorem ipsum
   heading: Lorem ipsum dolor sit
@@ -15,29 +12,22 @@ hero:
   structure: column
   align: center
   position: background
+
 blocks:
   - _block: Features
     cards:
       - icon: rocket
         heading: Lorem ipsum dolor
-        text: >-
-          Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum
-          dolor sit amet.
+        text: Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum dolor sit amet. 
       - icon: pencil
         heading: Lorem ipsum dolor
-        text: >-
-          Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum
-          dolor sit amet.
+        text: Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum dolor sit amet. 
       - icon: typography
         heading: Lorem ipsum dolor
-        text: >-
-          Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum
-          dolor sit amet.
+        text: Lorem ipsum dolor sit amet sit conset adem pios coredur. Lorem ipsum dolor sit amet. 
   - _block: Content
     heading: Lorem ipsum dolor sit amet
-    text: >-
-      Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit
-      amet conset adem pios coredur.
+    text: Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit amet conset adem pios coredur.
     buttons:
       - text: Lorem ipsum
         href: '#'
@@ -54,9 +44,7 @@ blocks:
         href: '#'
   - _block: Content
     heading: Lorem ipsum dolor sit amet
-    text: >-
-      Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit
-      amet conset adem pios coredur.
+    text: Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit amet conset adem pios coredur.
     buttons:
       - text: Lorem ipsum
         href: '#'
@@ -65,9 +53,7 @@ blocks:
     image: /placeholder.webp
   - _block: Reviews
     heading: Lorem ipsum dolor sit amet
-    text: >-
-      Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit
-      amet conset adem pios coredur.
+    text: Lorem ipsum dolor sit amet conset adem pios coredur. Lorem ipsum dolor sit amet conset adem pios coredur.
     buttons:
       - text: Lorem ipsum
         href: '#'
