@@ -5,13 +5,13 @@ import Hero from '../components/Hero.astro'
 
 interface Props extends ComponentProps<typeof Layout> {}
 
-const frontmatter = Astro.props
+const props = Astro.props.frontmatter
 ---
 
 <Layout>
   <Hero
     bookshop:live
-    {...frontmatter.hero}
+    {...props.hero}
   />
 </Layout>
 

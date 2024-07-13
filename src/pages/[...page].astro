@@ -20,6 +20,6 @@ const header = (await getEntry('blocks', 'Header'))?.data
 const cta = (await getEntry('blocks', 'Cta'))?.data
 ---
 
-<PageLayout {...data}>
+<PageLayout frontmatter={data}>
   <Content slot="content" />
 </PageLayout>
