@@ -24,6 +24,10 @@ collections_config:
         remove_empty_inputs: true
         path: src/schemas/page.md
 
+_structures:
+  blocks:
+    remove_empty_inputs: true
+
 _inputs:
   pages:
     label: Categorieën
