@@ -1,15 +1,15 @@
 source: src
 paths:
   uploads: public/assets
-  uploads_filename: /test/
+  uploads_filename:
   static: public
-  collections: src/content/pages
+  collections:
 collections_config:
-  pages:
-    path: src/content/pages
+  reviews:
+    path: src/content/pages/reviews
     output: true
     url: /[full_slug]/
-    name: Pagina's
+    name:
     description: ''
     icon: wysiwyg
     preview:
@@ -26,8 +26,63 @@ collections_config:
     _inputs:
     _select_data:
     _structures:
-    disable_add: true
-    disable_add_folder: true
+    create:
+      path: '[relative_base_path]/{heading|slugify}.md.'
+      extra_data:
+      publish_to:
+      _inputs:
+      _select_data:
+      _structures:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: src/schemas/page.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+        _editables:
+        _inputs:
+        _select_data:
+        _structures:
+  pages:
+    path: src/content/pages
+    output: true
+    url: /[full_slug]/
+    filter:
+      base:
+      include:
+      exclude:
+        - reviews
+    name:
+    description: ''
+    icon: wysiwyg
+    preview:
+      text:
+      subtext:
+      icon:
+      icon_color:
+      image:
+      metadata:
+      gallery:
+    _editables:
+    _enabled_editors:
+      - visual
+    _inputs:
+    _select_data:
+    _structures:
+    create:
+      path: '[relative_base_path]/{heading|slugify}.md.'
+      extra_data:
+      publish_to:
+      _inputs:
+      _select_data:
+      _structures:
+    disable_add: false
+    disable_add_folder: false
     disable_file_actions: false
     schemas:
       default:
@@ -38,7 +93,7 @@ collections_config:
         remove_extra_inputs: false
         icon: notes
 collection_groups:
-  - heading: Pagina's
+  - heading: Pages
     collections:
       - pages
   - heading: Blocks
@@ -133,4 +188,4 @@ _editables:
     table: true
     underline: true
     undo: true
-timezone: Etc/UTC
+timezone: Europe/Amsterdam
