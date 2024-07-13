@@ -68,12 +68,11 @@ const render =
       ]}
       {...rest}
     >
-      text
       <Fragment set:text={text} />
-      html
       <Fragment set:html={html} />
-      slot
       <Fragment set:html={slot} />
+      <br />
+      <slot />
     </As>
   )
 }

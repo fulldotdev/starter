@@ -1,7 +1,7 @@
 ---
 import type { HTMLTag, Polymorphic } from 'astro/types'
+import '../css/utils.scss'
 import Component from './_Component.astro'
-
 type Props<As extends HTMLTag = 'h2'> = Polymorphic<{ as: As }> & {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
   color?: 'base' | 'brand'
