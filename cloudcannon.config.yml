@@ -1,96 +1,136 @@
+source: src
 paths:
   uploads: public/assets
+  uploads_filename: /test/
   static: public
-
-collection_groups:
-  - heading: Content
-    collections:
-      - pages
-
+  collections: src/content/pages
 collections_config:
   pages:
     path: src/content/pages
-    url: /[full_slug]/
     output: true
-    icon: wysiwyg
+    url: /[full_slug]/
     name: Pagina's
-    disable_add: true
-    disable_add_folder: true
+    description: ''
+    icon: wysiwyg
+    preview:
+      text:
+      subtext:
+      icon:
+      icon_color:
+      image:
+      metadata:
+      gallery:
+    _editables:
     _enabled_editors:
       - visual
+    _inputs:
+    _select_data:
+    _structures:
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: false
     schemas:
       default:
-        remove_extra_inputs: false
-        remove_empty_inputs: true
         path: src/schemas/page.md
-
-_structures:
-  blocks:
-    remove_empty_inputs: true
-
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+collection_groups:
+  - heading: Pagina's
+    collections:
+      - pages
+  - heading: Blocks
+    collections:
+      - blocks
 _inputs:
   pages:
-    label: Categorieën
     type: multiselect
     options:
       preview:
         text:
           - key: url
-
+    label: Categorieën
+    cascade: true
   head:
+    type: auto
     label: SEO
+    cascade: true
   head.title:
+    type: auto
     label: Pagina title
     comment: 50 tot 60 karakters
+    cascade: true
   head.description:
+    type: auto
     label: Pagina beschrijving
     comment: 50 tot 120 karakters
+    cascade: true
   head.image:
+    type: auto
     label: Pagina afbeelding
     comment: Zichtbaar wanneer de pagina wordt gedeeld op social media
+    cascade: true
   src:
     type: image
-    label: Afbeelding
     options:
       expandable: false
       mime_type: image/webp
       correct_orientation: false
       prevent_resize_existing_files: true
       resize_style: crop
+    label: Afbeelding
+    cascade: true
   href:
     type: url
     label: Link
+    cascade: true
   rating:
-    label: Rating
     type: range
     options:
       min: 0
       max: 5
       step: 0.1
+    label: Rating
+    cascade: true
   images:
     type: array
+    cascade: true
   images[*]:
     type: image
+    cascade: true
   draft:
-    label: Concept
     type: switch
+    label: Concept
+    cascade: true
   variant:
+    type: auto
     hidden: true
+    cascade: true
   price:
     type: number
+    cascade: true
   paragraph:
     type: textarea
-
+    cascade: true
+_structures:
+  blocks:
+    remove_empty_inputs: true
 _editables:
   content:
+    allow_custom_markup: false
+    remove_custom_markup: false
     bold: true
-    format: p h1 h2 h3 h4 h5 h6
-    italic: true
-    underline: true
-    link: true
     bulletedlist: true
-    numberedlist: true
+    format: p h1 h2 h3 h4 h5 h6
     image: true
-    table: true
-    undo: true
+    image_size_attributes: true
+    italic: true
+    link: true
+    numberedlist: true
     redo: true
+    table: true
+    underline: true
+    undo: true
+timezone: Etc/UTC
