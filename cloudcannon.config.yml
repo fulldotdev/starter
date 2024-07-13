@@ -9,10 +9,6 @@ collections_config:
     output: true
     url: /[full_slug]/
     filter:
-      base:
-      include:
-      exclude:
-        - /reviews
     name:
     description: ''
     icon: wysiwyg
