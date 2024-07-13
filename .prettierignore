@@ -7,7 +7,9 @@
 # Build directories
 **/dist
 **/build
+**/public
 **/out
+**/.cloudcannon
 **/.astro
 **/.jampack
 **/.next
