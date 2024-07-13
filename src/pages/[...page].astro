@@ -22,6 +22,6 @@ const cta = (await getEntry('blocks', 'Cta'))?.data
 data.pages = data.pages && (await getEntries(data.pages))
 ---
 
-<PageLayout frontmatter={data}>
+<PageLayout {...data}>
   <Content slot="content" />
 </PageLayout>
