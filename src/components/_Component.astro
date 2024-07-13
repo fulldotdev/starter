@@ -76,9 +76,9 @@ const render =
 }
 
 <style is:global lang="scss">
-  @use '../css/utils.scss';
-
-  @include component('full') {
-    box-sizing: border-box;
+  @layer fulldev {
+    .full {
+      box-sizing: border-box;
+    }
   }
 </style>
