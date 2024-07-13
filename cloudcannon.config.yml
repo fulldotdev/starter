@@ -95,6 +95,7 @@ collection_groups:
   - heading: Pages
     collections:
       - pages
+      - reviews
   - heading: Blocks
     collections:
       - blocks
