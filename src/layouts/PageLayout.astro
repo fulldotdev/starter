@@ -7,14 +7,13 @@ interface Props extends ComponentProps<typeof Layout> {
   frontmatter: any
 }
 
-const { frontmatter, hero, blocks, cta, ...rest } = Astro.props
-console.log(frontmatter)
+const props = Astro.props.frontmatter
 ---
 
-<Layout {...rest}>
+<Layout>
   <Hero
     bookshop:live
-    {...frontmatter.hero}
+    {...props.hero}
   />
 </Layout>
 

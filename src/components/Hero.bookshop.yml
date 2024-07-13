@@ -4,7 +4,7 @@ spec:
   label: Hero
 
 blueprint:
-  heading:
+  heading: Hello world
   text:
   buttons:
     - text:
