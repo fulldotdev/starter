@@ -23,6 +23,8 @@ collections_config:
     _editables:
     _enabled_editors:
       - visual
+      - content
+      - data
     _inputs:
     _select_data:
     _structures:
