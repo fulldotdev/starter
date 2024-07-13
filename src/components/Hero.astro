@@ -1,0 +1,23 @@
+---
+const {
+  structure = 'column',
+  size = 'lg',
+  variant = 'subtle',
+  align = 'center',
+  level = 2,
+  badge,
+  tagline,
+  heading,
+  text,
+  buttons,
+  frame = 'panel',
+  input,
+  ...rest
+} = Astro.props
+---
+
+<section {...rest}>
+  <div>
+    <h1>{heading}</h1>
+  </div>
+</section>

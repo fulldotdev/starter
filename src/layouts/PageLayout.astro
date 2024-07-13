@@ -1,0 +1,21 @@
+---
+import type { ComponentProps } from 'astro/types'
+import { Layout } from 'fulldev-ui'
+import Hero from '../components/Hero.astro'
+
+interface Props extends ComponentProps<typeof Layout> {
+  frontmatter: any
+}
+
+const { frontmatter, hero, blocks, cta, ...rest } = Astro.props
+console.log(frontmatter)
+---
+
+<Layout {...rest}>
+  <Hero
+    bookshop:live
+    {...frontmatter.hero}
+  />
+</Layout>
+
+<style is:global lang="scss"></style>
