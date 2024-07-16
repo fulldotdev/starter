@@ -24,8 +24,8 @@ dependencies:
     specifier: ^4.11.5
     version: 4.11.5(sass@1.77.7)(typescript@5.5.3)
   fulldev-blocks:
-    specifier: ^0.0.28
-    version: 0.0.28(vite@5.3.3)
+    specifier: ^0.0.29
+    version: 0.0.29(vite@5.3.3)
   fulldev-ui:
     specifier: ^0.3.12
     version: 0.3.12(astro@4.11.5)(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.5.3)(vite@5.3.3)
@@ -3896,8 +3896,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /fulldev-blocks@0.0.28(vite@5.3.3):
-    resolution: {integrity: sha512-kpb2k+ZwBw38BQV6VfcnjQFJWVmSmRTRhBuc10otn4pJ86TsHe3s91SEwQ1QoMuWvPRuzcirrsWArIpVq1A9nw==}
+  /fulldev-blocks@0.0.29(vite@5.3.3):
+    resolution: {integrity: sha512-hH6dsdONjUGo7R+8SPmMIrh6/K2ziSq6Dov7RE1wor82Na6MgZn2TIhcnLQX3eZEpQuEaJC/Adwrty+Uj94nqg==}
     dependencies:
       '@rollup/plugin-yaml': 4.1.2
       deepmerge: 4.3.1
