@@ -1,4 +1,4 @@
-remove_empty_inputs: true
+source: /src
 paths:
   uploads: public/assets
   uploads_filename:
@@ -371,3 +371,4 @@ _editables:
     underline: true
     undo: true
 timezone: Europe/Amsterdam
+remove_empty_inputs: true
