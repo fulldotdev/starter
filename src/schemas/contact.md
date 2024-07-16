@@ -1,5 +1,7 @@
 ---
-hero:
+title:
+description:
+image: 
 
 blocks:
 

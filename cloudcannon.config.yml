@@ -1,3 +1,4 @@
+remove_empty_inputs: true
 paths:
   uploads: public/assets
   uploads_filename:
@@ -24,12 +25,10 @@ collections_config:
     _enabled_editors:
       - visual
       - content
-      - data
     _inputs:
     _select_data:
     _structures:
     create:
-      path: '[relative_base_path]/{heading|slugify}.md'
       extra_data:
       publish_to:
       _inputs:
@@ -39,20 +38,70 @@ collections_config:
     disable_add_folder: false
     disable_file_actions: false
     schemas:
-      default:
-        path: src/schemas/page.md
+      '404':
+        path: src/schemas/404.md
         reorder_inputs: true
-        hide_extra_inputs: false
+        hide_extra_inputs: true
         remove_empty_inputs: true
         remove_extra_inputs: false
         icon: notes
-  reviews:
-    path: src/content/pages/reviews
+      default:
+        path: src/schemas/page.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+      page:
+        path: src/schemas/page.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+      contact:
+        path: src/schemas/contact.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+      post:
+        path: src/schemas/post.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+      policy:
+        path: src/schemas/policy.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+      overview:
+        path: src/schemas/overview.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+      entry:
+        path: src/schemas/entry.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+  products:
+    path: src/content/products
     output: true
-    url: /[full_slug]/
+    url: /producten/[full_slug]/
+    filter:
     name:
     description: ''
-    icon: wysiwyg
+    icon: shopping_cart
     preview:
       text:
       subtext:
@@ -64,11 +113,12 @@ collections_config:
     _editables:
     _enabled_editors:
       - visual
+      - content
+      - data
     _inputs:
     _select_data:
     _structures:
     create:
-      path: '[relative_base_path]/{heading|slugify}.md'
       extra_data:
       publish_to:
       _inputs:
@@ -79,9 +129,127 @@ collections_config:
     disable_file_actions: false
     schemas:
       default:
-        path: src/schemas/page.md
+        path: src/schemas/product.md
         reorder_inputs: true
-        hide_extra_inputs: false
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+  categories:
+    path: src/content/categories
+    output: true
+    url: /categorieen/[full_slug]/
+    filter:
+    name:
+    description: ''
+    icon: category
+    preview:
+      text:
+      subtext:
+      icon:
+      icon_color:
+      image:
+      metadata:
+      gallery:
+    _editables:
+    _enabled_editors:
+      - visual
+      - content
+      - data
+    _inputs:
+    _select_data:
+    _structures:
+    create:
+      extra_data:
+      publish_to:
+      _inputs:
+      _select_data:
+      _structures:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: src/schemas/category.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+  reviews:
+    path: src/content/reviews
+    output: false
+    name:
+    description: ''
+    icon: reviews
+    preview:
+      text:
+      subtext:
+      icon: reviews
+      icon_color:
+      image:
+      metadata:
+      gallery:
+    _editables:
+    _enabled_editors:
+      - data
+    _inputs:
+    _select_data:
+    _structures:
+    create:
+      extra_data:
+      publish_to:
+      _inputs:
+      _select_data:
+      _structures:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: src/schemas/review.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        icon: notes
+        _editables:
+        _inputs:
+        _select_data:
+        _structures:
+  globals:
+    path: src/content/globals
+    output: false
+    name:
+    description: ''
+    icon: grid_view
+    preview:
+      text:
+      subtext:
+      icon: grid_view
+      icon_color:
+      image:
+      metadata:
+      gallery:
+    _editables:
+    _enabled_editors:
+      - data
+    _inputs:
+    _select_data:
+    _structures:
+    create:
+      extra_data:
+      publish_to:
+      _inputs:
+      _select_data:
+      _structures:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        reorder_inputs: true
+        hide_extra_inputs: true
         remove_empty_inputs: true
         remove_extra_inputs: false
         icon: notes
@@ -93,10 +261,12 @@ collection_groups:
   - heading: Pages
     collections:
       - pages
-      - reviews
-  - heading: Blocks
+      - products
+      - categories
+  - heading: Data
     collections:
-      - blocks
+      - reviews
+      - globals
 _inputs:
   pages:
     type: multiselect
@@ -106,33 +276,34 @@ _inputs:
           - key: url
     label: Categorieën
     cascade: true
-  head:
+  meta:
     type: auto
     label: SEO
     cascade: true
-  head.title:
+  meta.title:
     type: auto
     label: Pagina title
     comment: 50 tot 60 karakters
     cascade: true
-  head.description:
+  meta.description:
     type: auto
     label: Pagina beschrijving
     comment: 50 tot 120 karakters
     cascade: true
-  head.image:
+  meta.image:
     type: auto
     label: Pagina afbeelding
     comment: Zichtbaar wanneer de pagina wordt gedeeld op social media
     cascade: true
-  src:
+  image:
     type: image
     options:
-      expandable: false
       mime_type: image/webp
-      correct_orientation: false
-      prevent_resize_existing_files: true
-      resize_style: crop
+      resize_style: contain
+      width: 1920
+      height: 1920
+      expandable: false
+      sizes: []
     label: Afbeelding
     cascade: true
   href:
@@ -150,8 +321,22 @@ _inputs:
   images:
     type: array
     cascade: true
+  logo:
+    type: image
+    cascade: true
   images[*]:
     type: image
+    options:
+      paths:
+      mime_type: image/webp
+      empty_type:
+      resize_style: contain
+      width: 1920
+      height: 1920
+      expandable:
+      allowed_sources:
+      prevent_resize_existing_files:
+      sizes:
     cascade: true
   draft:
     type: switch
