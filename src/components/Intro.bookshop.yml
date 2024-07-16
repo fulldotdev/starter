@@ -1,0 +1,11 @@
+spec:
+  structures:
+    - blocks
+  label: Intro
+
+blueprint:
+  heading: Hello world
+  text:
+  buttons:
+    - text:
+      href:

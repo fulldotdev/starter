@@ -1,0 +1,13 @@
+spec:
+  structures:
+    - blocks
+  label: Newsletter
+
+blueprint:
+  heading:
+  text:
+  input:
+    placeholder:
+    submit:
+
+_inputs:
