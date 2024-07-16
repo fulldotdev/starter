@@ -1,4 +1,3 @@
-source: /src
 paths:
   uploads: public/assets
   uploads_filename:
