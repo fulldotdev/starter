@@ -9,7 +9,6 @@
 **/build
 **/public
 **/out
-**/.cloudcannon
 **/.astro
 **/.jampack
 **/.next

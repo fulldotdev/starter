@@ -1,0 +1,15 @@
+{
+  "ssg": "astro",
+  "build_configuration": {
+    "preserved_paths": "node_modules/",
+    "environment_variables": [
+      { 
+        "key": "CLOUDCANNON_CONFIG_PATH",
+        "value": ".cloudcannon/cloudcannon.config.json" 
+      }
+    ],
+    "install_command": "pnpm i",
+    "build_command": "pnpm build",
+    "output_path": "dist"
+  }
+}
