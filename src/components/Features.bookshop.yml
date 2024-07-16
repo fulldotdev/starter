@@ -1,7 +1,9 @@
 spec:
+  label: Voordelen
+  description: Een opsomming van voordelen
+  icon: playlist_add_check
   structures:
     - blocks
-  label: Features
 
 blueprint:
   heading:

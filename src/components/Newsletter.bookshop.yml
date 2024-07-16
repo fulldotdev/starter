@@ -1,7 +1,9 @@
 spec:
+  label: Nieuwsbrief
+  description: Korte tekst met aanmeld knop
+  icon: upcoming
   structures:
     - blocks
-  label: Newsletter
 
 blueprint:
   heading:

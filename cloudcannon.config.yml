@@ -112,9 +112,8 @@ collections_config:
       gallery:
     _editables:
     _enabled_editors:
-      - visual
       - content
-      - data
+      - visual
     _inputs:
     _select_data:
     _structures:
@@ -153,9 +152,8 @@ collections_config:
       gallery:
     _editables:
     _enabled_editors:
-      - visual
       - content
-      - data
+      - visual
     _inputs:
     _select_data:
     _structures:

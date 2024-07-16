@@ -1,7 +1,9 @@
 spec:
+  label: Product
+  description: Een sectie met 1 product
+  icon: shopping_cart
   structures:
     - blocks
-  label: Product
 
 blueprint:
   heading:

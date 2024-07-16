@@ -1,7 +1,9 @@
 spec:
+  label: Footer
+  description: Een balk onderaan van de pagina
+  icon: horizontal_rule
   structures:
     - footers
-  label: Footer
 
 blueprint:
   logo:

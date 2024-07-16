@@ -1,7 +1,9 @@
 spec:
+  label: Prijzen
+  description: Een overzicht van prijzen
+  icon: view_carousel
   structures:
     - blocks
-  label: Prices
 
 blueprint:
   tagline:

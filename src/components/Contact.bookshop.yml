@@ -1,7 +1,9 @@
 spec:
+  label: Contact
+  description: Contact formulier en gegevens
+  icon: phone
   structures:
     - blocks
-  label: Contact
 
 blueprint:
   heading:

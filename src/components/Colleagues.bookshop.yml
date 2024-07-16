@@ -1,7 +1,9 @@
 spec:
+  label: Collega's
+  description: Een overzicht van collega's
+  icon: recent_actors
   structures:
     - blocks
-  label: Employees
 
 blueprint:
   heading:

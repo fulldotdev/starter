@@ -1,7 +1,9 @@
 spec:
+  label: Logos'
+  description: Een opsomming van bedrijfslogo's
+  icon: horizontal_rule
   structures:
     - blocks
-  label: Logos
 
 blueprint:
   heading:

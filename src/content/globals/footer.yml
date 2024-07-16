@@ -1,15 +1,25 @@
-heading: Fulldev-starter
-text: A template internally used by Fulldev to create new websites fast.
-# categories:
-#   - category: Socials
-#     links:
-#       - text: Discord
-#         href: /
-#   - category: More
-#     links:
-#       - text: FullUI
-#         href: https://ui.full.dev
-#       - text: FullCart
-#         href: https://fullcart.dev
-#       - text: FullForms
-#         href: /
+columns:
+  - heading: Categorieen
+    links:
+      - text: Jurken
+        href: /categorieen/jurken/
+      - text: Tassen
+        href: /categorieen/tassen/
+      - text: Hoeden
+        href: /categorieen/hoeden/
+  - heading: Merken
+    links:
+      - text: Lorem Ipsum
+        href: /
+      - text: Lorem Ipsum
+        href: /
+  - heading: Meer
+    links:
+      - text: Over ons
+        href: /over-mignon/
+      - text: Retourbeleid
+        href: /retourbeleid/
+      - text: Algemene voorwaarden
+        href: /algemene-voorwaarden/
+      - text: Privacyverklaring
+        href: /privacyverklaring.pdf

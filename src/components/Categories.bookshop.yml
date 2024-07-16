@@ -1,7 +1,9 @@
 spec:
+  label: Categories
+  description: Een overzicht van product categorieën
+  icon: category
   structures:
     - blocks
-  label: Categories
 
 blueprint:
   heading:

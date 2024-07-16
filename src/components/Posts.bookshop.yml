@@ -1,7 +1,9 @@
 spec:
+  label: Blog posts
+  description: Een overzicht van blog posts
+  icon: view_carousel
   structures:
     - blocks
-  label: Posts
 
 blueprint:
   heading:

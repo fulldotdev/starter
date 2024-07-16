@@ -1,7 +1,9 @@
 spec:
+  label: Hero
+  description: Grote eerste sectie op de pagina
+  icon: view_stream
   structures:
     - blocks
-  label: Hero
 
 blueprint:
   heading: Hello world

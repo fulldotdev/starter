@@ -1,7 +1,9 @@
 spec:
+  label: Content
+  description: Tekst, knoppen en een afbeelding
+  icon: chrome_reader_mode
   structures:
     - blocks
-  label: Content
 
 blueprint:
   heading:

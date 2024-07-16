@@ -1,8 +1,9 @@
 spec:
+  label: Reviews
+  description: Een overzicht van reviews
+  icon: view_carousel
   structures:
     - blocks
-  label: Reviews
-
 blueprint:
   heading:
   text:
