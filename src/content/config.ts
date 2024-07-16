@@ -18,11 +18,11 @@ export const collections = {
     type: 'content',
     schema: page,
   }),
-  cards: defineCollection({
+  reviews: defineCollection({
     type: 'data',
     schema: card,
   }),
-  blocks: defineCollection({
+  globals: defineCollection({
     type: 'data',
     schema: block,
   }),
