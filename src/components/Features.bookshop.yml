@@ -6,8 +6,8 @@ spec:
     - blocks
 
 blueprint:
-  title:
-  description:
+  heading:
+  text:
   buttons:
     - text:
       href:
