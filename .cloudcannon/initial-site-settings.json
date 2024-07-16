@@ -5,7 +5,7 @@
     "environment_variables": [
       { 
         "key": "CLOUDCANNON_CONFIG_PATH",
-        "value": ".cloudcannon/cloudcannon.config.json" 
+        "value": ".cloudcannon/cloudcannon.config.yml" 
       }
     ],
     "install_command": "pnpm i",
