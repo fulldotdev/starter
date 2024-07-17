@@ -3,10 +3,11 @@ title:
 description:
 images:
 price:
+
 variations:
-  - name: Maat
+  - name:
     options:
-      ''
+      - ''
 
 blocks:
 ---

@@ -1,10 +1,8 @@
 ---
-hero:
-
-blocks:
-
 meta:
   title:
   description:
   image:
+
+intro:
 ---
