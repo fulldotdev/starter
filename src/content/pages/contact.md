@@ -1,3 +1,3 @@
 ---
-_schema: default
+_schema: contact
 ---

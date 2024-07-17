@@ -1,4 +1,6 @@
 ---
+_schema: default
+
 hero:
   badge: Lorem ipsum
   heading: Lorem ipsum dolor sit
