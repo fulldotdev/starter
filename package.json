@@ -6,14 +6,12 @@
   "license": "Unlicense",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "build:prod": "astro build && jampack ./dist",
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
     "test": "astro check && astro build && astro preview",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|astro)\" --write"
+    "connect": "pnpm link --global fulldev-ui && pnpm link --global fulldev-blocks"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
