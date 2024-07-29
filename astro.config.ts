@@ -5,6 +5,9 @@ import UnoCSS from 'unocss/astro'
 export default defineConfig({
   output: 'static',
   site: 'https://example.com',
+  devToolbar: {
+    enabled: false,
+  },
   integrations: [
     UnoCSS(),
     fulldevBlocks({
