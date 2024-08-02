@@ -1,8 +1,6 @@
 paths:
   uploads: public
   static: public
-  uploads_filename: null
-  collections: null
 collections_config:
   pages:
     path: src/content/pages
@@ -54,7 +52,6 @@ collections_config:
     icon: shopping_cart
     _enabled_editors:
       - content
-      - visual
     schemas:
       default:
         path: .cloudcannon/schemas/product.md
@@ -68,7 +65,6 @@ collections_config:
     icon: category
     _enabled_editors:
       - content
-      - visual
     schemas:
       default:
         path: .cloudcannon/schemas/category.md
@@ -110,7 +106,6 @@ collection_groups:
   - heading: Pages
     collections:
       - pages
-      - posts
       - products
       - categories
   - heading: Data
@@ -128,12 +123,22 @@ _inputs:
   href:
     type: url
     label: Link
+  meta:
+    type: object
+    label: SEO / Meta data
+    options:
+      _structures:
+        values:
+          - label: SEO / Meta data
+            value:
+              title:
+              description:
+              image:
+        remove_empty_inputs: true
   meta.title:
     type: auto
     label: Titel
     comment: Zichtbaar in Google
-  meta:
-    label: SEO / Meta data
   meta.description:
     type: auto
     label: Beschrijving
@@ -143,6 +148,7 @@ _inputs:
     label: Afbeelding
     comment: Zichtbaar wanneer je een linkje van de pagina deelt
     options:
+      accepts_mime_types: 'image/jpeg,image/jpg,image/png,image/webp'
       mime_type: image/png
       resize_style: contain
       width: 1200
@@ -151,16 +157,24 @@ _inputs:
     type: image
     label: Afbeelding
     options:
+      accepts_mime_types: 'image/jpeg,image/jpg,image/png,image/webp'
       mime_type: image/webp
       resize_style: contain
       width: 1920
       height: 1920
+  options:
+    type: array
+    label: Opties
+  variations:
+    type: array
+    label: Variaties
   images:
     type: array
     cascade: true
   images[*]:
     type: image
     options:
+      accepts_mime_types: 'image/jpeg,image/jpg,image/png,image/webp'
       mime_type: image/webp
       resize_style: contain
       width: 1920
@@ -169,6 +183,7 @@ _inputs:
     type: image
     cascade: true
     options:
+      accepts_mime_types: 'image/jpeg,image/jpg,image/png,image/webp'
       mime_type: image/webp
       resize_style: contain
       width: 260
@@ -180,18 +195,19 @@ _inputs:
       max: 5
       step: 0.1
     label: Rating
-    cascade: true
   draft:
     type: switch
     label: Concept
-    cascade: true
   price:
     type: number
-    cascade: true
+    label: Prijs
+    step: 2
+
 _structures:
   blocks:
     remove_empty_inputs: true
     style: modal
+
 _editables:
   content:
     allow_custom_markup: false
