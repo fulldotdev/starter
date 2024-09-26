@@ -1,0 +1,26 @@
+/* TODO: choose font on fonts.bunny.net, copy css here */
+@import url(https://fonts.bunny.net/css?family=inter:100,200,300,400,500,600,700,800,900);
+
+* {
+  /* TODO: set the font chosen from fonts.bunny.net here */
+  font-family: 'Inter', sans-serif;
+
+  /* OPTIONAL: customize below */
+  /* font-weight: 700; */
+}
+
+h1,
+h2 {
+  /* OPTIONAL: set a different font for large headings */
+  font-family: 'Inter', sans-serif;
+
+  /* OPTIONAL: customize below */
+  /* font-weight: 400; */
+}
+
+:root {
+  /* TODO: choose border radius multiplier, documented here: https://ui.full.dev/overview/theming#radius */
+  --border-radius: 0;
+}
+
+/* OPTIONAL: add custom styles bwlow */

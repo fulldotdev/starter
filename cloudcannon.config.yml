@@ -1,0 +1,242 @@
+paths:
+  uploads: public
+  static: public
+
+collection_groups:
+  - heading: Content
+    collections:
+      - pages
+      - records
+
+collections_config:
+  pages:
+    path: src/content/pages
+    url: /[full_slug]/
+    output: true
+    icon: wysiwyg
+    name: Pagina's
+    disable_add_folder: true
+    _enabled_editors:
+      - visual
+      - content
+    schemas:
+      default:
+        name: Pagina
+        icon: wysiwyg
+        remove_extra_inputs: false
+        remove_empty_inputs: true
+        path: schemas/page.md
+      overview:
+        name: Merk / Categorie / Collectie
+        icon: category
+        remove_extra_inputs: false
+        remove_empty_inputs: true
+        path: schemas/overview.md
+      product:
+        name: Product
+        icon: shopping_cart
+        remove_extra_inputs: false
+        remove_empty_inputs: true
+        path: schemas/product.md
+      policy:
+        name: Beleid
+        icon: article
+        remove_extra_inputs: false
+        remove_empty_inputs: true
+        path: schemas/policy.md
+  records:
+    path: src/content/records
+    output: false
+    icon: folder
+    name: Data
+    disable_add_folder: true
+    _enabled_editors:
+      - data
+    schemas:
+      default:
+        name: Review
+        icon: reviews
+        remove_extra_inputs: false
+        remove_empty_inputs: true
+        path: schemas/review.yml
+
+_inputs:
+  seo:
+    label: SEO
+    comment: Zoekmachine optimalisatie
+
+  seo.title:
+    label: Pagina title
+    comment: 50 tot 60 karakters
+
+  seo.description:
+    label: Pagina beschrijving
+    comment: 50 tot 120 karakters
+
+  href:
+    type: url
+    label: Link
+
+  html:
+    type: html
+    label: Content
+
+  buttons:
+    label: Knoppen
+
+  buttons[*].html:
+    type: text
+    label: Tekst
+
+  cards:
+    label: Cards
+
+  rating.value:
+    label: Rating
+    type: range
+    options:
+      min: 0
+      max: 5
+      step: 0.1
+
+  seo.image:
+    type: image
+    label: Afbeelding
+    comment: Zichtbaar wanneer je een linkje van de pagina deelt
+    options:
+      accepts_mime_types: 'image/jpeg,image/jpg,image/png,image/webp'
+      mime_type: image/png
+      resize_style: contain
+      width: 1200
+      height: 640
+  images:
+    type: array
+    cascade: true
+  images[*]:
+    type: image
+    options:
+      accepts_mime_types: 'image/jpeg,image/jpg,image/png,image/webp'
+      mime_type: image/webp
+      resize_style: contain
+      width: 1920
+      height: 1920
+  image:
+    type: image
+    label: Afbeelding
+    options:
+      accepts_mime_types: 'image/jpeg,image/jpg,image/png,image/webp'
+      mime_type: image/webp
+      resize_style: contain
+      width: 1920
+      height: 1920
+
+  specs:
+    label: Checklist
+
+  list:
+    type: array
+  list[*]:
+    type: text
+
+  sections:
+    label: Secties
+
+  draft:
+    label: Concept
+    type: switch
+
+  text:
+    type: textarea
+    label: Tekst
+  options:
+    type: array
+    label: Opties
+  options[*]:
+    type: text
+  variations:
+    type: array
+    label: Variaties
+  logo:
+    type: image
+    cascade: true
+    options:
+      accepts_mime_types: 'image/jpeg,image/jpg,image/png,image/webp'
+      mime_type: image/webp
+      resize_style: contain
+      width: 260
+      height: 32
+  rating:
+    type: range
+    options:
+      min: 0
+      max: 5
+      step: 0.1
+    label: Rating
+  price:
+    type: number
+    label: Prijs
+    step: 2
+
+  color:
+    hidden: true
+  layout:
+    hidden: true
+  position:
+    hidden: true
+  order:
+    hidden: true
+  scheme:
+    hidden: true
+  hue:
+    hidden: true
+  align:
+    hidden: true
+  frame:
+    hidden: true
+  variant:
+    hidden: true
+  scale:
+    hidden: true
+  render:
+    hidden: true
+  collection:
+    hidden: true
+  slug:
+    hidden: true
+  id:
+    hidden: true
+  class:
+    hidden: true
+  direction:
+    hidden: true
+  size:
+    hidden: true
+  structure:
+    hidden: true
+
+_structures:
+  blocks:
+    remove_empty_inputs: true
+    style: modal
+
+_editables:
+  content:
+    allow_custom_markup: false
+    remove_custom_markup: false
+    bold: true
+    bulletedlist: true
+    format: p h1 h2 h3 h4 h5 h6
+    image: true
+    image_size_attributes: true
+    italic: true
+    link: true
+    numberedlist: true
+    redo: true
+    table: true
+    underline: true
+    undo: true
+  pages:
+    type: multiselect
+    label: Categorieën
+    options:
+      values: collections.pages

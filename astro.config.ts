@@ -7,6 +7,7 @@ import UnoCSS from 'unocss/astro'
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
+  // TODO: change this to your site's URL
   site: 'https://full.dev',
   devToolbar: {
     enabled: false,
@@ -18,6 +19,7 @@ export default defineConfig({
     fulldev({
       css: '/src/css/custom.css',
       injectRoutes: true,
+      // TODO: choose default theme and colors, documented here: https://ui.full.dev/overview/theming#colors
       colors: {
         theme: 'light',
         light: {
