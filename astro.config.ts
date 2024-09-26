@@ -1,5 +1,5 @@
 import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
+import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
 import fulldev from 'fulldev-ui/integration'
 import UnoCSS from 'unocss/astro'
@@ -12,6 +12,8 @@ export default defineConfig({
     enabled: false,
   },
   integrations: [
+    sitemap(),
+    robotsTxt(),
     UnoCSS(),
     fulldev({
       css: '/src/css/custom.css',
@@ -30,9 +32,5 @@ export default defineConfig({
         },
       },
     }) as any,
-    sitemap(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
   ],
 })

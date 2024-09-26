@@ -15,18 +15,14 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/react": "^3.6.0",
     "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.1",
     "astro": "^4.11.5",
     "fulldev-ui": "^0.4.18",
     "typescript": "^5.5.3",
-    "unocss": "^0.61.5"
+    "unocss": "^0.61.5",
+    "astro-robots-txt": "^1.0.0"
   },
   "devDependencies": {
-    "@bookshop/astro-bookshop": "3.10.0",
-    "@bookshop/astro-engine": "^3.10.0",
-    "@bookshop/generate": "^3.10.0",
     "prettier": "3.2.5",
     "prettier-plugin-astro": "0.13.0",
     "prettier-plugin-astro-organize-imports": "^0.4.9",

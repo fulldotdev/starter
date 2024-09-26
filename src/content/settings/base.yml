@@ -1,63 +1,42 @@
-company: Acme Fashion Co.
-description: Trendy and affordable fashion for all ages
-logo: /logo-acme.png
-
-channels:
-  phone: 555-123-4567
-  email: info@acmefashion.com
-  address: 123 Main St, Anytown, USA 12345
-
-socials:
-  facebook: https://www.facebook.com/acmefashionco
-  instagram: https://www.instagram.com/acmefashionco/
-
-hours:
-  monday: 9:00 - 18:00
-  tuesday: 9:00 - 18:00
-  wednesday: 9:00 - 18:00
-  thursday: 9:00 - 20:00
-  friday: 9:00 - 20:00
-  saturday: 10:00 - 18:00
-  sunday: 12:00 - 16:00
-
-logo: /acme-logo.svg
-links:
-  - text: Home
-    href: /
-  - text: New Arrivals
-    href: /new-arrivals
-  - text: Collections
-    href: /collections
-  - text: Sale
-    href: /sale
-  - text: About
-    href: /about
-buttons:
-  - text: Shop Now
-    href: /shop
-
-columns:
-  - heading: Shop
+header:
+  heading: Your Company Name
+  logo: /logo.svg
+  links:
+    - text: Home
+      href: /
+    - text: About
+      href: /about
+    - text: Services
+      href: /services
+    - text: Contact
+      href: /contact
+  buttons:
+    - text: Get Started
+      href: /signup
+  drawer:
     links:
-      - text: Women
-        href: /collections/women/
-      - text: Men
-        href: /collections/men/
-      - text: Kids
-        href: /collections/kids/
-  - heading: Brands
-    links:
-      - text: FashionX
-        href: /brands/fashionx/
-      - text: StyleCo
-        href: /brands/styleco/
-  - heading: Customer Service
-    links:
-      - text: FAQ
-        href: /faq/
-      - text: Returns
-        href: /returns/
-      - text: Terms & Conditions
-        href: /terms/
-      - text: Privacy Policy
-        href: /privacy.pdf
+      - text: Home
+        href: /
+      - text: About
+        href: /about
+      - text: Services
+        href: /services
+
+footer:
+  heading: Your Company Name
+  logo: /logo.svg
+  columns:
+    - heading: Resources
+      links:
+        - text: Home
+          href: /
+        - text: About
+          href: /about
+        - text: Services
+          href: /services
+    - heading: Legal
+      links:
+        - text: Privacy Policy
+          href: /privacy
+        - text: Terms of Service
+          href: /tos
