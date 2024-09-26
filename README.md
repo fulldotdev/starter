@@ -120,6 +120,12 @@ NOTE: When rebasing, you must run `git push origin <branch-name> --force` in ord
 
 You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`. We use content collections for all of our websites for seemless integration with [CMS](https://cloudcannon.com/) for our customers to easily edit the contents of the website without needing to be technical.
 
+#### i18n (Internationalization)
+
+With this starter, internationalization is already set up. To add a new language, create a new folder in `src/content/` with the language code (e.g. `en`, `es`, `fr`, etc.). Then, copy the `pages` folder from the default language to the new language folder. You can then edit the content of the pages in the new language.
+
+to translate the blocks in `settings/base.yml` you can simply create another file with the language code (e.g. `en.yml`, `es.yml`, `fr.yml`, etc.) and copy/translate the content from `base.yml`.
+
 ### Blocks (sections)
 
 To build sections we use blocks. Blocks are reusable components that can be used in any page. These blocks are now primarily sourced from the FullUI Library, providing a set of pre-built, customizable components. You can use these blocks directly in your pages.

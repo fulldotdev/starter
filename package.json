@@ -14,13 +14,13 @@
     "connect": "pnpm link --global fulldev-ui"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
+    "@astrojs/check": "^0.9.3",
     "@astrojs/sitemap": "^3.1.6",
-    "astro": "^4.11.5",
+    "astro": "^4.15.9",
+    "astro-robots-txt": "^1.0.0",
     "fulldev-ui": "^0.4.18",
     "typescript": "^5.5.3",
-    "unocss": "^0.61.5",
-    "astro-robots-txt": "^1.0.0"
+    "unocss": "^0.61.5"
   },
   "devDependencies": {
     "prettier": "3.2.5",

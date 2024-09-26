@@ -1,42 +1,42 @@
 header:
-  heading: Your Company Name
-  logo: /logo.svg
+  heading: fulldev-starter
   links:
     - text: Home
       href: /
-    - text: About
-      href: /about
-    - text: Services
-      href: /services
-    - text: Contact
-      href: /contact
+    - text: UI
+      href: 'https://ui.full.dev'
+    - text: Components
+      href: 'https://ui.full.dev/typography/heading/'
+    - text: Blocks
+      href: 'https://ui.full.dev/blocks'
   buttons:
-    - text: Get Started
-      href: /signup
+    - icon: brand-github
+      href: 'https://github.com/fulldotdev/starter'
+    - text: README
+      href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
   drawer:
     links:
       - text: Home
         href: /
-      - text: About
-        href: /about
-      - text: Services
-        href: /services
+      - text: UI
+        href: 'https://ui.full.dev'
+      - text: Components
+        href: 'https://ui.full.dev/typography/heading/'
+      - text: Blocks
+        href: 'https://ui.full.dev/blocks'
 
 footer:
-  heading: Your Company Name
-  logo: /logo.svg
+  heading: fulldev-starter
+  text: Supercharging content-driven website development
+  structure: spread
   columns:
     - heading: Resources
       links:
         - text: Home
           href: /
-        - text: About
-          href: /about
-        - text: Services
-          href: /services
-    - heading: Legal
-      links:
-        - text: Privacy Policy
-          href: /privacy
-        - text: Terms of Service
-          href: /tos
+        - text: Components
+          href: 'https://ui.full.dev/typography/heading/'
+        - text: Blocks
+          href: 'https://ui.full.dev/blocks'
+        - text: README
+          href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
