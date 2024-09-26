@@ -1,63 +1,63 @@
-company: Mignon by Marlieke
-description: Tijdloze damesmode in hartverwarmend Haren
-logo: /logo-mignon.png
+company: Acme Fashion Co.
+description: Trendy and affordable fashion for all ages
+logo: /logo-acme.png
 
 channels:
-  phone: 050-5348556
-  email: info@mignon.nl
-  address: Kerkstraat 17, 9751BA Haren
+  phone: 555-123-4567
+  email: info@acmefashion.com
+  address: 123 Main St, Anytown, USA 12345
 
 socials:
-  facebook: https://www.facebook.com/mignonbymarlieke
-  instagram: https://www.instagram.com/mignonbymarlieke/
+  facebook: https://www.facebook.com/acmefashionco
+  instagram: https://www.instagram.com/acmefashionco/
 
 hours:
-  monday: Gesloten
-  tuesday: 10:00 - 17:30
-  wednesday: 10:00 - 17:30
-  thursday: 10:00 - 17:30
-  friday: 10:00 - 17:30
-  saturday: 10:00 - 17:00
-  sunday: Gesloten
+  monday: 9:00 - 18:00
+  tuesday: 9:00 - 18:00
+  wednesday: 9:00 - 18:00
+  thursday: 9:00 - 20:00
+  friday: 9:00 - 20:00
+  saturday: 10:00 - 18:00
+  sunday: 12:00 - 16:00
 
-logo: /logo-placeholder.svg
+logo: /acme-logo.svg
 links:
   - text: Home
     href: /
-  - text: Blog
-    href: /blog
-  - text: Producten
-    href: /producten
-  - text: Categorieen
-    href: /categorieen
-  - text: Over ons
-    href: /over-ons
+  - text: New Arrivals
+    href: /new-arrivals
+  - text: Collections
+    href: /collections
+  - text: Sale
+    href: /sale
+  - text: About
+    href: /about
 buttons:
-  - text: Contact
-    href: /contact
+  - text: Shop Now
+    href: /shop
 
 columns:
-  - heading: Categorieen
+  - heading: Shop
     links:
-      - text: Jurken
-        href: /categorieen/jurken/
-      - text: Tassen
-        href: /categorieen/tassen/
-      - text: Hoeden
-        href: /categorieen/hoeden/
-  - heading: Merken
+      - text: Women
+        href: /collections/women/
+      - text: Men
+        href: /collections/men/
+      - text: Kids
+        href: /collections/kids/
+  - heading: Brands
     links:
-      - text: Lorem Ipsum
-        href: /
-      - text: Lorem Ipsum
-        href: /
-  - heading: Meer
+      - text: FashionX
+        href: /brands/fashionx/
+      - text: StyleCo
+        href: /brands/styleco/
+  - heading: Customer Service
     links:
-      - text: Over ons
-        href: /over-mignon/
-      - text: Retourbeleid
-        href: /retourbeleid/
-      - text: Algemene voorwaarden
-        href: /algemene-voorwaarden/
-      - text: Privacyverklaring
-        href: /privacyverklaring.pdf
+      - text: FAQ
+        href: /faq/
+      - text: Returns
+        href: /returns/
+      - text: Terms & Conditions
+        href: /terms/
+      - text: Privacy Policy
+        href: /privacy.pdf
