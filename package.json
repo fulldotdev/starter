@@ -11,21 +11,22 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "astro check && astro build && astro preview",
-    "connect": "pnpm link --global fulldev-ui && pnpm link --global fulldev-blocks"
+    "connect": "pnpm link --global fulldev-ui"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/react": "^3.6.0",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.1",
     "astro": "^4.11.5",
-    "fulldev-blocks": "^0.0.56",
-    "fulldev-ui": "^0.3.29",
+    "fulldev-ui": "^0.4.18",
     "typescript": "^5.5.3",
-    "unocss": "^0.61.3"
+    "unocss": "^0.61.5"
   },
   "devDependencies": {
+    "@bookshop/astro-bookshop": "3.10.0",
     "@bookshop/astro-engine": "^3.10.0",
     "@bookshop/generate": "^3.10.0",
-    "@bookshop/astro-bookshop": "3.10.0",
     "prettier": "3.2.5",
     "prettier-plugin-astro": "0.13.0",
     "prettier-plugin-astro-organize-imports": "^0.4.9",

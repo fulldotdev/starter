@@ -1,8 +1,7 @@
 ---
-_schema: post
 heading: Over ons
 text: Lorem ipsum dolor sit amet.
 image: /placeholder.webp
 ---
 
-# Hello world
+# This is the Prose

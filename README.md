@@ -2,17 +2,79 @@
 
 This is a template made by fulldev to create new projects internally using the Fulldev-UI library.
 
-## Getting Started
+## Repo Structure
 
-First clone this repo or make a new one straight from Github by using the template and install the dependencies using pnpm.
+```md
+.
+├── src/
+│   ├── blocks/
+│   │   └── ...
+│   ├── components/
+│   │   └── ...
+│   ├── content/
+│   │   ├── pages/
+│   │   │   └── ...
+│   │   ├── records/
+│   │   │   └── ...
+│   │   ├── settings/
+│   │   │   └── ...
+│   │   └── ...
+│   ├── css/
+│   │   └── ...
+│   ├── layouts/
+│   │   └── ...
+│   └── pages/
+│       └── ...
+├── public/
+│   └── ...
+└──
+```
 
-```ts
+### /src
+
+The main source directory containing all the core files of the project.
+
+- **blocks/**: Contains reusable block components that can be composed to build pages
+- **components/**: Houses individual UI components used throughout the project
+- **content/**: Stores content-related files:
+  - **pages/**: Contains markdown or MDX files for individual pages.
+  - **records/**: Contains markdown or MDX files for content collections.
+  - **settings/**: Includes configuration files for various settings like the sidebar.
+- **css/**: Contains global CSS files and styles.
+- **layouts/**: Stores layout components used to structure pages.
+
+## Development
+
+### Setup
+
+1. Fork the [repository](https://github.com/fulldotdev/ui) by clicking the fork button on the top right of the repository page.
+
+2. Clone the Github repository in your designated folder:
+
+```bash
+git clone https://github.com/your-user-name/ui
+```
+Ensure the cloned repo is named "ui" or replace "ui" with your fork's name.
+
+2. Enter the folder using `cd ui`.
+
+3. Create a new branch:
+
+```bash
+git checkout -b my-new-branch
+```
+
+4. Install the packages using pnpm:
+
+```bash
 pnpm install
 ```
 
-Then start the development server.
+Make sure to do this in root to make sure you're using the local version of the component package.
 
-```ts
+5. Run the development server:
+
+```bash
 pnpm dev
 ```
 
@@ -51,20 +113,20 @@ NOTE: When rebasing, you must run `git push origin <branch-name> --force` in ord
 
 ### Working with a local version of the blocks package
 
-1. clone the blocks repo and run `pnpm link --global` in `/package`
-2. run `pnpm link --global` fulldev-blocks in the root of this project repo.
+1. clone the ui repo and run `pnpm link --global`
+2. run `pnpm link fulldev-ui` in the root of this project repo.
 
-## Editing the content
+### Editing the content
 
 You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`. We use content collections for all of our websites for seemless integration with [CMS](https://cloudcannon.com/) for our customers to easily edit the contents of the website without needing to be technical.
 
-### Schemas
-
-We use schemas to define the structure of the content. This is used to validate the content and to provide a better and typesafe editing experience. To create a new schema, see `src/schemas/` and add it by to a collection in `src/content/config.ts`
-
 ### Blocks (sections)
 
-To build sections we use blocks. Blocks are reusable components that can be used in any page. To create a new block, see `src/content/blocks/`. These blocks should be built using the FullUI library.
+To build sections we use blocks. Blocks are reusable components that can be used in any page. These blocks are now primarily sourced from the FullUI Library, providing a set of pre-built, customizable components. You can use these blocks directly in your pages.
+
+If you need to customize a block, you can create a block with the same name in `src/blocks/` to override the FullUI version. This allows you to maintain consistency with the FullUI naming conventions while tailoring the block to your specific needs.
+
+Additionally, you can still create entirely new custom blocks in `src/blocks/` if you need functionality not provided by the FullUI Library. This flexibility allows you to extend the available block set while leveraging the power of the FullUI components.
 
 ### Layouts
 
@@ -76,12 +138,16 @@ We use the Fulldev-UI library for theming. To change the theme, see `src/layouts
 
 ## Commands
 
-- `dev`: Runs the Astro development server.
-- `start`: Alias for `dev`, also runs the Astro development server.
-- `build`: Builds the Astro project.
-- `build:prod`: Builds the Astro project and then packages it using Jampack for production deployment.
-- `check`: Checks the Astro project for any errors or warnings.
-- `preview`: Generates a preview of the Astro project.
-- `astro`: Runs the Astro CLI.
-- `test`: Runs checks, builds, and generates a preview of the Astro project for testing purposes.
-- `format`: Formats the source code files (`.ts`, `.js`, `.astro`) using Prettier, should run before commiting if you do not auto-format on save in your IDE.
+- `dev`: Runs the Astro development server. This command starts a local development server, allowing you to preview your Astro project in real-time as you make changes.
+
+- `build`: Builds the Astro project. This command compiles your Astro project into static files ready for deployment.
+
+- `check`: Checks the Astro project for any errors or warnings. This is useful for catching potential issues before building or deploying your project.
+
+- `preview`: Generates a preview of the Astro project. This command builds your project and then serves the built files locally, allowing you to preview the production version of your site.
+
+- `astro`: Runs the Astro CLI. This is a general-purpose command that can be used with various subcommands to perform different Astro-related tasks.
+
+- `test`: Runs a series of checks and builds for testing purposes. Specifically, it runs `astro check`, `astro build`, and `astro preview` in sequence, providing a comprehensive test of your project's integrity.
+
+- `connect`: Links the global version of fulldev-ui to your project. This is useful when working with a local or development version of the fulldev-ui library.

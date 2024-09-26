@@ -1,29 +1,17 @@
 import { defineCollection } from 'astro:content'
-import { block, card, page } from 'fulldev-blocks'
+import { page } from 'fulldev-ui/schemas/page.ts'
 
 export const collections = {
   pages: defineCollection({
     type: 'content',
     schema: page,
   }),
-  posts: defineCollection({
-    type: 'content',
-    schema: page,
-  }),
-  products: defineCollection({
-    type: 'content',
-    schema: page,
-  }),
-  categories: defineCollection({
-    type: 'content',
-    schema: page,
-  }),
-  reviews: defineCollection({
-    type: 'content',
-    schema: card,
-  }),
-  globals: defineCollection({
+  records: defineCollection({
     type: 'data',
-    schema: block,
+    schema: page,
+  }),
+  settings: defineCollection({
+    type: 'data',
+    schema: page,
   }),
 }

@@ -1,6 +1,0 @@
----
-meta:
-  title:
-  description:
-  image:
----

@@ -1,27 +1,38 @@
+import sitemap from '@astrojs/sitemap'
+import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
-import fulldevBlocks from 'fulldev-blocks/integration'
+import fulldev from 'fulldev-ui/integration'
 import UnoCSS from 'unocss/astro'
 
+// https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://example.com',
+  site: 'https://full.dev',
+  devToolbar: {
+    enabled: false,
+  },
   integrations: [
     UnoCSS(),
-    fulldevBlocks({
+    fulldev({
       css: '/src/css/custom.css',
+      injectRoutes: true,
       colors: {
         theme: 'light',
         light: {
-          background: '#FFFFFF',
-          base: '#8E8C99',
-          brand: '#E93D82',
+          background: '#FDFDFD',
+          base: '#EBEBEB',
+          brand: '#f50',
         },
         dark: {
-          background: '#121113',
-          base: '#8E8C99',
-          brand: '#E93D82',
+          background: '#111',
+          base: '#222',
+          brand: '#f50',
         },
       },
+    }) as any,
+    sitemap(),
+    tailwind({
+      applyBaseStyles: false,
     }),
   ],
 })

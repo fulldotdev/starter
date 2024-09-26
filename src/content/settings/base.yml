@@ -1,0 +1,63 @@
+company: Mignon by Marlieke
+description: Tijdloze damesmode in hartverwarmend Haren
+logo: /logo-mignon.png
+
+channels:
+  phone: 050-5348556
+  email: info@mignon.nl
+  address: Kerkstraat 17, 9751BA Haren
+
+socials:
+  facebook: https://www.facebook.com/mignonbymarlieke
+  instagram: https://www.instagram.com/mignonbymarlieke/
+
+hours:
+  monday: Gesloten
+  tuesday: 10:00 - 17:30
+  wednesday: 10:00 - 17:30
+  thursday: 10:00 - 17:30
+  friday: 10:00 - 17:30
+  saturday: 10:00 - 17:00
+  sunday: Gesloten
+
+logo: /logo-placeholder.svg
+links:
+  - text: Home
+    href: /
+  - text: Blog
+    href: /blog
+  - text: Producten
+    href: /producten
+  - text: Categorieen
+    href: /categorieen
+  - text: Over ons
+    href: /over-ons
+buttons:
+  - text: Contact
+    href: /contact
+
+columns:
+  - heading: Categorieen
+    links:
+      - text: Jurken
+        href: /categorieen/jurken/
+      - text: Tassen
+        href: /categorieen/tassen/
+      - text: Hoeden
+        href: /categorieen/hoeden/
+  - heading: Merken
+    links:
+      - text: Lorem Ipsum
+        href: /
+      - text: Lorem Ipsum
+        href: /
+  - heading: Meer
+    links:
+      - text: Over ons
+        href: /over-mignon/
+      - text: Retourbeleid
+        href: /retourbeleid/
+      - text: Algemene voorwaarden
+        href: /algemene-voorwaarden/
+      - text: Privacyverklaring
+        href: /privacyverklaring.pdf
