@@ -1,7 +1,6 @@
 ---
-heading: Over ons
+heading: About us
 text: Lorem ipsum dolor sit amet.
-image: /placeholder.webp
 ---
 
 # This is the Prose

@@ -11,20 +11,21 @@ This is a template made by fulldev to create new projects internally using the F
 │   │   └── ...
 │   ├── components/
 │   │   └── ...
+│   ├── layouts/
+│   │   └── ...
 │   ├── content/
 │   │   ├── pages/
 │   │   │   └── ...
 │   │   ├── records/
 │   │   │   └── ...
+│   │   │       └── ...
 │   │   ├── settings/
+│   │   │   ├── base.yml
 │   │   │   └── ...
 │   │   └── ...
 │   ├── css/
+│   │   ├── custom.css
 │   │   └── ...
-│   ├── layouts/
-│   │   └── ...
-│   └── pages/
-│       └── ...
 ├── public/
 │   └── ...
 └──
@@ -34,14 +35,14 @@ This is a template made by fulldev to create new projects internally using the F
 
 The main source directory containing all the core files of the project.
 
-- **blocks/**: Contains reusable block components that can be composed to build pages
-- **components/**: Houses individual UI components used throughout the project
+- **blocks/**: Contains reusable block components that can be composed to build pages (Custom or overwrites existing fulldev-ui blocks)
+- **components/**: Houses individual UI components used throughout the project (Custom or overwrites existing fulldev-ui components)
+- **layouts/**: Contains layout components used to structure pages (Custom or overwrites existing fulldev-ui layouts)
 - **content/**: Stores content-related files:
   - **pages/**: Contains markdown or MDX files for individual pages.
-  - **records/**: Contains markdown or MDX files for content collections.
+  - **records/**: Contains markdown or MDX files for content collections. Nested in directories by collection name.
   - **settings/**: Includes configuration files for various settings like the sidebar.
 - **css/**: Contains global CSS files and styles.
-- **layouts/**: Stores layout components used to structure pages.
 
 ## Development
 

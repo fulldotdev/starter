@@ -3,33 +3,58 @@ header:
   links:
     - text: Home
       href: /
-    - text: Fulldev-ui
-      href: 'https://ui.full.dev'
-    - text: Components
-      href: 'https://ui.full.dev/typography/heading/'
-    - text: Blocks
-      href: 'https://ui.full.dev/blocks'
+    - text: About
+      href: '/about'
+    - text: Blog
+      href: '/blog'
+    - text: Products
+      href: '/products'
+    - text: Contact
+      href: '/contact'
   buttons:
     - icon: brand-github
       href: 'https://github.com/fulldotdev/starter'
-    - text: README
+    - icon: UI/Blocks Library
+      href: 'https://ui.full.dev'
+    - text: Guide
       href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
   drawer:
     links:
       - text: Home
         href: '/'
-      - text: Fulldev-ui
+      - text: About
+        href: '/about'
+      - text: Blog
+        href: '/blog'
+      - text: Products
+        href: '/products'
+      - text: Contact
+        href: '/contact'
+      - icon: brand-github
+        href: 'https://github.com/fulldotdev/starter'
+      - icon: UI/Blocks Library
         href: 'https://ui.full.dev'
-      - text: Components
-        href: 'https://ui.full.dev/typography/heading/'
-      - text: Blocks
-        href: 'https://ui.full.dev/blocks'
+      - text: Guide
+        href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
 
 footer:
   heading: fulldev-starter
   text: Supercharging content-driven website development
   structure: spread
   columns:
+    - heading: Example Pages
+      links:
+        - text: Home
+          href: /
+        - text: About
+          href: '/about'
+        - text: Blog
+          href: '/blog'
+        - text: Products
+          href: '/products'
+        - text: Contact
+          href: '/contact'
+
     - heading: Resources
       links:
         - text: Home
