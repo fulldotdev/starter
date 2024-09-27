@@ -1,0 +1,24 @@
+---
+import Section from 'fulldev-ui/components/Section.astro'
+
+const { ...rest } = Astro.props
+---
+
+{
+  /*
+    Example of a custom block using the Section component from fulldev-ui.
+
+    Since the name is CustomBlock, the name of your bookshop block should also be CustomBlock.
+
+    If this were to be named Hero, which already exists in fulldev-ui,
+    it would overwrite the block from fulldev-ui.
+  */
+}
+
+<Section
+  class:list="reviews"
+  structure="masonry"
+  align="center"
+  frame="panel"
+  {...rest}
+/>
