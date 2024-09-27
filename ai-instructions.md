@@ -67,10 +67,6 @@ Do not use/create custom styling, blocks or components unless specifically asked
 - Configure theme colors in `astro.config.ts` using the fulldev integration.
 - Customize CSS by modifying `/src/css/custom.css`.
 
-## Images
-
-- Store images in the `public/` directory and reference them using absolute paths (e.g., `/placeholder.webp`).
-
 ## Special Pages
 
 - Create a `404.md` page for custom "Not Found" errors.
@@ -83,6 +79,11 @@ Do not use/create custom styling, blocks or components unless specifically asked
 ---Begin example page structure:---
 
 ---
+seo:
+  title: Meta Title
+  description: Meta Description
+  image: /path/to/image.jpg # og:image
+
 title: Page Title
 description: Page description for SEO
 sections:
