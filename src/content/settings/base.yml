@@ -3,7 +3,7 @@ header:
   links:
     - text: Home
       href: /
-    - text: UI
+    - text: Fulldev-ui
       href: 'https://ui.full.dev'
     - text: Components
       href: 'https://ui.full.dev/typography/heading/'
@@ -17,8 +17,8 @@ header:
   drawer:
     links:
       - text: Home
-        href: /
-      - text: UI
+        href: '/'
+      - text: Fulldev-ui
         href: 'https://ui.full.dev'
       - text: Components
         href: 'https://ui.full.dev/typography/heading/'

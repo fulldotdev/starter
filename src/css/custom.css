@@ -20,7 +20,7 @@ h2 {
 
 :root {
   /* TODO: choose border radius multiplier, documented here: https://ui.full.dev/overview/theming#radius */
-  --border-radius: 0;
+  --border-radius: 1;
 }
 
 /* OPTIONAL: add custom styles bwlow */
