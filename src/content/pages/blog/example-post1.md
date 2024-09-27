@@ -1,8 +1,13 @@
 ---
 _layout: PostLayout
-title: test
-text: This is an example post, displayed on `/blog` to showcase how using records in block works.
-label: "2024-09-27"
+
+seo:
+  title: Lorem ipsum dolor sit amet
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+tagline: "2024-09-27"
+title: Lorem ipsum dolor sit amet
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ---
 
 ## This is the prose, you can write your blog in markdown

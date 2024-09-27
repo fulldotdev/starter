@@ -1,6 +1,4 @@
 ---
-_schema: contact
-
 sections:
     contact:
         _bookshop_name: Contact
