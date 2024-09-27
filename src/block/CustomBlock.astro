@@ -22,3 +22,21 @@ const { ...rest } = Astro.props
   frame="panel"
   {...rest}
 />
+
+{
+  /*
+      The classlist used here is set to "reviews", which corresponds to the class for the reviews block from fulldev-ui.
+      This provides a default styling for the CustomBlock component.
+
+      However, you have the flexibility to customize this classlist:
+
+      1. You can overwrite it with any other predefined classlist from fulldev-ui,
+         which allows you to adopt styles from other existing components.
+
+      2. Alternatively, you can create your own custom classlist by defining new styles
+         in a separate CSS file, such as `src/css/custom.css`.
+
+      This approach gives you the option to either leverage existing styles or create
+      completely custom designs for your CustomBlock component.
+    */
+}
