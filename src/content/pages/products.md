@@ -8,25 +8,25 @@ seo:
 title: All products
 
 reviews:
-    heading: Reviews block example
-    _bookshop_name: Reviews
-    frame: panel
-    structure: masonry
-    align: center
-    records:
-        - reviews/example-review1
-        - reviews/example-review2
-        - reviews/example-review2
-        - reviews/example-review1
-        - reviews/example-review2
-        - reviews/example-review1
-        - reviews/example-review2
-        - reviews/example-review2
-        - reviews/example-review1
-        - reviews/example-review2
-        - reviews/example-review1
-        - reviews/example-review1
-        - reviews/example-review2
-        - reviews/example-review1
-        - reviews/example-review2
+  heading: Reviews block example
+  _bookshop_name: Reviews
+  frame: panel
+  structure: masonry
+  align: center
+  records:
+      - reviews/example-review1
+      - reviews/example-review2
+      - reviews/example-review2
+      - reviews/example-review1
+      - reviews/example-review2
+      - reviews/example-review1
+      - reviews/example-review2
+      - reviews/example-review2
+      - reviews/example-review1
+      - reviews/example-review2
+      - reviews/example-review1
+      - reviews/example-review1
+      - reviews/example-review2
+      - reviews/example-review1
+      - reviews/example-review2
 ---
