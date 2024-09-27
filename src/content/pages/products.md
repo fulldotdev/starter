@@ -14,19 +14,19 @@ reviews:
     structure: masonry
     align: center
     records:
-        - reviews/example-review
-        - reviews/another-example-review
-        - reviews/another-example-review
-        - reviews/example-review
-        - reviews/another-example-review
-        - reviews/example-review
-        - reviews/another-example-review
-        - reviews/another-example-review
-        - reviews/example-review
-        - reviews/another-example-review
-        - reviews/example-review
-        - reviews/example-review
-        - reviews/another-example-review
-        - reviews/example-review
-        - reviews/another-example-review
+        - reviews/example-review1
+        - reviews/example-review2
+        - reviews/example-review2
+        - reviews/example-review1
+        - reviews/example-review2
+        - reviews/example-review1
+        - reviews/example-review2
+        - reviews/example-review2
+        - reviews/example-review1
+        - reviews/example-review2
+        - reviews/example-review1
+        - reviews/example-review1
+        - reviews/example-review2
+        - reviews/example-review1
+        - reviews/example-review2
 ---

@@ -40,7 +40,7 @@ header:
 footer:
   heading: fulldev-starter
   text: Supercharging content-driven website development
-  structure: spread
+  structure: stack
   columns:
     - heading: Example Pages
       links:
