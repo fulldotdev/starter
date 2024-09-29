@@ -21,7 +21,7 @@ export default defineConfig({
       injectRoutes: true,
       // TODO: choose default theme and colors, documented here: https://ui.full.dev/overview/theming#colors
       colors: {
-        theme: 'light',
+        theme: 'dark',
         light: {
           background: '#FDFDFD',
           base: '#EBEBEB',

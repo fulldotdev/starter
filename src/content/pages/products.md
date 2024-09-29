@@ -6,6 +6,7 @@ seo:
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 title: All products
+align: start
 
 reviews:
   heading: Reviews block example

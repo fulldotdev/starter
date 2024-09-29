@@ -2,48 +2,6 @@
 
 This is a template made by fulldev to create new projects internally using the Fulldev-UI library.
 
-## Repo Structure
-
-```md
-.
-├── src/
-│   ├── blocks/
-│   │   └── ...
-│   ├── components/
-│   │   └── ...
-│   ├── layouts/
-│   │   └── ...
-│   ├── content/
-│   │   ├── pages/
-│   │   │   └── ...
-│   │   ├── records/
-│   │   │   └── ...
-│   │   │       └── ...
-│   │   ├── settings/
-│   │   │   ├── base.yml
-│   │   │   └── ...
-│   │   └── ...
-│   ├── css/
-│   │   ├── custom.css
-│   │   └── ...
-├── public/
-│   └── ...
-└──
-```
-
-### /src
-
-The main source directory containing all the core files of the project.
-
-- **blocks/**: Contains reusable block components that can be composed to build pages (Custom or overwrites existing fulldev-ui blocks)
-- **components/**: Houses individual UI components used throughout the project (Custom or overwrites existing fulldev-ui components)
-- **layouts/**: Contains layout components used to structure pages (Custom or overwrites existing fulldev-ui layouts)
-- **content/**: Stores content-related files:
-  - **pages/**: Contains markdown or MDX files for individual pages.
-  - **records/**: Contains markdown or MDX files for content collections. Nested in directories by collection name.
-  - **settings/**: Includes configuration files for various settings like the sidebar.
-- **css/**: Contains global CSS files and styles.
-
 ## Development
 
 ### Setup
@@ -78,6 +36,50 @@ Make sure to do this in root to make sure you're using the local version of the 
 ```bash
 pnpm dev
 ```
+
+
+#### Repo Structure
+
+```md
+.
+├── src/
+│   ├── blocks/
+│   │   └── ...
+│   ├── components/
+│   │   └── ...
+│   ├── layouts/
+│   │   └── ...
+│   ├── content/
+│   │   ├── pages/
+│   │   │   └── ...
+│   │   ├── records/
+│   │   │   └── ...
+│   │   │       └── ...
+│   │   ├── settings/
+│   │   │   ├── base.yml
+│   │   │   └── ...
+│   │   └── ...
+│   ├── css/
+│   │   ├── custom.css
+│   │   └── ...
+├── public/
+│   └── ...
+└──
+```
+
+##### /src
+
+The main source directory containing all the core files of the project.
+
+- **blocks/**: Contains reusable block components that can be composed to build pages (Custom or overwrites existing fulldev-ui blocks)
+- **components/**: Houses individual UI components used throughout the project (Custom or overwrites existing fulldev-ui components)
+- **layouts/**: Contains layout components used to structure pages (Custom or overwrites existing fulldev-ui layouts)
+- **content/**: Stores content-related files:
+  - **pages/**: Contains markdown or MDX files for individual pages.
+  - **records/**: Contains markdown or MDX files for content collections. Nested in directories by collection name.
+  - **settings/**: Includes configuration files for various settings like the sidebar.
+- **css/**: Contains global CSS files and styles.
+
 
 ### Getting diffs/commits from the template
 
