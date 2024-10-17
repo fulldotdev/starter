@@ -9,7 +9,6 @@ sections:
     badge: Website generated with `pnpm create astro@latest --template fulldotdev/starter`
     heading: Fulldev Starter
     size: sm
-    frame: panel
     text: Start by editing `src/content/pages/index.md` or check out one of the other files that make usage of records to easily build anything content-related.
     buttons:
       - text: Get Started
@@ -38,13 +37,3 @@ sections:
       - icon: file-type-css
         heading: Customizable
         text: Want custom styles? Add them to the global CSS files
-
-  # cta:
-  #   _bookshop_name: Cta
-  #   heading: Ready to get started?
-  #   text: Start by editing `src/content/pages/index.md` or check out one of the other files that make usage of records to easily build anything content-related.
-  #   color: brand
-  #   buttons:
-  #     - text: Read Guide
-  #       href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
----

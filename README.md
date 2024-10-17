@@ -116,20 +116,18 @@ NOTE: When rebasing, you must run `git push origin <branch-name> --force` in ord
 
 ### Working with a local version of the blocks package
 
-1. clone the ui repo and run `pnpm link --global`
-2. run `pnpm link fulldev-ui` in the root of this project repo.
+1. clone the ui repo and run `pnpm run link` in the root of the ui repo.
+2. run `pnpm run connect` in the root of this project repo.
+
+### Working with the content-layer
+
+For docs on what you can do and how to work with with the content layer, see the [fulldev-ui docs](https://ui.full.dev/overview/content-layer). Important things as the folder and file structure are all explained there.
 
 ### Editing the content
 
-You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`. We use content collections for all of our websites for seemless integration with [CMS](https://cloudcannon.com/) for our customers to easily edit the contents of the website without needing to be technical.
+You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`.
 
-#### i18n (Internationalization)
-
-With this starter, internationalization is already set up. To add a new language, create a new folder in `src/content/` with the language code (e.g. `en`, `es`, `fr`, etc.). Then, copy the `pages` folder from the default language to the new language folder. You can then edit the content of the pages in the new language.
-
-to translate the blocks in `settings/base.yml` you can simply create another file with the language code (e.g. `en.yml`, `es.yml`, `fr.yml`, etc.) and copy/translate the content from `base.yml`.
-
-### Blocks (sections)
+### (Custom) Blocks
 
 To build sections we use blocks. Blocks are reusable components that can be used in any page. These blocks are now primarily sourced from the FullUI Library, providing a set of pre-built, customizable components. You can use these blocks directly in your pages.
 
@@ -141,9 +139,9 @@ Additionally, you can still create entirely new custom blocks in `src/blocks/` i
 
 We use layouts to define the structure of the page. To create a new layout, see `src/layouts/` and use them following the same approach as done in `index.astro`.
 
-### Theming
+### Customization & Theming
 
-We use the Fulldev-UI library for theming. To change the theme, see `src/layouts/Layout.astro` and follow the Fulldev-UI [theming guide](https://ui.full.dev/overview/theming).
+We use the Fulldev-UI library for theming. To change the theme, see `src/layouts/Layout.astro` and follow the Fulldev-UI [customization guide](https://ui.full.dev/overview/customization).
 
 ## Commands
 
@@ -159,4 +157,4 @@ We use the Fulldev-UI library for theming. To change the theme, see `src/layouts
 
 - `test`: Runs a series of checks and builds for testing purposes. Specifically, it runs `astro check`, `astro build`, and `astro preview` in sequence, providing a comprehensive test of your project's integrity.
 
-- `connect`: Links the global version of fulldev-ui to your project. This is useful when working with a local or development version of the fulldev-ui library.
+- `connect`: Links the global version of fulldev-ui to your project. This is useful when working with a local or development version of the fulldev-ui library. Must run `pnpm run link` in the fulldev-ui repo first.

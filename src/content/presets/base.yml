@@ -1,6 +1,9 @@
-header:
-  heading: fulldev-starter
-  links:
+seo:
+  image: /images/og-image.png
+
+navigation:
+  logo: fulldev-starter
+  buttons:
     - text: Home
       href: /
     - text: About
@@ -11,7 +14,6 @@ header:
       href: '/products'
     - text: Contact
       href: '/contact'
-  buttons:
     - icon: brand-github
       href: 'https://github.com/fulldotdev/starter'
     - icon: UI/Blocks Library
@@ -38,12 +40,11 @@ header:
         href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
 
 footer:
-  heading: fulldev-starter
+  logo: fulldev-starter
   text: Supercharging content-driven website development
-  structure: stack
   columns:
     - heading: Example Pages
-      links:
+      buttons:
         - text: Home
           href: /
         - text: About
@@ -56,7 +57,7 @@ footer:
           href: '/contact'
 
     - heading: Resources
-      links:
+      buttons:
         - text: Home
           href: /
         - text: Components
