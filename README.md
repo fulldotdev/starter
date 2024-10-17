@@ -30,6 +30,8 @@ pnpm install
 pnpm dev
 ```
 
+## Starter
+
 ### Working with the content-layer
 
 For docs on what you can do and how to work with with the content layer, see the [fulldev-ui docs](https://ui.full.dev/overview/content-layer). Important things as the folder and file structure are all explained there.
