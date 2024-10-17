@@ -19,6 +19,7 @@ export default defineConfig({
     fulldev({
       css: '/src/css/custom.css',
       injectRoutes: true,
+      generateImageEntries: false, // set to true if you want to use records for you alt texts with the image-component, documented here: https://ui.full.dev/overview/content-layer/#image-alt-collection
       // TODO: choose default theme and colors, documented here: https://ui.full.dev/overview/theming#colors
       colors: {
         theme: 'dark',
@@ -33,6 +34,6 @@ export default defineConfig({
           brand: '#f50',
         },
       },
-    }) as any,
+    }),
   ],
 })

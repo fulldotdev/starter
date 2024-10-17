@@ -1,6 +1,6 @@
 # Fulldev Starter Template
 
-This is a template made by fulldev to create new projects internally using the Fulldev-UI library.
+This is a template made by fulldev to create new projects using the fulldev-ui library and markdown.
 
 ## Development
 
@@ -11,75 +11,75 @@ This is a template made by fulldev to create new projects internally using the F
 2. Clone the Github repository in your designated folder:
 
 ```bash
-git clone https://github.com/your-user-name/ui
+git clone https://github.com/your-user-name/starter
 ```
+
 Ensure the cloned repo is named "ui" or replace "ui" with your fork's name.
 
 2. Enter the folder using `cd ui`.
 
-3. Create a new branch:
-
-```bash
-git checkout -b my-new-branch
-```
-
-4. Install the packages using pnpm:
+3. Install the packages using pnpm:
 
 ```bash
 pnpm install
 ```
 
-Make sure to do this in root to make sure you're using the local version of the component package.
-
-5. Run the development server:
+1. Run the development server:
 
 ```bash
 pnpm dev
 ```
 
+### Working with the content-layer
 
-#### Repo Structure
+For docs on what you can do and how to work with with the content layer, see the [fulldev-ui docs](https://ui.full.dev/overview/content-layer). Important things as the folder and file structure are all explained there.
 
-```md
-.
-├── src/
-│   ├── blocks/
-│   │   └── ...
-│   ├── components/
-│   │   └── ...
-│   ├── layouts/
-│   │   └── ...
-│   ├── content/
-│   │   ├── pages/
-│   │   │   └── ...
-│   │   ├── records/
-│   │   │   └── ...
-│   │   │       └── ...
-│   │   ├── settings/
-│   │   │   ├── base.yml
-│   │   │   └── ...
-│   │   └── ...
-│   ├── css/
-│   │   ├── custom.css
-│   │   └── ...
-├── public/
-│   └── ...
-└──
-```
+### Editing the content
 
-##### /src
+You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`. This starter also comes with a few examples of everything we offer, you can safely delete anything you don't need.
 
-The main source directory containing all the core files of the project.
+### (Custom) Components
 
-- **blocks/**: Contains reusable block components that can be composed to build pages (Custom or overwrites existing fulldev-ui blocks)
-- **components/**: Houses individual UI components used throughout the project (Custom or overwrites existing fulldev-ui components)
-- **layouts/**: Contains layout components used to structure pages (Custom or overwrites existing fulldev-ui layouts)
-- **content/**: Stores content-related files:
-  - **pages/**: Contains markdown or MDX files for individual pages.
-  - **records/**: Contains markdown or MDX files for content collections. Nested in directories by collection name.
-  - **settings/**: Includes configuration files for various settings like the sidebar.
-- **css/**: Contains global CSS files and styles.
+To build sections and structure pages, we use various components such as blocks, layouts, and other UI elements. These components are primarily sourced from the FullUI Library, providing a set of pre-built, customizable elements. You can use these components directly in your pages.
 
+If you need to customize any component (blocks, layouts, individual UI components, or any other), you can create a component with the same name in the corresponding directory (`src/blocks/`, `src/layouts/`, `src/components/`, etc.) to override the FullUI version. This allows you to maintain consistency with the FullUI naming conventions while tailoring the component to your specific needs.
+
+For example:
+
+- To create a block: create a file in `src/blocks/`
+- To create a layout: create a file in `src/layouts/`
+- To create a UI component: create a file in `src/components/`
+
+Additionally, you can still create entirely new custom components if you need functionality not provided by the FullUI Library. This flexibility allows you to extend the available component set while leveraging the power of the FullUI components.
+
+For blocks, use them in your content files as demonstrated in the examples. For layouts, you can use them following the same approach as done in `index.astro`. For components, they will be automatically overwritten with your version.
+
+### Customization & Theming
+
+Theming is done through our own integration. To change the theme, see the fulldev-ui [customization guide](https://ui.full.dev/overview/customization).
+
+## Commands
+
+- `dev`: Runs the Astro development server. This command starts a local development server, allowing you to preview your Astro project in real-time as you make changes.
+
+- `build`: Builds the Astro project. This command compiles your Astro project into static files ready for deployment.
+
+- `check`: Checks the Astro project for any errors or warnings. This is useful for catching potential issues before building or deploying your project.
+
+- `preview`: Generates a preview of the Astro project. This command builds your project and then serves the built files locally, allowing you to preview the production version of your site.
+
+- `astro`: Runs the Astro CLI. This is a general-purpose command that can be used with various subcommands to perform different Astro-related tasks.
+
+- `test`: Runs a series of checks and builds for testing purposes. Specifically, it runs `astro check`, `astro build`, and `astro preview` in sequence, providing a comprehensive test of your project's integrity.
+
+- `connect`: Links the global version of fulldev-ui to your project. This is useful when working with a local or development version of the fulldev-ui library. Must run `pnpm run link` in the fulldev-ui repo first.
+
+## For experienced developers
+
+### Working with a local version of the blocks package
+
+1. clone the ui repo and run `pnpm run link` in the root of the ui repo.
+2. run `pnpm run connect` in the root of this project repo.
 
 ### Getting diffs/commits from the template
 
@@ -113,48 +113,3 @@ git rebase upstream/<branch-to-merge>
 ```
 
 NOTE: When rebasing, you must run `git push origin <branch-name> --force` in order to override your old commits on your remote branch. This is why It's recommend to rebase only on private repos.
-
-### Working with a local version of the blocks package
-
-1. clone the ui repo and run `pnpm run link` in the root of the ui repo.
-2. run `pnpm run connect` in the root of this project repo.
-
-### Working with the content-layer
-
-For docs on what you can do and how to work with with the content layer, see the [fulldev-ui docs](https://ui.full.dev/overview/content-layer). Important things as the folder and file structure are all explained there.
-
-### Editing the content
-
-You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`.
-
-### (Custom) Blocks
-
-To build sections we use blocks. Blocks are reusable components that can be used in any page. These blocks are now primarily sourced from the FullUI Library, providing a set of pre-built, customizable components. You can use these blocks directly in your pages.
-
-If you need to customize a block, you can create a block with the same name in `src/blocks/` to override the FullUI version. This allows you to maintain consistency with the FullUI naming conventions while tailoring the block to your specific needs.
-
-Additionally, you can still create entirely new custom blocks in `src/blocks/` if you need functionality not provided by the FullUI Library. This flexibility allows you to extend the available block set while leveraging the power of the FullUI components.
-
-### Layouts
-
-We use layouts to define the structure of the page. To create a new layout, see `src/layouts/` and use them following the same approach as done in `index.astro`.
-
-### Customization & Theming
-
-We use the Fulldev-UI library for theming. To change the theme, see `src/layouts/Layout.astro` and follow the Fulldev-UI [customization guide](https://ui.full.dev/overview/customization).
-
-## Commands
-
-- `dev`: Runs the Astro development server. This command starts a local development server, allowing you to preview your Astro project in real-time as you make changes.
-
-- `build`: Builds the Astro project. This command compiles your Astro project into static files ready for deployment.
-
-- `check`: Checks the Astro project for any errors or warnings. This is useful for catching potential issues before building or deploying your project.
-
-- `preview`: Generates a preview of the Astro project. This command builds your project and then serves the built files locally, allowing you to preview the production version of your site.
-
-- `astro`: Runs the Astro CLI. This is a general-purpose command that can be used with various subcommands to perform different Astro-related tasks.
-
-- `test`: Runs a series of checks and builds for testing purposes. Specifically, it runs `astro check`, `astro build`, and `astro preview` in sequence, providing a comprehensive test of your project's integrity.
-
-- `connect`: Links the global version of fulldev-ui to your project. This is useful when working with a local or development version of the fulldev-ui library. Must run `pnpm run link` in the fulldev-ui repo first.
