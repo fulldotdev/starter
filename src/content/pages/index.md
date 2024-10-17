@@ -14,6 +14,7 @@ sections:
       - text: Get Started
         href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
       - text: UI/Blocks Library
+        icon: layout
         href: 'https://ui.full.dev/blocks'
     align: start
     structure: grid

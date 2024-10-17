@@ -14,12 +14,15 @@ navigation:
       href: '/products'
     - text: Contact
       href: '/contact'
-    - icon: brand-github
-      href: 'https://github.com/fulldotdev/starter'
-    - icon: UI/Blocks Library
-      href: 'https://ui.full.dev'
     - text: Guide
       href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
+    - icon: brand-github
+      href: 'https://github.com/fulldotdev/starter'
+      variant: secondary
+    - icon: layout
+      text: UI/Blocks
+      variant: secondary
+      href: 'https://ui.full.dev'
   drawer:
     links:
       - text: Home

@@ -1,9 +1,18 @@
 ---
 _layout: ProductLayout
 
-heading: Product Name
-text: This is an example product created to showcase how to use records in blocks and pre-made layouts from our fulldev-ui.
-images: 
-  - /placeholder.webp
-price: 99.99
+heading: Basic Tee
+price: 48
+rating: 5
+image: /placeholder.webp
+buttons:
+  - text: Add to cart
+description: Oversized white tee made of 100% cotton.
+list:
+  - Shortsleeve
+  - Ribbed collar
+  - Runs large
+  - Unisex
+  - "Material: 100% cotton"
+  - Imported
 ---
