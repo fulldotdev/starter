@@ -32,7 +32,7 @@ sections:
         icon: pin
         text: 1234 Main St, Springfield, IL 62701
         href: https://maps.google.com/maps?q=1234+Main+St,+Springfield,+IL+62701
-    socials: 
+    socials:
       - icon: brand-facebook
         href: https://www.facebook.com
       - icon: brand-x

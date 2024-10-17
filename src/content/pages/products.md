@@ -5,7 +5,7 @@ seo:
   title: Lorem ipsum
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-title: All products
+heading: All products
 align: start
 
 reviews:
