@@ -12,7 +12,7 @@ align: start
 reviews:
   heading: Reviews block example
   component: Reviews
-  frame: panel
+  panel: true
   structure: masonry
   align: center
   records:
