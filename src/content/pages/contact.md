@@ -1,4 +1,5 @@
 ---
+presets: [base]
 sections:
   - component: Contact
     heading: Contact us

@@ -1,4 +1,5 @@
 ---
+presets: [base]
 component: ProductLayout
 
 heading: Basic Tee

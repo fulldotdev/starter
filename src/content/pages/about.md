@@ -1,4 +1,5 @@
 ---
+presets: [base]
 component: PostLayout
 
 seo:
