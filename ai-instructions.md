@@ -37,6 +37,7 @@ Do not use/create custom styling, blocks or components unless specifically asked
   - Products
   - Reviews
   - Contact
+  - Banner
 
 ## Content Collections
 
@@ -87,16 +88,14 @@ seo:
 title: Page Title
 description: Page description for SEO
 sections:
-  hero:
-    component: Hero
+  - component: Hero
     heading: Main Heading
     text: Subtext or description
     buttons:
       - text: Button Text
         href: /link
 
-  customSection:
-    component: CustomBlock
+  - component: LocalBlock
     # Additional block-specific properties
 ---
 

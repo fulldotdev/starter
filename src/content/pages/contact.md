@@ -43,5 +43,5 @@ sections:
         href: https://www.linkedin.com
       - icon: brand-youtube
         href: https://www.youtube.com
-    image: /placeholder.webp
+    image: placeholder.webp
 ---

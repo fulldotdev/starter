@@ -1,5 +1,5 @@
 seo:
-  image: /images/og-image.png
+  image: images/og-image.png
 
 sidebar: false
 toc: false
@@ -13,8 +13,16 @@ header:
     - about
     - text: Blog
       href: '/blog'
-    - text: Products
-      href: '/products'
+    - text: About
+      href: '/about'
+    - text: Team
+      href: '/team'
+    - text: Projects
+      href: '/projects'
+    - text: Services
+      href: '/services'
+    - text: Testimonials
+      href: '/testimonials'
     - text: Contact
       href: '/contact'
     - text: Guide
@@ -55,10 +63,14 @@ footer:
           href: /
         - text: About
           href: '/about'
-        - text: Blog
-          href: '/blog'
-        - text: Products
-          href: '/products'
+        - text: Team
+          href: '/team'
+        - text: Projects
+          href: '/projects'
+        - text: Services
+          href: '/services'
+        - text: Testimonials
+          href: '/testimonials'
         - text: Contact
           href: '/contact'
 
@@ -69,6 +81,6 @@ footer:
         - text: Components
           href: 'https://ui.full.dev/typography/heading/'
         - text: Blocks
-          href: 'https://ui.full.dev/blocks'
+          href: 'https://ui.full.dev/blocks/banner'
         - text: README
           href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
