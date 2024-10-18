@@ -10,8 +10,7 @@ header:
   buttons:
     - text: Home
       href: /
-    - text: About
-      href: '/about'
+    - about
     - text: Blog
       href: '/blog'
     - text: Products

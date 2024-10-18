@@ -8,23 +8,15 @@ seo:
 sections:
   - component: Hero # You can use any name for the section as long as the block exist on 'https://ui.full.dev/blocks' or in 'src/blocks/'
     badge:
-      text: Website generated with `pnpm create astro@latest --template fulldotdev/starter`
-    heading: Fulldev Starter
-    size: sm
+      text: pnpm create astro@latest --template fulldotdev/starter
+    heading: A starter to build entire website with fulldev-ui
     text: Start by editing `src/content/pages/index.md` or check out one of the other files that make usage of records to easily build anything content-related.
     buttons:
-      - text: Get Started
+      - text: hello
         href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
-      - text: UI/Blocks Library
-        icon: layout
-        href: 'https://ui.full.dev/blocks'
-    align: start
-    structure: grid
+      - about
     cards:
-      - icon: layout-grid
-        heading: Blocks
-        text: Reusable block components for building pages using our fulldev-ui, easily overwritable.
-        href: 'https://ui.full.dev/blocks'
+      - about
       - icon: files
         heading: Content
         text: Stores content-related files for pages, records, and settings

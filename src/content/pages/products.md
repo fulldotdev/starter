@@ -9,14 +9,10 @@ seo:
 heading: All products
 align: start
 
-reviews:
-  heading: Reviews block example
-  component: Reviews
-  panel: true
-  structure: masonry
-  align: center
-  records:
-      - reviews/example-review1
+sections:
+  - component: Reviews
+    heading: Reviews block example
+    cards:
       - reviews/example-review2
       - reviews/example-review2
       - reviews/example-review1
