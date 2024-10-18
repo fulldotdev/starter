@@ -1,7 +1,11 @@
 seo:
   image: /images/og-image.png
 
-navigation:
+sidebar: true
+toc: false
+themeselect: true
+
+header:
   logo: fulldev-starter
   buttons:
     - text: Home

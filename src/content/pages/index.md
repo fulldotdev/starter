@@ -4,9 +4,9 @@ seo:
   description: Supercharging content-driven website development with Fulldev-starter, an Astro starter template. Easily use blocks from fulldev-ui to build pages and content-driven websites.
 
 sections:
-  hero:
-    _bookshop_name: Hero # You can use any name for the section as long as the block exist on 'https://ui.full.dev/blocks' or in 'src/blocks/'
-    badge: Website generated with `pnpm create astro@latest --template fulldotdev/starter`
+  - component: Hero # You can use any name for the section as long as the block exist on 'https://ui.full.dev/blocks' or in 'src/blocks/'
+    badge: 
+      text: Website generated with `pnpm create astro@latest --template fulldotdev/starter`
     heading: Fulldev Starter
     size: sm
     text: Start by editing `src/content/pages/index.md` or check out one of the other files that make usage of records to easily build anything content-related.
@@ -38,3 +38,4 @@ sections:
       - icon: file-type-css
         heading: Customizable
         text: Want custom styles? Add them to the global CSS files
+---

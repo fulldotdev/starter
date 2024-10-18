@@ -1,5 +1,5 @@
 ---
-_layout: PostLayout
+component: PostLayout
 
 seo:
   title: Lorem ipsum dolor sit amet

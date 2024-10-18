@@ -1,5 +1,5 @@
 ---
-_layout: OverviewLayout
+component: OverviewLayout
 
 heading: Blog
 align: start

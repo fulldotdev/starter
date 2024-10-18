@@ -1,7 +1,6 @@
 ---
 sections:
-  contact:
-    _bookshop_name: Contact
+  - component: Contact
     heading: Contact us
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices tincidunt. Nullam nec purus ac libero ultrices tincidunt.
     form:

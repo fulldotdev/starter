@@ -1,5 +1,5 @@
 ---
-_layout: OverviewLayout
+component: OverviewLayout
 
 seo:
   title: Lorem ipsum
@@ -10,7 +10,7 @@ align: start
 
 reviews:
   heading: Reviews block example
-  _bookshop_name: Reviews
+  component: Reviews
   frame: panel
   structure: masonry
   align: center

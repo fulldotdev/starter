@@ -1,5 +1,5 @@
 ---
-_layout: ProductLayout
+component: ProductLayout
 
 heading: Basic Tee
 price: 48

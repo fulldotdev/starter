@@ -20,7 +20,7 @@ Do not use/create custom styling, blocks or components unless specifically asked
 
 - Blocks are defined in the `sections` frontmatter.
 - Each block is identified by a unique key (e.g., `hero`, `cta`, `posts`).
-- The `_bookshop_name` property specifies the block type from Full.dev UI Blocks.
+- The `component` property specifies the block type from Full.dev UI Blocks.
 - Additional properties configure the block's content and appearance.
 
 ## Block Types
@@ -50,7 +50,7 @@ Do not use/create custom styling, blocks or components unless specifically asked
 
 ## Layouts
 
-- Specify custom layouts using the `_layout` frontmatter property (e.g., `_layout: ProductLayout`).
+- Specify custom layouts using the `component` frontmatter property (e.g., `component: ProductLayout`).
 
 ## Internationalization (i18n)
 
@@ -88,7 +88,7 @@ title: Page Title
 description: Page description for SEO
 sections:
   hero:
-    _bookshop_name: Hero
+    component: Hero
     heading: Main Heading
     text: Subtext or description
     buttons:
@@ -96,7 +96,7 @@ sections:
         href: /link
 
   customSection:
-    _bookshop_name: CustomBlock
+    component: CustomBlock
     # Additional block-specific properties
 ---
 
