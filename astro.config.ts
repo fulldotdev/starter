@@ -1,8 +1,9 @@
 import sitemap from '@astrojs/sitemap'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
-import fulldev from 'fulldev-ui/integration'
 import UnoCSS from 'unocss/astro'
+import fulldev from 'fulldev-ui/integration'
+import favicons from 'astro-favicons'
 
 // https://astro.build/config
 export default defineConfig({
@@ -34,6 +35,12 @@ export default defineConfig({
           brand: '#f50',
         },
       },
+    }),
+    favicons({
+      path: 'src/images/favicon.svg',
+      masterPicture: 'src/images/favicon.svg',
+      appName: 'Fulldev Starter',
+      appShortName: 'Fulldev Starter',
     }),
   ],
 })
