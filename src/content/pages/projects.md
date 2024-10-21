@@ -10,7 +10,7 @@ heading: Projects
 align: start
 
 sections:
-  - component: team
+  - component: Colleagues
     heading: Team block example
     records:
       - team/john-doe

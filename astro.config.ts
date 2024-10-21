@@ -1,9 +1,8 @@
 import sitemap from '@astrojs/sitemap'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
-import UnoCSS from 'unocss/astro'
 import fulldev from 'fulldev-ui/integration'
-import favicons from 'astro-favicons'
+import UnoCSS from 'unocss/astro'
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,15 +12,18 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  experimental: {
+    contentLayer: true,
+  },
   integrations: [
     sitemap(),
     robotsTxt(),
     UnoCSS(),
     fulldev({
+      company: 'Fulldev Starter',
+      favicon: 'src/images/favicon.svg',
       css: '/src/css/custom.css',
       injectRoutes: true,
-      generateImageEntries: true, // set to true if you want to use records for you alt texts with the image-component, documented here: https://ui.full.dev/overview/content-layer/#image-alt-collection
-      // TODO: choose default theme and colors, documented here: https://ui.full.dev/overview/theming#colors
       colors: {
         theme: 'dark',
         light: {
@@ -35,12 +37,6 @@ export default defineConfig({
           brand: '#f50',
         },
       },
-    }),
-    favicons({
-      path: 'src/images/favicon.svg',
-      masterPicture: 'src/images/favicon.svg',
-      appName: 'Fulldev Starter',
-      appShortName: 'Fulldev Starter',
     }),
   ],
 })

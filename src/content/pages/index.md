@@ -5,14 +5,16 @@ seo:
   title: Fulldev-starter | Astro Starter Template
   description: Supercharging content-driven website development with Fulldev-starter, an Astro starter template. Easily use blocks from fulldev-ui to build pages and content-driven websites.
 
+title: Home
+
 sections:
-  - component: Hero # You can use any name for the section as long as the block exist on 'https://ui.full.dev/blocks' or in 'src/blocks/'
+  - component: Hero
     badge:
       text: pnpm create astro@latest --template fulldotdev/starter
     heading: A starter to build entire website with fulldev-ui
     text: Start by editing `src/content/pages/index.md` or check out one of the other files that make usage of records to easily build anything content-related.
     buttons:
-      - text: README
+      - text: Get started
         href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
     cards:
       - icon: files
@@ -27,20 +29,9 @@ sections:
       - icon: brush
         heading: Theming
         text: Customizable theming using our fulldev-ui Astro integration
-      - icon: file-type-css
-        heading: Customizable
-        text: Want custom styles? Add them to the global CSS files
 
   - component: Content
-    align: start
     heading: What is Fulldev-starter?
     text: Fulldev-starter is an Astro starter template that supercharges content-driven website development. It allows you to easily use blocks from fulldev-ui to build pages and content-driven websites.
     image:  placeholder.webp
-
-  - component: Content
-    reverse: odd
-    align: end
-    heading: Records to use anywhere
-    text: With our starter you can create files with information and use them anywhere in your project for any component
-    image: placeholder.webp
 ---

@@ -10,7 +10,7 @@ heading: All products
 align: start
 
 sections:
-  - component: Team
+  - component: Colleagues
     heading: Team block example
     records:
       - team/john-doe
