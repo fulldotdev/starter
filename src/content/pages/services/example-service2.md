@@ -1,4 +1,5 @@
 ---
+component: PostLayout
 
 seo:
   title: Example Service
