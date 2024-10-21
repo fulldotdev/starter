@@ -6,7 +6,7 @@ toc: false
 themeselect: true
 
 header:
-  logo: fulldev-starter
+  company: fulldev-starter
   buttons:
     - text: Home
       href: /
@@ -54,7 +54,7 @@ header:
         href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
 
 footer:
-  logo: fulldev-starter
+  company: fulldev-starter
   text: Supercharging content-driven website development
   columns:
     - heading: Example Pages
