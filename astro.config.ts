@@ -24,6 +24,7 @@ export default defineConfig({
       favicon: 'src/images/favicon.svg',
       css: '/src/css/custom.css',
       injectRoutes: true,
+      basePreset: 'base',
       colors: {
         theme: 'dark',
         light: {

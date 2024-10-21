@@ -1,5 +1,4 @@
 ---
-presets: [base]
 
 seo:
   title: Example Testimonials
