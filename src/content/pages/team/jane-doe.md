@@ -1,3 +1,5 @@
+---
 heading: Jane Doe
 avatar: avatar-placeholder.jpg
 text: This is an example review created to showcase how to use records in blocks and pre-made layouts from our fulldev-ui.
+---
