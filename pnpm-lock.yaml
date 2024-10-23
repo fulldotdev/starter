@@ -18,8 +18,8 @@ dependencies:
     specifier: ^1.0.0
     version: 1.0.0
   fulldev-ui:
-    specifier: 0.5.0-beta.1
-    version: 0.5.0-beta.1(postcss@8.4.47)(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.4.9)
+    specifier: 0.5.0-beta.5
+    version: 0.5.0-beta.5(postcss@8.4.47)(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.4.9)
   sharp:
     specifier: ^0.33.5
     version: 0.33.5
@@ -4041,8 +4041,8 @@ packages:
     dev: false
     optional: true
 
-  /fulldev-ui@0.5.0-beta.1(postcss@8.4.47)(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.4.9):
-    resolution: {integrity: sha512-ECIYiVBOk10QvhTbjLdELDYFRl74RX1SmJ7+qkJPTIrUDxvzuzF1PTNgydWM89cr9KC9aPvEDmydDiACUxeOFg==}
+  /fulldev-ui@0.5.0-beta.5(postcss@8.4.47)(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(vite@5.4.9):
+    resolution: {integrity: sha512-PVeM205JDUX/C/k8hiSzS30Y4tlbSXQvGbQBv+8b7xEgv5GFx6wdf1A2NHEScZ0SvLAEoevUfOBiTGP9Cm3pWw==}
     dependencies:
       '@astrojs/mdx': 3.1.8(astro@4.16.6)
       '@astrojs/sitemap': 3.2.1
