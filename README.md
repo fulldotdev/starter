@@ -36,6 +36,44 @@ pnpm dev
 
 For docs on what you can do and how to work with with the content layer, see the [fulldev-ui docs](https://ui.full.dev/overview/content-layer). Important things as the folder and file structure are all explained there.
 
+### Project Structure
+
+```bash
+.
+├── src/
+│   ├── blocks/
+│   │   └── ...
+│   ├── components/
+│   │   └── ...
+│   ├── layouts/
+│   │   └── ...
+│   ├── assets/
+│   │   └── ...
+│   ├── content/
+│   │   ├── pages/
+│   │   │   └── ...
+│   │   ├── presets/
+│   │   │   ├── base.yml
+│   │   │   └── ...
+│   │   └── ...
+│   ├── css/
+│   │   ├── custom.css
+│   │   └── ...
+├── public/
+│   └── ...
+└──
+```
+
+- **/src/**: The main source directory containing all the core files of the project.
+  - **/blocks/**: Contains reusable block components that can be composed to build pages (Custom or overwrites existing fulldev-ui blocks)
+  - **/components/**: Houses individual UI components used throughout the project (Custom or overwrites existing fulldev-ui components)
+  - **/layouts/**: Contains layout components used to structure pages (Custom or overwrites existing fulldev-ui layouts)
+  - **/images/**: Contains images, favicons, ect.
+  - **/content/**: Stores content-related files:
+    - **pages/**: Contains markdown or MDX files for individual pages.
+    - **/presets/**: Includes configuration files for various settings like the sidebar.
+  - **/css/**: Contains global CSS files and styles.
+
 ### Editing the content
 
 You will be greeted with a starter page, to edit the content of this page, see `src/content/pages/index.md`. This starter also comes with a few examples of everything we offer, you can safely delete anything you don't need.
