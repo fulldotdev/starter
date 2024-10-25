@@ -6,5 +6,5 @@ seo:
   description: Example of the service page.
 
 heading: Example Service
-text: Example of the service page.
+description: Example of the service page.
 ---

@@ -1,10 +1,6 @@
 seo:
   image: images/og-image.png
 
-sidebar: false
-toc: false
-themeselect: true
-
 header:
   company: fulldev-starter
   buttons:

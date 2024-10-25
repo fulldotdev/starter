@@ -6,5 +6,5 @@ seo:
   description: Example of the project page.
 
 heading: Example Project
-text: Example of the project page.
+description: Example of the project page.
 ---

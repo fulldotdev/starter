@@ -5,9 +5,8 @@ seo:
   title: Customizing Your Fulldev UI Components
   description: Learn how to override and customize Fulldev UI components in your project.
 
-tagline: "2024-05-22"
 heading: Customizing Your Fulldev UI Components
-text: Discover how to tailor Fulldev UI components to fit your project's unique needs.
+description: Discover how to tailor Fulldev UI components to fit your project's unique needs.
 ---
 
 ## Making Fulldev UI Your Own

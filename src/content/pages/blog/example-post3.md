@@ -5,9 +5,8 @@ seo:
   title: Working with the Content Layer in Fulldev UI
   description: Explore how to effectively use the content layer in your Fulldev UI projects.
 
-tagline: "2024-07-10"
 heading: Working with the Content Layer in Fulldev UI
-text: Learn how to structure and manage your content efficiently using Fulldev UI's content layer.
+description: Learn how to structure and manage your content efficiently using Fulldev UI's content layer.
 ---
 
 ## Mastering the Content Layer

@@ -5,9 +5,8 @@ seo:
   title: Getting Started with Fulldev Starter Template
   description: Learn how to set up and start developing with the Fulldev Starter Template.
 
-tagline: "2024-03-15"
 heading: Getting Started with Fulldev Starter Template
-text: Discover how to quickly set up your development environment and begin creating with Fulldev UI.
+description: Discover how to quickly set up your development environment and begin creating with Fulldev UI.
 ---
 
 ## Quick Start Guide
