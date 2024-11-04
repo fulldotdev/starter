@@ -1,6 +1,4 @@
 ---
-component: PostLayout
-
 seo:
   title: Example Project
   description: Example of the project page.

@@ -1,6 +1,4 @@
 ---
-component: PostLayout
-
 seo:
   title: Working with the Content Layer in Fulldev UI
   description: Explore how to effectively use the content layer in your Fulldev UI projects.

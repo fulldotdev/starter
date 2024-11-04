@@ -1,6 +1,4 @@
 ---
-component: PostLayout
-
 seo:
   title: About Fulldev Starter Template
   description: Learn about the Fulldev Starter Template, a powerful tool for content-driven website development using Astro and fulldev-ui.

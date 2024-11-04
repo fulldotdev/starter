@@ -1,6 +1,4 @@
 ---
-component: PostLayout
-
 seo:
   title: Getting Started with Fulldev Starter Template
   description: Learn how to set up and start developing with the Fulldev Starter Template.

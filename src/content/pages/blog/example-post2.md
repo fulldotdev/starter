@@ -1,6 +1,4 @@
 ---
-component: PostLayout
-
 seo:
   title: Customizing Your Fulldev UI Components
   description: Learn how to override and customize Fulldev UI components in your project.

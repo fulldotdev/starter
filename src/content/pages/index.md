@@ -29,8 +29,4 @@ sections:
         heading: Theming
         text: Customizable theming using our fulldev-ui Astro integration
 
-  - component: Content
-    heading: What is Fulldev-starter?
-    text: Fulldev-starter is an Astro starter template that supercharges content-driven website development. It allows you to easily use blocks from fulldev-ui to build pages and content-driven websites.
-    image:  placeholder.webp
 ---

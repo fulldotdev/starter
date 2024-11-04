@@ -1,7 +1,9 @@
 seo:
   image: images/og-image.png
 
-header:
+navigation:
+  themer: true
+  header: true
   company: fulldev-starter
   buttons:
     - text: Home
@@ -30,24 +32,23 @@ header:
       text: UI/Blocks
       variant: secondary
       href: 'https://ui.full.dev'
-  drawer:
-    links:
-      - text: Home
-        href: '/'
-      - text: About
-        href: '/about'
-      - text: Blog
-        href: '/blog'
-      - text: Products
-        href: '/products'
-      - text: Contact
-        href: '/contact'
-      - icon: brand-github
-        href: 'https://github.com/fulldotdev/starter'
-      - icon: UI/Blocks Library
-        href: 'https://ui.full.dev'
-      - text: Guide
-        href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
+  menu:
+    - text: Home
+      href: '/'
+    - text: About
+      href: '/about'
+    - text: Blog
+      href: '/blog'
+    - text: Products
+      href: '/products'
+    - text: Contact
+      href: '/contact'
+    - icon: brand-github
+      href: 'https://github.com/fulldotdev/starter'
+    - icon: UI/Blocks Library
+      href: 'https://ui.full.dev'
+    - text: Guide
+      href: 'https://github.com/fulldotdev/starter/blob/main/README.md'
 
 footer:
   company: fulldev-starter
