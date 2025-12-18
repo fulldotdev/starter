@@ -1,20 +1,9 @@
-# build output
-dist/
-**/dist
-**/build
-**/out
-**/.astro
-**/.jampack
-**/.core
-# generated types
+# folders
 .astro/
-
-# dependencies
+.netlify/
+dist/
+.stackbit/
 node_modules/
-**/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
 
 # logs
 npm-debug.log*
@@ -22,25 +11,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# public files
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+bun.lockb
 
-**/public/images
-
-# logs
-**/npm-debug.log*
-**/yarn-debug.log*
-**/yarn-error.log*
-**/pnpm-debug.log*
-
-# environment variables
-.env
-.env.production
-**/.env
-**/.env.*
-**/.env*.local
-!**/.env.example
-
-# macOS-specific files
-.DS_Store
+# misc
 **/.DS_Store
-*.pem

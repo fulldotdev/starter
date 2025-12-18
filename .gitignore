@@ -1,42 +1,34 @@
-# build output
-dist/
-**/dist
-**/build
-**/out
-**/.astro
-**/.jampack
-**/.core
-# generated types
-.astro/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-node_modules/
-**/node_modules
-/.pnp
+node_modules
+.pnp
 .pnp.js
-.yarn/install-state.gz
 
-# logs
+# astro
+.astro/
+dist/
+.netlify/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+.pnpm-debug.log*
 
-# logs
-**/npm-debug.log*
-**/yarn-debug.log*
-**/yarn-error.log*
-**/pnpm-debug.log*
-
-# environment variables
+# local env files
 .env
-.env.production
-**/.env
-**/.env.*
-**/.env*.local
-!**/.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# macOS-specific files
-.DS_Store
-**/.DS_Store
-*.pem
+# ide
+.idea
+.fleet
+.vscode
+
