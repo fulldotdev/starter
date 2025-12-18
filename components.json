@@ -19,6 +19,6 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@fulldev": "http:ui.full.dev/r/{name}.json"
+    "@fulldev": "https://ui.full.dev/r/{name}.json"
   }
 }
