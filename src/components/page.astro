@@ -1,0 +1,35 @@
+---
+import { getEntry } from "astro:content"
+
+import type { PageSchema } from "@/schemas/collections/page"
+import {
+  LayoutBody,
+  LayoutHead,
+  LayoutMain,
+  Layout as LayoutRoot,
+} from "@/components/ui/layout"
+import Block from "@/components/block.astro"
+
+type Props = PageSchema
+
+const { sections, seo } = Astro.props
+
+const pageLayout = await getEntry("layouts", "page")
+---
+
+<LayoutRoot>
+  <LayoutHead {...seo}>
+    <slot name="head" />
+  </LayoutHead>
+  <LayoutBody>
+    {pageLayout?.data?.headers?.map((header) => <Block {...header} />)}
+    <slot name="headers" />
+    <LayoutMain>
+      <slot />
+      {sections?.map((section) => <Block {...section} />)}
+      {pageLayout?.data?.sections?.map((section) => <Block {...section} />)}
+    </LayoutMain>
+    <slot name="footers" />
+    {pageLayout?.data?.footers?.map((footer) => <Block {...footer} />)}
+  </LayoutBody>
+</LayoutRoot>

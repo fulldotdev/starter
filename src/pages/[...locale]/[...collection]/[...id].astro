@@ -1,0 +1,51 @@
+---
+import type { GetStaticPathsResult } from "astro"
+import type { CollectionKey } from "astro:content"
+import { getCollection } from "astro:content"
+import {
+  getLocaleByPath,
+  pathHasLocale,
+} from "astro:i18n"
+
+import { getCollectionSlug } from "@/lib/routing"
+
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+  const stripLocaleFromId = (entryId: string, locale: string) => {
+    if (!locale) {
+      return entryId
+    }
+
+    const prefix = `${locale}/`
+    return entryId.startsWith(prefix) ? entryId.slice(prefix.length) : entryId
+  }
+
+  const allRoutes = await Promise.all(
+    (["pages", "articles", "organizations", "persons", "reviews", "services"] as const).map(
+      async (key) => {
+        const collection = await getCollection(key)
+        return collection.map((entry) => {
+          const hasLocale = pathHasLocale(entry.id)
+          const locale = hasLocale ? getLocaleByPath(entry.id) : ""
+          const collectionSlug = getCollectionSlug(entry.collection, locale)
+          return {
+            params: {
+              locale,
+              collection: collectionSlug,
+              id: stripLocaleFromId(entry.id, locale),
+            },
+            // props: entry,
+          }
+        })
+      }
+    )
+  )
+
+  return allRoutes.flat()
+}
+---
+
+<!-- Your HTML template here. -->---
+
+<div>
+  <h1>Hello World</h1>
+</div>

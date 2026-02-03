@@ -21,7 +21,7 @@ export const reviewSchema = (ctx: SchemaContext) =>
         reference("services"),
         reference("organizations"),
       ]),
-      datePublished: z.string().datetime(),
+      datePublished: z.coerce.date(),
     })
     .partial()
     .strict()

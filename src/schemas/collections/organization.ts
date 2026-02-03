@@ -1,5 +1,6 @@
 import { z, type SchemaContext } from "astro:content"
 
+import { blockSchema } from "@/schemas/blocks"
 import { addressSchema } from "@/schemas/fields/address"
 import { imageSchema } from "@/schemas/fields/image"
 import { openingHoursSpecSchema } from "@/schemas/fields/opening-hours"
@@ -19,6 +20,8 @@ export const organizationSchema = (ctx: SchemaContext) =>
       address: addressSchema,
       openingHours: openingHoursSpecSchema.array(),
       sameAs: z.string().url().array(),
+      // ui
+      sections: blockSchema(ctx).array(),
       // seo
       seo: seoSchema(ctx),
     })

@@ -2,7 +2,7 @@
   "site": "https://ui.full.dev",
   "name": "fulldev/ui",
   "defaultLocale": "en",
-  "locales": ["en"],
+  "locales": ["en", "nl", "de"],
   "favicon": "src/assets/logo-fulldev.svg",
   "theme": "light",
   "fonts": {

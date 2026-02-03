@@ -1,0 +1,11 @@
+---
+import type { CollectionKey } from "astro:content"
+import { getCollection, getEntry } from "astro:content"
+import { getRelativeLocaleUrlList } from "astro:i18n"
+
+const localeUrls = getRelativeLocaleUrlList("hello-world/index/")
+console.log(localeUrls)
+
+const entry = await getEntry("pages", "/hello")
+console.log(entry)
+---

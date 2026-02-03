@@ -1,5 +1,6 @@
 import { z, type SchemaContext } from "astro:content"
 
+import { blockSchema } from "@/schemas/blocks"
 import { imageSchema } from "@/schemas/fields/image"
 import { seoSchema } from "@/schemas/fields/seo"
 
@@ -15,6 +16,8 @@ export const personSchema = (ctx: SchemaContext) =>
       email: z.string().email(),
       telephone: z.string(),
       sameAs: z.string().url().array(),
+      // ui
+      sections: blockSchema(ctx).array(),
       // seo
       seo: seoSchema(ctx),
     })

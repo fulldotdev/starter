@@ -1,0 +1,3 @@
+type: Service
+name: Sample Service
+description: Example service record for routing tests.

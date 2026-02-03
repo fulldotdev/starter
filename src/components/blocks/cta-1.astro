@@ -16,26 +16,11 @@ import {
   SectionProse,
 } from "@/components/ui/section"
 
-interface Props {
-  class?: string
-  id?: string
-  links?: {
-    icon?: string
-    text?: string
-    href?: string
-    target?: string
-  }[]
-  item?: {
-    images?: {
-      src: string
-      alt: string
-    }[]
-    rating?: number
-    description?: string
-  }
-}
+import type { Cta1Schema } from "@/schemas/blocks/cta-1"
 
-const { class: className, id, links, item } = Astro.props
+type Props = Cta1Schema
+
+const { class: className, id, links, item } = Astro.props as Props
 ---
 
 <Section class={className} id={id} variant="floating">

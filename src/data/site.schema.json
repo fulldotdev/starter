@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["site", "name", "defaultLocale", "locales", "favicon", "fonts"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "site": {
+      "type": "string",
+      "format": "uri"
+    },
+    "name": {
+      "type": "string"
+    },
+    "defaultLocale": {
+      "type": "string"
+    },
+    "locales": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "favicon": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string",
+      "enum": ["light", "dark", "system"]
+    },
+    "fonts": {
+      "type": "object",
+      "required": ["base"],
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "mono": {
+          "type": "string"
+        }
+      }
+    },
+    "routes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "collections": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

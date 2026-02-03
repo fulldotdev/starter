@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["site", "name", "favicon", "i18n", "fonts"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "site": {
+      "type": "string",
+      "format": "uri"
+    },
+    "name": {
+      "type": "string"
+    },
+    "favicon": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string",
+      "enum": ["light", "dark", "system"]
+    },
+    "i18n": {
+      "type": "object",
+      "required": ["defaultLocale", "locales"],
+      "additionalProperties": false,
+      "properties": {
+        "defaultLocale": {
+          "type": "string"
+        },
+        "locales": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "routing": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "prefixDefaultLocale": {
+              "type": "boolean"
+            },
+            "redirectToDefaultLocale": {
+              "type": "boolean"
+            },
+            "fallbackType": {
+              "type": "string",
+              "enum": ["redirect", "not-found"]
+            }
+          }
+        }
+      }
+    },
+    "fonts": {
+      "type": "object",
+      "required": ["base"],
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "mono": {
+          "type": "string"
+        }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "collectionSlugs": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

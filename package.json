@@ -13,6 +13,7 @@
     "build:test": "astro check && astro build && astro preview --host"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/sitemap": "^3.6.0",
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.1.14",

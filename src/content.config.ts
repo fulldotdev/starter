@@ -1,22 +1,22 @@
 import { defineCollection } from "astro:content"
 import { glob } from "astro/loaders"
 
-import { page } from "@/lib/schemas"
 import { articleSchema } from "@/schemas/collections/article"
+import { layoutSchema } from "@/schemas/collections/layout"
 import { organizationSchema } from "@/schemas/collections/organization"
+import { pageSchema } from "@/schemas/collections/page"
 import { personSchema } from "@/schemas/collections/person"
 import { reviewSchema } from "@/schemas/collections/review"
 import { serviceSchema } from "@/schemas/collections/service"
-import { webPageSchema } from "@/schemas/collections/page"
-import { webSiteSchema } from "@/schemas/collections/website"
+import { settingsSchema } from "@/schemas/collections/settings"
 
 export const collections = {
-  website: defineCollection({
+  layouts: defineCollection({
     loader: glob({
       pattern: "**/[^_]*.{yaml,yml,json}",
-      base: "src/content/website",
+      base: "src/content/layouts",
     }),
-    schema: webSiteSchema,
+    schema: layoutSchema,
   }),
   organizations: defineCollection({
     loader: glob({
@@ -53,25 +53,18 @@ export const collections = {
     }),
     schema: reviewSchema,
   }),
-  policies: defineCollection({
+  settings: defineCollection({
     loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/policies",
+      pattern: "**/[^_]*.{yaml,yml,json}",
+      base: "src/content/settings",
     }),
-    schema: webPageSchema,
+    schema: settingsSchema,
   }),
   pages: defineCollection({
     loader: glob({
       pattern: "**/[^_]*.{md,mdx}",
       base: "src/content/pages",
     }),
-    schema: page,
-  }),
-  layouts: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{yaml,yml,json}",
-      base: "src/content/layouts",
-    }),
-    schema: page,
+    schema: pageSchema,
   }),
 }

@@ -1,9 +1,9 @@
 ---
 import { getCollection, getEntry, type CollectionEntry } from "astro:content"
 
-import type { BlockSchema, PageSchema } from "@/lib/schemas"
+import type { BlockSchema } from "@/schemas/blocks"
 
-type Props = BlockSchema & PageSchema
+type Props = BlockSchema & Record<string, any>
 
 // Helper functions
 function getHref(entry: CollectionEntry<"pages">) {

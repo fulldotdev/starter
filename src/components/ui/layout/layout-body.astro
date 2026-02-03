@@ -1,0 +1,26 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/lib/utils"
+
+interface Props extends HTMLAttributes<"body"> {}
+
+const { class: className, ...props } = Astro.props
+---
+
+<body
+  class={cn(
+    "bg-background text-foreground font-base @container overscroll-none antialiased",
+    className
+  )}
+  data-slot="layout-body"
+  {...props}
+>
+  <slot />
+</body>
+
+<style>
+  body {
+    font-family: var(--font-base);
+  }
+</style>

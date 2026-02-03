@@ -11,28 +11,11 @@ import {
   SectionProse,
 } from "@/components/ui/section"
 
-interface Props {
-  class?: string
-  id?: string
-  link?: {
-    text?: string
-    href?: string
-    icon?: string
-    target?: string
-  }
-  links?: {
-    text?: string
-    href?: string
-    icon?: string
-    target?: string
-  }[]
-  image?: {
-    src: string
-    alt: string
-  }
-}
+import type { Hero1Schema } from "@/schemas/blocks/hero-1"
 
-const { class: className, id, link, links, image } = Astro.props
+type Props = Hero1Schema
+
+const { class: className, id, link, links, image } = Astro.props as Props
 ---
 
 <Section class={className} id={id}>

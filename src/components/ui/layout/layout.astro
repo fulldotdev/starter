@@ -1,0 +1,26 @@
+---
+import { Font } from "astro:assets"
+import type { HTMLAttributes } from "astro/types"
+
+import "@/styles/global.css"
+
+import { cn } from "@/lib/utils"
+
+interface Props extends HTMLAttributes<"html"> {
+  theme?: string
+}
+
+const { class: className, lang, theme, ...props } = Astro.props
+const locale = lang || Astro.currentLocale
+---
+
+<html
+  class={cn("bg-background text-foreground scroll-smooth", theme, className)}
+  data-slot="layout"
+  lang={locale}
+  {...props}
+>
+  <slot />
+  <Font cssVariable="--font-base" preload />
+  <Font cssVariable="--font-heading" preload />
+</html>

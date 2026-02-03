@@ -1,5 +1,6 @@
 import { reference, z, type SchemaContext } from "astro:content"
 
+import { blockSchema } from "@/schemas/blocks"
 import { imageSchema } from "@/schemas/fields/image"
 import { seoSchema } from "@/schemas/fields/seo"
 
@@ -14,8 +15,10 @@ export const articleSchema = (ctx: SchemaContext) =>
       author: z
         .union([reference("persons"), reference("organizations")])
         .array(),
-      datePublished: z.string().datetime(),
-      dateModified: z.string().datetime(),
+      datePublished: z.coerce.date(),
+      dateModified: z.coerce.date(),
+      // ui
+      sections: blockSchema(ctx).array(),
       // seo
       seo: seoSchema(ctx),
     })

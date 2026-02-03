@@ -1,5 +1,6 @@
 import { reference, z, type SchemaContext } from "astro:content"
 
+import { blockSchema } from "@/schemas/blocks"
 import { imageSchema } from "@/schemas/fields/image"
 import { seoSchema } from "@/schemas/fields/seo"
 
@@ -14,6 +15,8 @@ export const serviceSchema = (ctx: SchemaContext) =>
         .union([reference("organizations"), reference("persons")])
         .array(),
       image: imageSchema(ctx),
+      // ui
+      sections: blockSchema(ctx).array(),
       // seo
       seo: seoSchema(ctx),
     })
