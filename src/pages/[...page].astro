@@ -16,21 +16,30 @@ export async function getStaticPaths() {
 }
 
 const page = Astro.props
-const { layout } = page.data
 const { Content } = await render(Astro.props)
 
 const indexLayout = await getEntry("layouts", "index")
-const pageLayout = layout ? await getEntry("layouts", layout) : undefined
+const typeLayout = page.data.type && (await getEntry("layouts", page.data.type))
 ---
 
 <Layout
   {...indexLayout?.data}
-  {...pageLayout?.data}
+  {...typeLayout?.data}
   {...page.data}
+  headers={[
+    ...(indexLayout?.data?.headers || []),
+    ...(typeLayout?.data?.headers || []),
+    ...(page.data?.headers || []),
+  ]}
   sections={[
     ...(page.data?.sections || []),
-    ...(pageLayout?.data?.sections || []),
+    ...(typeLayout?.data?.sections || []),
     ...(indexLayout?.data?.sections || []),
+  ]}
+  footers={[
+    ...(indexLayout?.data?.footers || []),
+    ...(typeLayout?.data?.footers || []),
+    ...(page.data?.footers || []),
   ]}
 >
   <Content />
