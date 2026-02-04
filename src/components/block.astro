@@ -1,19 +1,18 @@
 ---
-import { getCollection, getEntry, type CollectionEntry } from "astro:content"
+import { getCollection, type CollectionEntry } from "astro:content"
 
-import type { BlockSchema, PageSchema } from "@/lib/schemas"
+import type { BlockSchema } from "@/schemas/blocks/blocks"
+import site from "site.json"
+import { normalizeGlobPath, routeFromEntryId } from "@/lib/locale"
 
-type Props = BlockSchema & PageSchema
+type Props = BlockSchema & { [key: string]: unknown }
 
 // Helper functions
 function getHref(entry: CollectionEntry<"pages">) {
   // If there is no content, return undefined
-  if (!entry.data.sections?.length && !entry.body?.length && !entry.data.block)
-    return undefined
-  // If the page is the index, return the root
-  if (entry.id === "index") return "/"
-  // else return href b yid
-  return `/${entry.id}/`
+  if (!entry.data.sections?.length && !entry.body?.length) return undefined
+  const path = routeFromEntryId(entry.id, site.locales, site.defaultLocale)
+  return path ? `/${path}/` : "/"
 }
 
 const pages = await getCollection("pages")
@@ -21,12 +20,8 @@ const pages = await getCollection("pages")
 // Get a single reference by file path
 async function getRef(value: string) {
   const entry = pages.find((page) => `/${page.filePath}` === value)
-  const layout = entry?.data?.layout
-    ? await getEntry("layouts", entry?.data?.layout)
-    : undefined
   if (!entry) return
   return {
-    ...layout?.data,
     href: getHref(entry),
     ...entry.data,
   }
@@ -41,8 +36,15 @@ async function getRefs(values: string[]) {
 
 // Get a glob of pages by folder path
 async function getGlob(value: string) {
+  const normalized = normalizeGlobPath(
+    value,
+    Astro.currentLocale || site.defaultLocale,
+    site.locales
+  )
   return pages
-    .filter((page) => page.filePath?.startsWith(`src/content/pages/${value}`))
+    .filter((page) =>
+      page.filePath?.startsWith(`src/content/pages/${normalized}`)
+    )
     .map((page) => ({
       href: getHref(page),
       ...page.data,
@@ -89,7 +91,7 @@ async function resolveItem(item: any): Promise<any> {
   return resolved
 }
 
-const { block, ref, refs, glob, ...props } = Astro.props
+const { block, ref, refs, glob, ...props } = Astro.props as Props
 
 // Populate references at top level
 if (ref) {

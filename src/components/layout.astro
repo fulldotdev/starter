@@ -6,11 +6,11 @@ import "@/styles/global.css"
 import { Font } from "astro:assets"
 import site from "site.json"
 
-import type { PageSchema } from "@/lib/schemas"
+import type { PageSchema } from "@/schemas/collections/page"
 import { ThemeProvider } from "@/components/ui/theme-toggle"
 import Block from "@/components/block.astro"
 
-type Props = PageSchema
+type Props = PageSchema & { [key: string]: any }
 
 const baseUrl = Astro.site?.origin || Astro.url.origin
 const pagePathname = Astro.url.pathname.endsWith("/")
@@ -18,7 +18,15 @@ const pagePathname = Astro.url.pathname.endsWith("/")
   : `${Astro.url.pathname}/`
 const pageUrl = `${baseUrl}${pagePathname}`
 
-const { headers, sections, footers, block, seo, head, ...props } = Astro.props
+const {
+  headers = [],
+  sections = [],
+  footers = [],
+  block,
+  seo,
+  head,
+  ...props
+} = Astro.props as Props
 
 const title = seo?.title || props?.title
 const description = seo?.description || props?.description
@@ -168,7 +176,7 @@ const transformedImage = image?.src
     class="text-foreground bg-background font-base @container overscroll-none antialiased"
     id={Astro.url.pathname}
   >
-    {headers?.map((header) => <Block {...header} />)}
+    {headers?.map((header: any) => <Block {...header} />)}
     <main class="@container flex flex-col">
       <Block
         data-cms-bind="#"
@@ -181,12 +189,12 @@ const transformedImage = image?.src
       {
         sections?.map((section, i) => (
           <div data-cms-bind={`#sections[${i}]`} data-cms-bind-style="sidebar">
-            <Block {...section} />
+            <Block {...(section as any)} />
           </div>
         ))
       }
     </main>
-    {footers?.map((footer) => <Block {...footer} />)}
+    {footers?.map((footer: any) => <Block {...footer} />)}
   </body><style>
     body {
       font-family: var(--font-base);

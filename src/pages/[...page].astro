@@ -2,13 +2,20 @@
 import { getCollection, getEntry, render } from "astro:content"
 
 import Layout from "@/components/layout.astro"
+import site from "site.json"
+import { routeFromEntryId } from "@/lib/locale"
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages")
   return pages.map((page) => {
+    const path = routeFromEntryId(
+      page.id,
+      site.locales,
+      site.defaultLocale
+    )
     return {
       params: {
-        page: page.id === "index" ? undefined : page.id,
+        page: path === "" ? undefined : path,
       },
       props: page,
     }
@@ -16,20 +23,16 @@ export async function getStaticPaths() {
 }
 
 const page = Astro.props
-const { layout } = page.data
 const { Content } = await render(Astro.props)
 
 const indexLayout = await getEntry("layouts", "index")
-const pageLayout = layout ? await getEntry("layouts", layout) : undefined
 ---
 
 <Layout
   {...indexLayout?.data}
-  {...pageLayout?.data}
   {...page.data}
   sections={[
     ...(page.data?.sections || []),
-    ...(pageLayout?.data?.sections || []),
     ...(indexLayout?.data?.sections || []),
   ]}
 >
