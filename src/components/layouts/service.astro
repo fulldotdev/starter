@@ -1,0 +1,197 @@
+---
+import type { ServiceSchema } from "@/schemas/layouts/service"
+import { Button } from "@/components/ui/button"
+import { Icon } from "@/components/ui/icon"
+import { Image } from "@/components/ui/image"
+import {
+  Layout,
+  LayoutBody,
+  LayoutHead,
+  LayoutMain,
+} from "@/components/ui/layout"
+import {
+  Section,
+  SectionActions,
+  SectionContent,
+  SectionGrid,
+  SectionMedia,
+  SectionProse,
+} from "@/components/ui/section"
+import {
+  Tile,
+  TileContent,
+  TileDescription,
+  TileMedia,
+  TileTitle,
+} from "@/components/ui/tile"
+import Footer from "@/components/blocks/footer.astro"
+import Header from "@/components/blocks/header.astro"
+
+interface Props extends ServiceSchema {}
+
+const { title, description, hero, benefits, process, cta } = Astro.props
+const global = Astro.locals.global
+---
+
+<Layout>
+  <LayoutHead title={title} description={description} />
+  <LayoutBody>
+    {global?.header && <Header {...global.header} />}
+    <LayoutMain>
+      {/* Hero */}
+      <Section size="lg">
+        <SectionContent class="items-center text-center">
+          <SectionProse size="lg" class="text-balance">
+            <h1 set:html={hero.title} />
+            {
+              hero.description && (
+                <p
+                  class="text-muted-foreground text-lg"
+                  set:html={hero.description}
+                />
+              )
+            }
+          </SectionProse>
+          {
+            hero.links && hero.links.length > 0 && (
+              <SectionActions class="justify-center">
+                {hero.links.map(({ icon, text, ...link }, i) => (
+                  <Button
+                    variant={i === 0 ? "default" : "outline"}
+                    size="lg"
+                    {...link}
+                  >
+                    {icon && <Icon name={icon} />}
+                    {text}
+                  </Button>
+                ))}
+              </SectionActions>
+            )
+          }
+        </SectionContent>
+        {
+          hero.image?.src && (
+            <SectionMedia>
+              <Image
+                sizes="(min-width: 1536px) 1536px, 100vw"
+                {...hero.image}
+              />
+            </SectionMedia>
+          )
+        }
+      </Section>
+
+      <slot />
+
+      {/* Benefits */}
+      <Section>
+        <SectionContent class="items-center text-center">
+          <SectionProse>
+            {benefits.title && <h2 set:html={benefits.title} />}
+            {
+              benefits.description && (
+                <p
+                  class="text-muted-foreground"
+                  set:html={benefits.description}
+                />
+              )
+            }
+          </SectionProse>
+        </SectionContent>
+        <SectionGrid>
+          {
+            benefits.items.map((item) => (
+              <Tile>
+                {item.icon && (
+                  <TileMedia variant="icon">
+                    <Icon name={item.icon} />
+                  </TileMedia>
+                )}
+                <TileContent>
+                  <TileTitle>{item.title}</TileTitle>
+                  {item.description && (
+                    <TileDescription>{item.description}</TileDescription>
+                  )}
+                </TileContent>
+              </Tile>
+            ))
+          }
+        </SectionGrid>
+      </Section>
+
+      {/* Process */}
+      <Section>
+        <SectionContent class="items-center text-center">
+          <SectionProse>
+            {process.title && <h2 set:html={process.title} />}
+            {
+              process.description && (
+                <p
+                  class="text-muted-foreground"
+                  set:html={process.description}
+                />
+              )
+            }
+          </SectionProse>
+        </SectionContent>
+        <div class="mx-auto grid w-full max-w-4xl gap-8">
+          {
+            process.items.map((step, i) => (
+              <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                  <div class="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+                    {step.icon ? <Icon name={step.icon} /> : i + 1}
+                  </div>
+                  {i < process.items.length - 1 && (
+                    <div class="bg-border mt-2 w-px flex-1" />
+                  )}
+                </div>
+                <div class="flex flex-col gap-1 pb-8">
+                  <h3 class="text-foreground text-lg font-semibold">
+                    {step.title}
+                  </h3>
+                  {step.description && (
+                    <p class="text-muted-foreground text-sm leading-relaxed">
+                      {step.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </Section>
+
+      {/* CTA */}
+      {
+        cta && (
+          <Section variant="floating">
+            <SectionContent class="items-center text-center">
+              <SectionProse>
+                <h2 set:html={cta.title} />
+                {cta.description && (
+                  <p class="text-muted-foreground" set:html={cta.description} />
+                )}
+              </SectionProse>
+              {cta.links && cta.links.length > 0 && (
+                <SectionActions class="justify-center">
+                  {cta.links.map(({ icon, text, ...link }, i) => (
+                    <Button
+                      variant={i === 0 ? "default" : "outline"}
+                      size="lg"
+                      {...link}
+                    >
+                      {icon && <Icon name={icon} />}
+                      {text}
+                    </Button>
+                  ))}
+                </SectionActions>
+              )}
+            </SectionContent>
+          </Section>
+        )
+      }
+    </LayoutMain>
+    {global?.footer && <Footer {...global.footer} />}
+  </LayoutBody>
+</Layout>

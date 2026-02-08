@@ -1,90 +1,17 @@
-import sitemap from "@astrojs/sitemap"
-import tailwindcss from "@tailwindcss/vite"
-import favicons from "astro-favicons"
-import robotsTxt from "astro-robots-txt"
-import { defineConfig, fontProviders } from "astro/config"
+import { defineConfig } from "astro/config"
 
-import site from "./site.json"
+import fulldevIntegration from "./src/lib/integration"
 
 export default defineConfig({
-  site: site.site,
-  image: {
-    breakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
-    responsiveStyles: false,
-    layout: "full-width",
-  },
-  prefetch: {
-    prefetchAll: true,
-  },
-  devToolbar: {
-    enabled: false,
-  },
-  i18n: {
-    defaultLocale: site.defaultLocale,
-    locales: site.locales,
-    routing: {
-      prefixDefaultLocale: false,
-      redirectToDefaultLocale: false,
-      fallbackType: "redirect",
-    },
-  },
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        cssVariable: "--font-base",
-        name: site.fonts.base,
-        weights: [
-          "100",
-          "200",
-          "300",
-          "400",
-          "500",
-          "600",
-          "700",
-          "800",
-          "900",
-        ],
-      },
-      {
-        provider: fontProviders.google(),
-        cssVariable: "--font-heading",
-        name: site.fonts.heading || site.fonts.base,
-        weights: [
-          "100",
-          "200",
-          "300",
-          "400",
-          "500",
-          "600",
-          "700",
-          "800",
-          "900",
-        ],
-      },
-    ],
-  },
-  vite: {
-    plugins: [tailwindcss()],
-  },
   integrations: [
-    robotsTxt(),
-    sitemap({
-      changefreq: "weekly",
-      lastmod: new Date(),
+    fulldevIntegration({
+      site: "https://ui.full.dev",
+      name: "fulldev/ui",
+      favicon: "src/assets/logo-fulldev.svg",
       i18n: {
-        defaultLocale: site.defaultLocale,
-        locales: Object.fromEntries(
-          site.locales.map((locale) => [locale, locale])
-        ),
+        defaultLocale: "en",
+        locales: ["en", "nl", "fr"],
       },
-    }),
-    favicons({
-      input: {
-        favicons: [site.favicon],
-      },
-      name: site.name,
-      short_name: site.name,
     }),
   ],
 })

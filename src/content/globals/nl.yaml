@@ -1,0 +1,87 @@
+buttons:
+  submit: Versturen
+  cancel: Annuleren
+  get_started: Aan de slag
+  learn_more: Meer informatie
+  contact_us: Neem contact op
+  read_more: Lees meer
+  view_all: Bekijk alles
+  back: Terug
+
+labels:
+  email: E-mail
+  password: Wachtwoord
+  name: Naam
+  phone: Telefoon
+  message: Bericht
+  company: Bedrijf
+
+errors:
+  required: Dit veld is verplicht
+  invalid_email: Voer een geldig e-mailadres in
+  too_short: Deze waarde is te kort
+  too_long: Deze waarde is te lang
+  generic: Er is iets misgegaan, probeer het opnieuw
+
+success:
+  form_submitted: Formulier succesvol verzonden
+  message_sent: Uw bericht is verzonden
+  subscribed: U bent geabonneerd
+
+header:
+  logo:
+    text: AI Hub
+    href: /nl/
+  nav:
+    - text: Home
+      href: /nl/
+    - text: Diensten
+      href: /nl/diensten/
+    - text: Prijzen
+      href: /nl/prijzen/
+    - text: Over ons
+      href: /nl/over-ons/
+    - text: Contact
+      href: /nl/contact/
+
+footer:
+  logo:
+    text: AI Hub
+    href: /nl/
+  description: Bedrijven versterken met intelligente AI-oplossingen voor groei en innovatie.
+  columns:
+    - title: Product
+      links:
+        - text: Functies
+          href: /nl/functies/
+        - text: Prijzen
+          href: /nl/prijzen/
+        - text: Integraties
+          href: /nl/integraties/
+    - title: Bedrijf
+      links:
+        - text: Over ons
+          href: /nl/over-ons/
+        - text: Team
+          href: /nl/team/
+        - text: Contact
+          href: /nl/contact/
+    - title: Bronnen
+      links:
+        - text: Documentatie
+          href: /nl/docs/
+        - text: Blog
+          href: /nl/blog/
+        - text: Ondersteuning
+          href: /nl/ondersteuning/
+  socials:
+    - platform: twitter
+      href: https://twitter.com/aihub
+      icon: twitter
+    - platform: github
+      href: https://github.com/aihub
+      icon: github
+    - platform: linkedin
+      href: https://linkedin.com/company/aihub
+      icon: linkedin
+  bottomText: "\u00A9 2026 AI Hub. Alle rechten voorbehouden."
