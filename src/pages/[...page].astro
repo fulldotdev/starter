@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from "astro:content"
 
+import "@/styles/global.css"
+
 export async function getStaticPaths() {
   const pages = await getCollection("pages")
   return pages.map((page) => {

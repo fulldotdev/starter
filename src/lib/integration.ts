@@ -21,7 +21,6 @@ export default function (options: Options): AstroIntegration {
       "astro:config:setup": ({ updateConfig }) => {
         updateConfig({
           site: options.site,
-          trailingSlash: "always",
           image: {
             responsiveStyles: true,
             breakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
