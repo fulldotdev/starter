@@ -10,13 +10,4 @@ I want you to create **FIVE** different designs. Each design should be creative 
 
 Use your **frontend-design skill** to make these designs exceptional.
 
-## How to build
-
-- Start from the scaffold at `src/pages/1.astro` — duplicate it to `2.astro` through `5.astro` and build each design.
-- Override the OKLCH color variables in the `<style is:global>` block to give each design a unique color palette.
-- Use the placeholder image (already imported as `placeholder`) generously — heroes, cards, backgrounds, avatars, etc.
-- Use UI components from `src/components/ui/` — read their source first. All accept a `class` prop that merges with defaults.
-- Use Google Fonts via `<link>` tags in the `LayoutHead` slot, applied with `font-['Font_Name']`.
-- Use Tailwind classes for all styling — no additional `<style>` blocks or inline `style` attributes.
-
 Dev server is running on port **4321**.
