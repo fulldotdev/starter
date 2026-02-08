@@ -1,30 +1,16 @@
 import { z, type SchemaContext } from "astro:content"
 
-export const contactSchema = ({}: SchemaContext) =>
+export const contactSchema = ({ image }: SchemaContext) =>
   z.object({
-    title: z.string(),
-    description: z.string(),
-    info: z.object({
-      title: z.string(),
-      items: z.array(
-        z.object({
-          label: z.string(),
-          value: z.string(),
-          icon: z.string().optional(),
-          href: z.string().optional(),
-        })
-      ),
-    }),
-    cta: z.object({
+    slug: z.string().optional(),
+    name: z.string(),
+    seo: z.object({
       title: z.string(),
       description: z.string(),
-      links: z.array(
-        z.object({
-          text: z.string(),
-          href: z.string(),
-          icon: z.string().optional(),
-        })
-      ),
+      image: z.object({
+        src: image(),
+        alt: z.string(),
+      }).optional(),
     }),
   })
 

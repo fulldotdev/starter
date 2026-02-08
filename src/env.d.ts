@@ -3,6 +3,6 @@
 
 declare namespace App {
   interface Locals {
-    global?: import("@/schemas/global").GlobalSchema // Add global type to Astro.locals
+    global: import("@/schemas/global").GlobalSchema
   }
 }

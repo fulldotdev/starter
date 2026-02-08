@@ -1,0 +1,27 @@
+---
+import type { AboutSchema } from "@/schemas/layouts/about"
+import {
+  Layout,
+  LayoutBody,
+  LayoutHead,
+  LayoutMain,
+} from "@/components/ui/layout"
+import Footer from "@/components/blocks/footer.astro"
+import Header from "@/components/blocks/header.astro"
+
+type Props = AboutSchema
+
+const page = Astro.props
+const global = Astro.locals.global
+---
+
+<Layout>
+  <LayoutHead {...page} />
+  <LayoutBody>
+    <Header />
+    <LayoutMain>
+      <!-- Write the about page layout here -->
+    </LayoutMain>
+    <Footer />
+  </LayoutBody>
+</Layout>

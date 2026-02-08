@@ -1,6 +1,6 @@
 import { z, type SchemaContext } from "astro:content"
 
-export const aboutSchema = ({ image }: SchemaContext) =>
+export const landingSchema = ({ image }: SchemaContext) =>
   z.object({
     slug: z.string().optional(),
     name: z.string(),
@@ -14,4 +14,4 @@ export const aboutSchema = ({ image }: SchemaContext) =>
     }),
   })
 
-export type AboutSchema = z.infer<ReturnType<typeof aboutSchema>>
+export type LandingSchema = z.infer<ReturnType<typeof landingSchema>>

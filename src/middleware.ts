@@ -8,6 +8,9 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const defaultLocale = i18n?.defaultLocale
   const globalId = !locale || locale === defaultLocale ? "index" : locale
   const global = await getEntry("globals", globalId)
-  context.locals.global = global?.data
+  if (!global) {
+    throw new Error(`Global data not found for locale: ${locale}`)
+  }
+  context.locals.global = global.data
   return next()
 })

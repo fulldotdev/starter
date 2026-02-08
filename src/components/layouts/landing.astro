@@ -1,0 +1,23 @@
+---
+import type { LandingSchema } from "@/schemas/layouts/landing"
+import {
+  Layout,
+  LayoutBody,
+  LayoutHead,
+  LayoutMain,
+} from "@/components/ui/layout"
+
+type Props = LandingSchema
+
+const page = Astro.props
+const global = Astro.locals.global
+---
+
+<Layout>
+  <LayoutHead {...page} />
+  <LayoutBody>
+    <LayoutMain>
+      <!-- Write the landing page layout here -->
+    </LayoutMain>
+  </LayoutBody>
+</Layout>

@@ -10,7 +10,7 @@ export default defineConfig({
       favicon: "src/assets/logo-fulldev.svg",
       i18n: {
         defaultLocale: "en",
-        locales: ["en", "nl", "fr"],
+        locales: ["en", "nl", "de"],
       },
     }),
   ],
