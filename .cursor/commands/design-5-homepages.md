@@ -11,8 +11,10 @@ You already have an empty project initialized following specs:
 - Astro
 - Typescript
 - Pnpm
+- Tailwind CSS
+- UI components in src/components/ui/
 
-I want you to create FIVE different designs. Each design should be creative and unique from all the others that you create. They should be created in 1.astro, 2.astro, 3.astro, 4.astro and 5.astro respectively and will be hosted on /1, /2, /3, /4 and /5 respectively.
+I want you to create FIFTEEN different designs. Each design should be creative and unique from all the others that you create. They should be created in 1.astro, till 15.astro respectively and will be hosted on /1, till /15 respectively.
 
 Use your frontend design skill to make these designs exceptional.
 
