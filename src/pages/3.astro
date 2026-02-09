@@ -1,0 +1,401 @@
+---
+import "@/styles/global.css"
+import {
+  Layout,
+  LayoutBody,
+  LayoutHead,
+  LayoutMain,
+} from "@/components/ui/layout"
+---
+
+<Layout>
+  <LayoutHead title="About — Conduit" description="Meet the people behind Conduit. We're designers, engineers, and strategists united by a belief that technology should bring people closer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  </LayoutHead>
+  <LayoutBody>
+    <LayoutMain class="relative overflow-hidden">
+
+      <!-- Organic blob decorations -->
+      <div class="organic-blob blob-1"></div>
+      <div class="organic-blob blob-2"></div>
+
+      <!-- Nav -->
+      <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 md:px-12 lg:px-20 nav-blur">
+        <a href="/1" class="font-display text-xl tracking-tight">Conduit</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/2" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Services</a>
+          <a href="/3" class="font-body text-sm font-medium text-[var(--foreground)]">About</a>
+          <a href="/4" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Work</a>
+          <a href="/5" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Contact</a>
+        </div>
+        <a href="/5" class="font-body text-sm border border-[var(--border)] px-4 py-2 rounded-full hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all duration-300">Let's Talk</a>
+      </nav>
+
+      <!-- Hero -->
+      <section class="px-6 md:px-12 lg:px-20 pt-32 pb-12">
+        <div class="max-w-4xl">
+          <p class="font-body text-sm uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-6 fade-in" style="animation-delay: 0.1s">About Us</p>
+          <h1 class="font-display text-5xl md:text-6xl lg:text-7xl leading-[1] tracking-tight mb-8">
+            <span class="line-reveal" style="animation-delay: 0.2s">Real people building</span><br />
+            <span class="line-reveal" style="animation-delay: 0.4s"><em class="italic warm-glow">real connections.</em></span>
+          </h1>
+          <p class="font-body text-lg text-[var(--muted-foreground)] max-w-2xl leading-relaxed fade-in" style="animation-delay: 0.6s">
+            We started Conduit because we saw too much technology that felt lifeless — interfaces designed for metrics instead of humans. We believed there was a better way, and we set out to prove it.
+          </p>
+        </div>
+      </section>
+
+      <!-- Origin Story -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 reveal-section">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+          <div class="lg:col-span-2 reveal-item" style="animation-delay: 0.1s">
+            <div class="aspect-[3/4] bg-[var(--muted)] rounded-2xl relative overflow-hidden founders-photo">
+              <!-- Warm overlay gradient -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[var(--foreground)]/20 to-transparent mix-blend-multiply"></div>
+              <!-- Corner accent -->
+              <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[var(--accent)]/40 to-transparent"></div>
+            </div>
+          </div>
+          <div class="lg:col-span-3 flex flex-col justify-center reveal-item" style="animation-delay: 0.25s">
+            <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-6">Our Story</p>
+            <h2 class="font-display text-3xl md:text-4xl leading-snug mb-6">Founded in 2014 by two friends who couldn't stop arguing about bad websites.</h2>
+            <div class="space-y-4 font-body text-[var(--muted-foreground)] leading-relaxed">
+              <p>What started as late-night critiques of clunky interfaces became a shared mission: build digital experiences that treat people like people — not data points.</p>
+              <p>Marcus came from product design. Aisha from full-stack engineering. Together they assembled a team that speaks both languages fluently — the language of human emotion and the language of clean code.</p>
+              <p>Twelve years later, we're 34 people strong, spanning three continents. But the mission hasn't changed: every project begins with empathy and ends with connection.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 bg-[var(--secondary)] relative reveal-section">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--foreground)]/15 to-transparent"></div>
+        <div class="max-w-3xl mb-16 reveal-item" style="animation-delay: 0.1s">
+          <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-4">What Guides Us</p>
+          <h2 class="font-display text-4xl md:text-5xl tracking-tight">Our values aren't<br />on a poster. They're<br />in our <em class="italic">code.</em></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="space-y-12">
+            <div class="reveal-item value-card" style="animation-delay: 0.15s">
+              <div class="value-marker"></div>
+              <h3 class="font-display text-2xl mb-3">Empathy Over Efficiency</h3>
+              <p class="font-body text-[var(--muted-foreground)] leading-relaxed">We'd rather ship one feature that genuinely helps someone than ten features nobody asked for. Every decision gets filtered through "does this serve the person using it?"</p>
+            </div>
+            <div class="reveal-item value-card" style="animation-delay: 0.25s">
+              <div class="value-marker"></div>
+              <h3 class="font-display text-2xl mb-3">Radical Honesty</h3>
+              <p class="font-body text-[var(--muted-foreground)] leading-relaxed">If your idea won't work, we'll tell you — and we'll bring a better one. No scope bloat, no yes-people. Just direct, caring partnership.</p>
+            </div>
+          </div>
+          <div class="space-y-12">
+            <div class="reveal-item value-card" style="animation-delay: 0.35s">
+              <div class="value-marker"></div>
+              <h3 class="font-display text-2xl mb-3">Craft as Care</h3>
+              <p class="font-body text-[var(--muted-foreground)] leading-relaxed">We obsess over details because details are where trust lives. The loading state, the error message, the hover transition — these moments matter.</p>
+            </div>
+            <div class="reveal-item value-card" style="animation-delay: 0.45s">
+              <div class="value-marker"></div>
+              <h3 class="font-display text-2xl mb-3">Long-Term Thinking</h3>
+              <p class="font-body text-[var(--muted-foreground)] leading-relaxed">We don't optimize for launches. We optimize for what happens after — when your users return, when your team needs to iterate, when the real relationship begins.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 reveal-section">
+        <div class="max-w-3xl mb-16 reveal-item" style="animation-delay: 0.1s">
+          <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-4">The Team</p>
+          <h2 class="font-display text-4xl md:text-5xl tracking-tight">Diverse minds,<br /><em class="italic">shared purpose.</em></h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
+          <div class="team-member reveal-item" style="animation-delay: 0.1s">
+            <div class="aspect-square bg-[var(--muted)] rounded-xl mb-3 overflow-hidden team-photo"></div>
+            <h4 class="font-body text-sm font-medium">Marcus Rivera</h4>
+            <p class="font-body text-xs text-[var(--muted-foreground)]">Co-Founder & Design</p>
+          </div>
+          <div class="team-member reveal-item" style="animation-delay: 0.15s">
+            <div class="aspect-square bg-[var(--muted)] rounded-xl mb-3 overflow-hidden team-photo"></div>
+            <h4 class="font-body text-sm font-medium">Aisha Okonkwo</h4>
+            <p class="font-body text-xs text-[var(--muted-foreground)]">Co-Founder & Engineering</p>
+          </div>
+          <div class="team-member reveal-item" style="animation-delay: 0.2s">
+            <div class="aspect-square bg-[var(--muted)] rounded-xl mb-3 overflow-hidden team-photo"></div>
+            <h4 class="font-body text-sm font-medium">Jonas Lindqvist</h4>
+            <p class="font-body text-xs text-[var(--muted-foreground)]">Head of Strategy</p>
+          </div>
+          <div class="team-member reveal-item" style="animation-delay: 0.25s">
+            <div class="aspect-square bg-[var(--muted)] rounded-xl mb-3 overflow-hidden team-photo"></div>
+            <h4 class="font-body text-sm font-medium">Mei Chen</h4>
+            <p class="font-body text-xs text-[var(--muted-foreground)]">Lead Designer</p>
+          </div>
+          <div class="team-member reveal-item" style="animation-delay: 0.3s">
+            <div class="aspect-square bg-[var(--muted)] rounded-xl mb-3 overflow-hidden team-photo"></div>
+            <h4 class="font-body text-sm font-medium">Tomás Herrera</h4>
+            <p class="font-body text-xs text-[var(--muted-foreground)]">Senior Engineer</p>
+          </div>
+          <div class="team-member reveal-item" style="animation-delay: 0.35s">
+            <div class="aspect-square bg-[var(--muted)] rounded-xl mb-3 overflow-hidden team-photo"></div>
+            <h4 class="font-body text-sm font-medium">Priya Sharma</h4>
+            <p class="font-body text-xs text-[var(--muted-foreground)]">UX Researcher</p>
+          </div>
+          <div class="team-member reveal-item" style="animation-delay: 0.4s">
+            <div class="aspect-square bg-[var(--muted)] rounded-xl mb-3 overflow-hidden team-photo"></div>
+            <h4 class="font-body text-sm font-medium">David Osei</h4>
+            <p class="font-body text-xs text-[var(--muted-foreground)]">Full-Stack Developer</p>
+          </div>
+          <div class="team-member reveal-item" style="animation-delay: 0.45s">
+            <div class="aspect-square bg-[var(--muted)] rounded-xl mb-3 overflow-hidden team-photo"></div>
+            <h4 class="font-body text-sm font-medium">Elena Volkov</h4>
+            <p class="font-body text-xs text-[var(--muted-foreground)]">Project Manager</p>
+          </div>
+        </div>
+        <p class="font-body text-sm text-[var(--muted-foreground)] mt-12 fade-in">+ 26 more talented humans across Amsterdam, Lagos, and Portland.</p>
+      </section>
+
+      <!-- Culture Quote -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 border-t border-[var(--border)] reveal-section">
+        <div class="max-w-3xl mx-auto text-center relative reveal-item" style="animation-delay: 0.1s">
+          <!-- Big decorative quote mark -->
+          <div class="big-quote">"</div>
+          <blockquote class="font-display text-2xl md:text-3xl lg:text-4xl leading-snug mb-8 relative z-10">
+            "We hire for curiosity and kindness. Everything else can be taught."
+          </blockquote>
+          <div class="relative z-10">
+            <p class="font-body text-sm font-medium">Marcus Rivera</p>
+            <p class="font-body text-sm text-[var(--muted-foreground)]">Co-Founder, Conduit</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Open Roles CTA -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 bg-[var(--foreground)] text-[var(--background)] relative overflow-hidden reveal-section">
+        <div class="absolute inset-0 careers-texture"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+          <div class="reveal-item" style="animation-delay: 0.1s">
+            <p class="font-body text-xs uppercase tracking-[0.2em] opacity-50 mb-4">Careers</p>
+            <h2 class="font-display text-4xl md:text-5xl tracking-tight mb-6">Want to build<br />things that <em class="italic">matter?</em></h2>
+            <p class="font-body text-lg opacity-70 mb-8">We're always looking for empathetic makers — designers who code, engineers who care about UX, and strategists who listen more than they talk.</p>
+            <a href="/5" class="font-body text-sm bg-[var(--background)] text-[var(--foreground)] px-8 py-3.5 rounded-full inline-block hover:scale-[1.03] hover:shadow-xl active:scale-[0.98] transition-all duration-300">View Open Roles</a>
+          </div>
+          <div class="space-y-4 reveal-item" style="animation-delay: 0.25s">
+            <a href="#" class="flex items-center justify-between border-b border-[var(--background)]/15 pb-4 group role-item">
+              <div>
+                <h4 class="font-body text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">Senior Frontend Engineer</h4>
+                <p class="font-body text-xs opacity-50">Remote · Full-time</p>
+              </div>
+              <span class="font-body text-sm opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">→</span>
+            </a>
+            <a href="#" class="flex items-center justify-between border-b border-[var(--background)]/15 pb-4 group role-item">
+              <div>
+                <h4 class="font-body text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">Product Designer</h4>
+                <p class="font-body text-xs opacity-50">Amsterdam · Full-time</p>
+              </div>
+              <span class="font-body text-sm opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">→</span>
+            </a>
+            <a href="#" class="flex items-center justify-between border-b border-[var(--background)]/15 pb-4 group role-item">
+              <div>
+                <h4 class="font-body text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">UX Researcher</h4>
+                <p class="font-body text-xs opacity-50">Remote · Contract</p>
+              </div>
+              <span class="font-body text-sm opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="px-6 md:px-12 lg:px-20 py-12 border-t border-[var(--border)]">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div>
+            <a href="/1" class="font-display text-lg tracking-tight hover:opacity-70 transition-opacity duration-300">Conduit</a>
+            <p class="font-body text-sm text-[var(--muted-foreground)] mt-1">Bridging human connection & technology.</p>
+          </div>
+          <div class="flex flex-wrap gap-6">
+            <a href="/2" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Services</a>
+            <a href="/3" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">About</a>
+            <a href="/4" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Work</a>
+            <a href="/5" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Contact</a>
+          </div>
+          <p class="font-body text-xs text-[var(--muted-foreground)]">© 2026 Conduit. All rights reserved.</p>
+        </div>
+      </footer>
+
+    </LayoutMain>
+  </LayoutBody>
+</Layout>
+
+<style is:global>
+  :root {
+    --radius: 0.625rem;
+    --background: oklch(0.965 0.008 75);
+    --foreground: oklch(0.20 0.015 55);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.20 0.015 55);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.20 0.015 55);
+    --primary: oklch(0.20 0.015 55);
+    --primary-foreground: oklch(0.965 0.008 75);
+    --secondary: oklch(0.935 0.012 75);
+    --secondary-foreground: oklch(0.20 0.015 55);
+    --muted: oklch(0.935 0.012 75);
+    --muted-foreground: oklch(0.52 0.02 55);
+    --accent: oklch(0.70 0.06 55);
+    --accent-foreground: oklch(0.20 0.015 55);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(0.985 0 0);
+    --border: oklch(0.20 0.015 55 / 10%);
+    --input: oklch(0.20 0.015 55 / 12%);
+    --ring: oklch(0.708 0 0);
+  }
+
+  .font-display {
+    font-family: 'Fraunces', serif;
+  }
+  .font-body {
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  /* === NAV BLUR === */
+  .nav-blur {
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    background: oklch(0.965 0.008 75 / 75%);
+  }
+
+  /* === ORGANIC BLOBS === */
+  .organic-blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(80px);
+  }
+  .blob-1 {
+    top: 10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: oklch(0.85 0.04 55 / 25%);
+    animation: blob-float 16s ease-in-out infinite alternate;
+  }
+  .blob-2 {
+    bottom: 30%;
+    left: -8%;
+    width: 350px;
+    height: 350px;
+    background: oklch(0.82 0.05 80 / 20%);
+    animation: blob-float 20s ease-in-out 3s infinite alternate-reverse;
+  }
+
+  @keyframes blob-float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -20px) scale(1.08); }
+  }
+
+  /* === HERO ANIMATIONS === */
+  .line-reveal {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: line-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: line-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes line-up {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* === WARM GLOW TEXT === */
+  .warm-glow {
+    text-shadow: 0 0 60px oklch(0.70 0.06 55 / 15%);
+  }
+
+  /* === SCROLL REVEAL === */
+  .reveal-section .reveal-item {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .reveal-section.is-visible .reveal-item {
+    animation: line-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* === TEAM PHOTOS === */
+  .team-photo {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  }
+  .team-member:hover .team-photo {
+    transform: translateY(-4px) rotate(-1deg);
+    box-shadow: 0 12px 32px oklch(0 0 0 / 10%);
+  }
+
+  /* === FOUNDERS PHOTO === */
+  .founders-photo {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .founders-photo:hover {
+    transform: scale(1.02);
+  }
+
+  /* === VALUE CARD === */
+  .value-card {
+    position: relative;
+    padding-left: 20px;
+  }
+  .value-marker {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 24px;
+    border-radius: 2px;
+    background: var(--foreground);
+    opacity: 0.15;
+    transition: opacity 0.3s ease, height 0.3s ease;
+  }
+  .value-card:hover .value-marker {
+    opacity: 0.4;
+    height: 32px;
+  }
+
+  /* === BIG QUOTE === */
+  .big-quote {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Fraunces', serif;
+    font-size: 12rem;
+    line-height: 1;
+    color: var(--foreground);
+    opacity: 0.04;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* === CAREERS TEXTURE === */
+  .careers-texture {
+    background-image: radial-gradient(oklch(1 0 0 / 3%) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>
+
+<script>
+  const sections = document.querySelectorAll('.reveal-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.15 });
+  sections.forEach(section => observer.observe(section));
+</script>

@@ -1,8 +1,5 @@
 ---
-import placeholder from "@/assets/image-placeholder.webp"
-
 import "@/styles/global.css"
-
 import {
   Layout,
   LayoutBody,
@@ -12,61 +9,344 @@ import {
 ---
 
 <Layout>
-  <LayoutHead title="" description="">
-    <!-- Google Fonts -->
+  <LayoutHead title="Conduit — Where Human Connection Meets Technology" description="A web development agency that bridges the gap between human connection and technology. We build digital experiences that feel genuinely human.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
   </LayoutHead>
   <LayoutBody>
-    <!-- Header -->
-    <LayoutMain>
-      <!-- Main -->
+    <LayoutMain class="relative overflow-hidden">
+
+      <!-- Grain overlay -->
+      <div class="grain"></div>
+
+      <!-- Ambient glow -->
+      <div class="hero-glow"></div>
+
+      <!-- Nav -->
+      <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 md:px-12 lg:px-20 nav-blur">
+        <a href="/1" class="font-display text-xl tracking-tight text-[var(--foreground)]">Conduit</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/2" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Services</a>
+          <a href="/3" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">About</a>
+          <a href="/4" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Work</a>
+          <a href="/5" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Contact</a>
+        </div>
+        <a href="/5" class="font-body text-sm border border-[var(--border)] px-4 py-2 rounded-full hover:bg-[var(--foreground)]/10 transition-all duration-300">Let's Talk</a>
+      </nav>
+
+      <!-- Hero -->
+      <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-24 relative">
+        <div class="max-w-5xl">
+          <p class="font-body text-sm uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-8 hero-fade" style="animation-delay: 0.1s">Web Development Agency</p>
+          <h1 class="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.95] tracking-tight mb-8">
+            <span class="hero-line" style="animation-delay: 0.2s">We build the</span><br />
+            <span class="hero-line" style="animation-delay: 0.35s">bridge between</span><br />
+            <span class="hero-line" style="animation-delay: 0.5s"><em class="italic text-shimmer">people</em> & tech</span>
+          </h1>
+          <p class="font-body text-lg md:text-xl text-[var(--muted-foreground)] max-w-xl leading-relaxed mb-12 hero-fade" style="animation-delay: 0.7s">
+            Technology should feel human. We create digital experiences that connect, resonate, and endure — never cold, never impersonal.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 hero-fade" style="animation-delay: 0.9s">
+            <a href="/5" class="font-body text-sm bg-[var(--foreground)] text-[var(--background)] px-8 py-3.5 rounded-full text-center hover:scale-[1.02] hover:shadow-lg hover:shadow-[var(--foreground)]/10 active:scale-[0.98] transition-all duration-300">Start a Project</a>
+            <a href="/4" class="font-body text-sm border border-[var(--border)] px-8 py-3.5 rounded-full text-center hover:bg-[var(--foreground)]/10 hover:border-[var(--foreground)]/30 transition-all duration-300">View Our Work</a>
+          </div>
+        </div>
+        <!-- Scroll hint -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-hint">
+          <div class="w-px h-12 bg-gradient-to-b from-transparent to-[var(--muted-foreground)]/40"></div>
+        </div>
+      </section>
+
+      <!-- Manifesto Strip -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 border-t border-[var(--border)] reveal-section">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+          <div class="reveal-item" style="animation-delay: 0.1s">
+            <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-4">01 — Philosophy</p>
+            <h3 class="font-display text-2xl md:text-3xl leading-snug mb-4">Human-first, always.</h3>
+            <p class="font-body text-[var(--muted-foreground)] leading-relaxed">Every interface we craft starts with empathy. We study how people think, feel, and move through digital spaces before writing a single line of code.</p>
+          </div>
+          <div class="reveal-item" style="animation-delay: 0.25s">
+            <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-4">02 — Approach</p>
+            <h3 class="font-display text-2xl md:text-3xl leading-snug mb-4">Craft meets precision.</h3>
+            <p class="font-body text-[var(--muted-foreground)] leading-relaxed">We merge artful design with rigorous engineering. The result is software that's beautiful and bulletproof — experiences that delight and perform.</p>
+          </div>
+          <div class="reveal-item" style="animation-delay: 0.4s">
+            <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-4">03 — Promise</p>
+            <h3 class="font-display text-2xl md:text-3xl leading-snug mb-4">Connection that lasts.</h3>
+            <p class="font-body text-[var(--muted-foreground)] leading-relaxed">We don't build throwaway websites. We build lasting digital relationships — platforms that grow with your audience and deepen engagement over time.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Band -->
+      <section class="px-6 md:px-12 lg:px-20 py-20 bg-[var(--secondary)] relative reveal-section">
+        <div class="absolute inset-0 bg-gradient-to-r from-[var(--foreground)]/[0.02] via-transparent to-[var(--foreground)]/[0.02]"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center relative">
+          <div class="stat-item">
+            <p class="font-display text-4xl md:text-5xl tracking-tight mb-2">127</p>
+            <p class="font-body text-sm text-[var(--muted-foreground)]">Projects Delivered</p>
+          </div>
+          <div class="stat-item">
+            <p class="font-display text-4xl md:text-5xl tracking-tight mb-2">98%</p>
+            <p class="font-body text-sm text-[var(--muted-foreground)]">Client Retention</p>
+          </div>
+          <div class="stat-item">
+            <p class="font-display text-4xl md:text-5xl tracking-tight mb-2">12</p>
+            <p class="font-body text-sm text-[var(--muted-foreground)]">Years Running</p>
+          </div>
+          <div class="stat-item">
+            <p class="font-display text-4xl md:text-5xl tracking-tight mb-2">34</p>
+            <p class="font-body text-sm text-[var(--muted-foreground)]">Team Members</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Work Preview -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 reveal-section">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+          <div>
+            <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-4">Selected Work</p>
+            <h2 class="font-display text-4xl md:text-5xl lg:text-6xl tracking-tight">Projects that<br /><em class="italic">connect.</em></h2>
+          </div>
+          <a href="/4" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300 mt-6 md:mt-0 underline underline-offset-4 decoration-[var(--border)] hover:decoration-[var(--foreground)]">View all work →</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a href="/4" class="group block">
+            <div class="aspect-[4/3] bg-[var(--muted)] rounded-lg mb-4 overflow-hidden relative project-card">
+              <div class="absolute inset-0 bg-gradient-to-t from-[var(--foreground)]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                <span class="font-body text-xs text-[var(--background)]">View Project →</span>
+              </div>
+            </div>
+            <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-1">Healthcare Platform</p>
+            <h3 class="font-display text-xl group-hover:translate-x-1 transition-transform duration-300">MedConnect — Patient Portal Reimagined</h3>
+          </a>
+          <a href="/4" class="group block">
+            <div class="aspect-[4/3] bg-[var(--muted)] rounded-lg mb-4 overflow-hidden relative project-card">
+              <div class="absolute inset-0 bg-gradient-to-t from-[var(--foreground)]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                <span class="font-body text-xs text-[var(--background)]">View Project →</span>
+              </div>
+            </div>
+            <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-1">EdTech Startup</p>
+            <h3 class="font-display text-xl group-hover:translate-x-1 transition-transform duration-300">Luminary — Learning That Feels Personal</h3>
+          </a>
+        </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 border-t border-[var(--border)] reveal-section">
+        <div class="max-w-3xl mx-auto text-center relative">
+          <div class="absolute -top-8 left-1/2 -translate-x-1/2 font-display text-8xl text-[var(--foreground)]/[0.06] select-none leading-none">"</div>
+          <p class="font-body text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)] mb-8">What Clients Say</p>
+          <blockquote class="font-display text-2xl md:text-3xl lg:text-4xl leading-snug mb-8">
+            "Conduit didn't just build us a website — they gave our customers a reason to stay, to trust, and to come back."
+          </blockquote>
+          <div>
+            <p class="font-body text-sm font-medium">Sarah Chen</p>
+            <p class="font-body text-sm text-[var(--muted-foreground)]">CEO, MedConnect</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="px-6 md:px-12 lg:px-20 py-24 bg-[var(--foreground)] text-[var(--background)] relative overflow-hidden reveal-section">
+        <div class="absolute inset-0 cta-pattern"></div>
+        <div class="max-w-3xl mx-auto text-center relative">
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">Ready to build<br />something <em class="italic">real?</em></h2>
+          <p class="font-body text-lg opacity-70 mb-10 max-w-lg mx-auto">Let's have a conversation about what your audience needs — and create a digital experience they'll genuinely love.</p>
+          <a href="/5" class="font-body text-sm bg-[var(--background)] text-[var(--foreground)] px-8 py-3.5 rounded-full inline-block hover:scale-[1.03] hover:shadow-xl active:scale-[0.98] transition-all duration-300">Start the Conversation</a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="px-6 md:px-12 lg:px-20 py-12 border-t border-[var(--border)]">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div>
+            <a href="/1" class="font-display text-lg tracking-tight hover:opacity-70 transition-opacity duration-300">Conduit</a>
+            <p class="font-body text-sm text-[var(--muted-foreground)] mt-1">Bridging human connection & technology.</p>
+          </div>
+          <div class="flex flex-wrap gap-6">
+            <a href="/2" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Services</a>
+            <a href="/3" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">About</a>
+            <a href="/4" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Work</a>
+            <a href="/5" class="font-body text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-300">Contact</a>
+          </div>
+          <p class="font-body text-xs text-[var(--muted-foreground)]">© 2026 Conduit. All rights reserved.</p>
+        </div>
+      </footer>
+
     </LayoutMain>
-    <!-- Footer -->
   </LayoutBody>
 </Layout>
 
 <style is:global>
   :root {
     --radius: 0.625rem;
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
+    --background: oklch(0.13 0.005 70);
+    --foreground: oklch(0.96 0.01 80);
+    --card: oklch(0.17 0.005 70);
+    --card-foreground: oklch(0.96 0.01 80);
+    --popover: oklch(0.17 0.005 70);
+    --popover-foreground: oklch(0.96 0.01 80);
+    --primary: oklch(0.96 0.01 80);
+    --primary-foreground: oklch(0.13 0.005 70);
+    --secondary: oklch(0.18 0.008 70);
+    --secondary-foreground: oklch(0.96 0.01 80);
+    --muted: oklch(0.22 0.008 70);
+    --muted-foreground: oklch(0.60 0.02 70);
+    --accent: oklch(0.22 0.01 70);
+    --accent-foreground: oklch(0.96 0.01 80);
     --destructive: oklch(0.577 0.245 27.325);
     --destructive-foreground: oklch(0.985 0 0);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
+    --border: oklch(0.96 0.01 80 / 12%);
+    --input: oklch(0.96 0.01 80 / 15%);
     --ring: oklch(0.708 0 0);
   }
 
-  .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.269 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.371 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --destructive-foreground: oklch(0.985 0 0);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
+  .font-display {
+    font-family: 'Instrument Serif', serif;
+  }
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* === GRAIN TEXTURE === */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 180px;
+  }
+
+  /* === AMBIENT GLOW === */
+  .hero-glow {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 50%;
+    height: 60%;
+    background: radial-gradient(ellipse, oklch(0.35 0.06 50 / 15%) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: glow-drift 12s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow-drift {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    100% { transform: translate(5%, 8%) scale(1.1); opacity: 0.9; }
+  }
+
+  /* === NAV BLUR === */
+  .nav-blur {
+    backdrop-filter: blur(12px) saturate(1.3);
+    -webkit-backdrop-filter: blur(12px) saturate(1.3);
+    background: oklch(0.13 0.005 70 / 70%);
+  }
+
+  /* === HERO ANIMATIONS === */
+  .hero-line {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: hero-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .hero-fade {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes hero-reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* === TEXT SHIMMER === */
+  .text-shimmer {
+    background: linear-gradient(
+      110deg,
+      oklch(0.96 0.01 80) 0%,
+      oklch(0.75 0.08 60) 40%,
+      oklch(0.96 0.01 80) 60%,
+      oklch(0.80 0.06 50) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+  }
+
+  /* === SCROLL HINT === */
+  .scroll-hint {
+    animation: scroll-bob 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-bob {
+    0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 0.8; transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* === SCROLL REVEAL === */
+  .reveal-section .reveal-item,
+  .reveal-section .stat-item {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .reveal-section.is-visible .reveal-item,
+  .reveal-section.is-visible .stat-item {
+    animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* === PROJECT CARD HOVER === */
+  .project-card {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  }
+
+  .group:hover .project-card {
+    transform: scale(1.015);
+    box-shadow: 0 20px 60px oklch(0 0 0 / 30%);
+  }
+
+  /* === CTA PATTERN === */
+  .cta-pattern {
+    background-image: radial-gradient(oklch(1 0 0 / 3%) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 </style>
+
+<script>
+  // Scroll reveal observer
+  const sections = document.querySelectorAll('.reveal-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+</script>

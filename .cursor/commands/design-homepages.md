@@ -1,21 +1,62 @@
 # Marketing homepage
 
-I am building a marketing homepage for a web development agency focusing on the combination between technical expertise and human soft skills to communicate with clients in a smooth way.
+I am building a marketing homepage for a web development agency focused on combining technical expertise with human soft skills for smooth client communication.
 
-It forms the bridge between the client and the technical possibilities. They offer a wide range of services, from website, webshop en webapplication development to AI integration.
+The agency bridges client goals and technical possibilities. Services include website, webshop, web application development, and AI integration.
 
-Your task is to build an incredible marketing homepage for this company. I want it to be creative and unique. Really push the limits of your design capabilities.
+Your task is to build exceptional marketing homepages with bold, memorable visual direction.
 
-You already have an empty project initialized following specs:
+## Project stack
 
 - Astro
-- Typescript
-- Pnpm
-- Tailwind CSS
-- UI components in src/components/ui/
+- TypeScript
+- pnpm
+- Tailwind CSS 4
+- UI components in `src/components/ui/`
 
-I want you to create FIFTEEN different designs. Each design should be creative and unique from all the others that you create. They should be created in 1.astro, till 15.astro respectively and will be hosted on /1, till /15 respectively.
+## Deliverables
 
-Use your frontend design skill to make these designs exceptional.
+- Create FIVE different homepage designs.
+- Save them as `src/pages/1.astro` through `src/pages/5.astro`.
+- They should be available at `/1` through `/5`.
+- Every design must be clearly distinct in art direction, layout system, typography, and motion language.
 
-The dev server is running on the following port: 4321
+## Styling policy (non-negotiable)
+
+Use a hybrid approach: Tailwind-first, CSS-enhanced.
+
+### Use Tailwind for
+
+- Layout and structure (grid, flex, positioning, spacing)
+- Typography scale, responsive behavior, and state variants
+- Color/token usage through existing theme utilities (`bg-background`, `text-foreground`, etc.)
+- Component composition and UI consistency
+
+### Use custom CSS only for
+
+- Complex keyframes and animation choreography
+- Effects that are awkward or impossible with utilities alone (masking, clip-path, blend/filter stacks, advanced gradient/noise treatments)
+- Highly specific decorative details that materially improve the design quality
+
+### Custom CSS constraints
+
+- Prefer `<style>` scoped to each page/component; avoid global leakage.
+- No separate design system. Do not introduce a new standalone palette/spacing/radius system.
+- Custom CSS must extend Tailwind tokens: use existing theme variables (`var(--background)`, `var(--foreground)`, `var(--primary)`, etc.) rather than unrelated hardcoded systems.
+- Avoid raw hex values when an existing theme token can express the same intent.
+- Keep custom CSS concise and purposeful (target: <= 80 lines per page unless absolutely necessary).
+- No CSS frameworks other than Tailwind.
+
+## Quality bar
+
+- Avoid generic template aesthetics.
+- Each page must include one signature visual motif (e.g. distinctive hero composition, interaction pattern, or art-directed section treatment).
+- Use strong type pairings and clear hierarchy.
+- Include tasteful, performant motion (not excessive).
+- Ensure responsive behavior is designed, not merely stacked.
+
+## Process
+
+- Use the frontend-design skill to push creative quality.
+- Before implementing each page, define a short concept direction (tone, palette intent, type approach, interaction idea), then execute.
+- Validate that each page renders without errors in the running dev server (`http://localhost:4321`).
