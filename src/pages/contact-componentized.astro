@@ -1,0 +1,341 @@
+---
+import SiteFooter from "@/components/blocks/site-footer-componentized.astro"
+import SiteHeader from "@/components/blocks/site-header-componentized.astro"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty"
+import {
+  Field,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+  FieldLegend,
+  FieldSet,
+} from "@/components/ui/field"
+import { Input } from "@/components/ui/input"
+import {
+  Layout,
+  LayoutBody,
+  LayoutHead,
+  LayoutMain,
+} from "@/components/ui/layout"
+import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select"
+import { Textarea } from "@/components/ui/textarea"
+
+const serviceOptions = [
+  "Web Application",
+  "Brand Experience",
+  "UX Design",
+  "Digital Strategy",
+]
+---
+
+<Layout>
+  <LayoutHead
+    title="Conduit — Contact"
+    name="Conduit"
+    description="Contact Conduit to discuss your next project."
+  >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </LayoutHead>
+  <LayoutBody class="overflow-x-hidden">
+    <SiteHeader activePath="/contact" workHref="/#work" />
+    <LayoutMain>
+      <section class="pt-32 pb-16 md:pt-40 md:pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+          <p class="font-code text-xs tracking-widest text-foreground/35 mb-4 reveal" style="animation-delay:0.2s">Let's talk</p>
+          <h1 class="font-human text-4xl md:text-6xl lg:text-7xl leading-[1.02] max-w-4xl reveal" style="animation-delay:0.3s">
+            Every good project starts with a <em class="italic text-accent">conversation</em>
+          </h1>
+        </div>
+      </section>
+
+      <section class="py-12 md:py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+          <div class="grid md:grid-cols-12 gap-12 md:gap-16">
+            <div class="md:col-span-7">
+              <div class="scroll-reveal">
+                <p class="font-human text-lg mb-8">Tell us about your project</p>
+                <Alert class="mb-8 bg-transparent border-foreground/10">
+                  <AlertTitle class="font-human">How we work</AlertTitle>
+                  <AlertDescription class="text-sm">
+                    Every inquiry gets a thoughtful reply from a senior team member, usually within a few hours.
+                  </AlertDescription>
+                </Alert>
+                <form class="space-y-6">
+                  <FieldGroup class="space-y-0 gap-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                      <Field>
+                        <FieldLabel class="font-code text-[10px] tracking-widest text-foreground/40 uppercase block mb-2">Name</FieldLabel>
+                        <Input type="text" placeholder="Your name" class="form-input" />
+                      </Field>
+                      <Field>
+                        <FieldLabel class="font-code text-[10px] tracking-widest text-foreground/40 uppercase block mb-2">Email</FieldLabel>
+                        <Input type="email" placeholder="you@company.com" class="form-input" />
+                      </Field>
+                    </div>
+                    <Field>
+                      <FieldLabel class="font-code text-[10px] tracking-widest text-foreground/40 uppercase block mb-2">Company</FieldLabel>
+                      <Input type="text" placeholder="Your company (optional)" class="form-input" />
+                    </Field>
+                    <FieldSet>
+                      <FieldLegend class="font-code text-[10px] tracking-widest text-foreground/40 uppercase block mb-2">
+                        What do you need?
+                      </FieldLegend>
+                      <div class="grid grid-cols-2 gap-3">
+                        {
+                          serviceOptions.map((service) => {
+                            const id = `service-${service.toLowerCase().replaceAll(" ", "-")}`
+                            return (
+                              <Field orientation="horizontal" class="service-chip rounded-md border border-foreground/10 px-3 py-2 gap-2">
+                                <Checkbox id={id} class="shrink-0 mt-0.5" />
+                                <FieldLabel for={id} class="chip-label text-left w-full cursor-pointer">
+                                  {service}
+                                </FieldLabel>
+                              </Field>
+                            )
+                          })
+                        }
+                      </div>
+                      <FieldDescription class="font-code text-[11px] text-foreground/35">
+                        Select all services that apply.
+                      </FieldDescription>
+                    </FieldSet>
+                    <Field>
+                      <FieldLabel class="font-code text-[10px] tracking-widest text-foreground/40 uppercase block mb-2">Tell us more</FieldLabel>
+                      <Textarea rows={5} placeholder="What are you building? What's the challenge? What would success look like?" class="form-input form-textarea" />
+                    </Field>
+                    <Field>
+                      <FieldLabel class="font-code text-[10px] tracking-widest text-foreground/40 uppercase block mb-2">Budget range</FieldLabel>
+                      <NativeSelect class="form-input form-select w-full">
+                        <NativeSelectOption value="">Select a range</NativeSelectOption>
+                        <NativeSelectOption value="25-50k">$25k – $50k</NativeSelectOption>
+                        <NativeSelectOption value="50-100k">$50k – $100k</NativeSelectOption>
+                        <NativeSelectOption value="100-250k">$100k – $250k</NativeSelectOption>
+                        <NativeSelectOption value="250k+">$250k+</NativeSelectOption>
+                        <NativeSelectOption value="unsure">Not sure yet</NativeSelectOption>
+                      </NativeSelect>
+                    </Field>
+                  </FieldGroup>
+                  <Button type="submit" class="cta-primary w-full sm:w-auto">
+                    <span>Send message</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </Button>
+                </form>
+              </div>
+            </div>
+
+            <div class="md:col-span-4 md:col-start-9">
+              <div class="space-y-10 scroll-reveal">
+                <div>
+                  <p class="font-code text-[10px] tracking-widest text-foreground/35 uppercase mb-3">Email us directly</p>
+                  <a href="mailto:hello@conduit.dev" class="font-human text-lg text-accent hover:underline transition-colors">hello@conduit.dev</a>
+                  <p class="text-xs text-muted-foreground mt-1.5">Usually respond within a few hours</p>
+                </div>
+                <div>
+                  <p class="font-code text-[10px] tracking-widest text-foreground/35 uppercase mb-3">Prefer to talk?</p>
+                  <a href="#" class="inline-flex items-center gap-2 text-sm text-accent group font-human">
+                    <span>Book a 30-minute call</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+                <div>
+                  <p class="font-code text-[10px] tracking-widest text-foreground/35 uppercase mb-3">Find us</p>
+                  <p class="font-human text-sm">Portland, Oregon</p>
+                  <p class="text-xs text-muted-foreground mt-1">Working with teams worldwide</p>
+                </div>
+                <div>
+                  <p class="font-code text-[10px] tracking-widest text-foreground/35 uppercase mb-3">Follow along</p>
+                  <div class="flex gap-4">
+                    <a href="#" class="text-sm text-muted-foreground hover:text-accent transition-colors">Twitter</a>
+                    <a href="#" class="text-sm text-muted-foreground hover:text-accent transition-colors">LinkedIn</a>
+                    <a href="#" class="text-sm text-muted-foreground hover:text-accent transition-colors">Dribbble</a>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <Empty class="border-foreground/10 p-5 items-start text-left">
+                    <EmptyHeader class="items-start text-left">
+                      <EmptyMedia variant="icon" class="bg-linear-to-b from-foreground/10 to-foreground/5 text-accent/60">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      </EmptyMedia>
+                      <EmptyTitle class="font-human text-base">What to expect</EmptyTitle>
+                    </EmptyHeader>
+                    <EmptyContent class="items-start text-left max-w-none">
+                      <EmptyDescription>
+                        A quick video about our process and what working with us looks like.
+                      </EmptyDescription>
+                      <span class="font-code text-[10px] text-foreground/30 block mt-1.5">1:45</span>
+                    </EmptyContent>
+                  </Empty>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 md:py-32 px-6">
+        <div class="max-w-5xl mx-auto">
+          <div class="grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-4">
+              <p class="font-code text-xs tracking-widest text-foreground/35 mb-3 scroll-reveal">Common questions</p>
+              <h2 class="font-human text-3xl leading-tight scroll-reveal">
+                Before you <em class="italic text-accent">ask</em>
+              </h2>
+            </div>
+            <div class="md:col-span-7 md:col-start-6 space-y-0">
+              <Accordion>
+                <AccordionItem class="faq-item scroll-reveal" open>
+                  <AccordionTrigger class="faq-question">
+                    <span class="font-human text-base">What does a typical project look like?</span>
+                  </AccordionTrigger>
+                  <AccordionContent class="faq-answer">
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                      Most projects run 3-6 months from kickoff to launch. We start with a discovery phase (2-3 weeks of research and strategy), move into design, then development. You'll have a dedicated team throughout — typically a designer, an engineer, and a project lead.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem class="faq-item scroll-reveal">
+                  <AccordionTrigger class="faq-question">
+                    <span class="font-human text-base">What's your minimum budget?</span>
+                  </AccordionTrigger>
+                  <AccordionContent class="faq-answer">
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                      Most of our projects fall in the $50k–$250k range. We occasionally take on smaller engagements if the project aligns deeply with our values. Budget depends on scope, timeline, and complexity — we'll give you an honest estimate after our first conversation.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem class="faq-item scroll-reveal">
+                  <AccordionTrigger class="faq-question">
+                    <span class="font-human text-base">Do you work with startups?</span>
+                  </AccordionTrigger>
+                  <AccordionContent class="faq-answer">
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                      Absolutely. Some of our best work has been with early-stage teams who care deeply about getting the experience right from day one. We've helped startups go from napkin sketch to funded product.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem class="faq-item scroll-reveal">
+                  <AccordionTrigger class="faq-question">
+                    <span class="font-human text-base">What technologies do you use?</span>
+                  </AccordionTrigger>
+                  <AccordionContent class="faq-answer">
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                      We're technology-agnostic — we choose what's right for your project. That said, we have deep expertise in React, Next.js, Astro, TypeScript, Node.js, and various cloud platforms. For design, we work primarily in Figma with a strong systems-thinking approach.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem class="faq-item scroll-reveal">
+                  <AccordionTrigger class="faq-question">
+                    <span class="font-human text-base">Can we see more of your work?</span>
+                  </AccordionTrigger>
+                  <AccordionContent class="faq-answer">
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                      Our <a href="/#work" class="text-accent hover:underline">homepage showcases selected projects</a>. We're happy to share more detailed case studies during a conversation — including process work, metrics, and client feedback.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </section>
+    </LayoutMain>
+    <SiteFooter />
+  </LayoutBody>
+</Layout>
+
+<style>
+  .font-human { font-family: 'Libre Baskerville', Georgia, serif; }
+  .font-code { font-family: 'JetBrains Mono', monospace; }
+  body { font-family: 'Libre Baskerville', Georgia, serif; font-size: 16px; }
+
+  .text-accent { color: oklch(0.65 0.12 70); }
+  .bg-accent { background-color: oklch(0.65 0.12 70); }
+
+  .nav-glass { backdrop-filter: blur(16px); background: oklch(0.97 0.01 80 / 85%); border-bottom: 1px solid oklch(0.18 0.015 55 / 6%); }
+  .nav-btn { padding: 0.45rem 1.2rem; border: 1px solid oklch(0.65 0.12 70 / 40%); border-radius: 6px; color: oklch(0.65 0.12 70); font-family: 'Libre Baskerville', serif; font-size: 0.75rem; transition: all 0.3s; }
+  .nav-btn:hover { background: oklch(0.65 0.12 70 / 6%); border-color: oklch(0.65 0.12 70 / 70%); }
+
+  .form-input {
+    width: 100%;
+    background: oklch(0.955 0.012 78);
+    border: 1px solid oklch(0.18 0.015 55 / 8%);
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: oklch(0.18 0.015 55);
+    transition: all 0.3s;
+    outline: none;
+  }
+  .form-input::placeholder { color: oklch(0.18 0.015 55 / 25%); }
+  .form-input:focus {
+    border-color: oklch(0.65 0.12 70 / 40%);
+    box-shadow: 0 0 0 3px oklch(0.65 0.12 70 / 8%);
+  }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .service-chip { cursor: pointer; }
+  .chip-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: oklch(0.4 0.02 55);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .service-chip:hover { border-color: oklch(0.65 0.12 70 / 30%); }
+  .service-chip:hover .chip-label { color: oklch(0.65 0.12 70); }
+
+  .faq-item {
+    border-bottom: 1px solid oklch(0.18 0.015 55 / 8%);
+  }
+  .faq-item:first-child { border-top: 1px solid oklch(0.18 0.015 55 / 8%); }
+  .faq-question {
+    display: flex; align-items: center; justify-content: between; gap: 1rem;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    width: 100%;
+  }
+  .faq-question span { flex: 1; }
+  .faq-answer { padding-bottom: 1.25rem; }
+
+  .cta-primary {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0.85rem 1.75rem; background: oklch(0.65 0.12 70); color: white; border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; font-weight: 500; transition: all 0.3s;
+    border: none; cursor: pointer;
+  }
+  .cta-primary:hover { background: oklch(0.58 0.12 70); transform: translateY(-2px); box-shadow: 0 8px 25px oklch(0.65 0.12 70 / 20%); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .scroll-reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+  .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+
+<script>
+  const reveals = document.querySelectorAll('.scroll-reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  reveals.forEach(el => observer.observe(el));
+</script>

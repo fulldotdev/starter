@@ -36,5 +36,3 @@ Use a strict two-phase workflow:
 - Override the theme variables in the `<style is:global>` in whatever way you see fit to make the design exceptional.
 
 Use your frontend design skill to make these designs exceptional.
-
-Use the following port for the dev server: 4321

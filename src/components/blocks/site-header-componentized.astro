@@ -1,0 +1,131 @@
+---
+import { Logo, LogoText } from "@/components/ui/logo"
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
+interface Props {
+  activePath?: "/" | "/about" | "/contact" | "/surfaces"
+  workHref?: string
+}
+
+const { activePath = "/", workHref = "/#work" } = Astro.props
+
+const navLinkClass =
+  "text-muted-foreground hover:text-foreground transition-colors duration-300 tracking-wide"
+const ctaClass = "nav-btn"
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 px-6 md:px-10 py-5 flex items-center justify-between nav-glass">
+  <Logo href="/" class="font-human text-lg tracking-tight text-foreground font-normal">
+    <LogoText>Conduit</LogoText>
+  </Logo>
+
+  <NavigationMenu class="hidden md:flex max-w-none flex-none">
+    <NavigationMenuList class="gap-8 text-xs">
+      <NavigationMenuItem>
+        <NavigationMenuLink
+          href="/surfaces"
+          class={navLinkClass}
+          active={activePath === "/surfaces"}
+          variant="trigger"
+        >
+          Surfaces
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuLink
+          href="/about"
+          class={navLinkClass}
+          active={activePath === "/about"}
+          variant="trigger"
+        >
+          About
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuLink href={workHref} class={navLinkClass} variant="trigger">
+          Work
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuLink
+          href="/contact"
+          class={ctaClass}
+          active={activePath === "/contact"}
+          variant="trigger"
+        >
+          Start a conversation
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+    </NavigationMenuList>
+  </NavigationMenu>
+
+  <Sheet class="md:hidden">
+    <SheetTrigger
+      variant="ghost"
+      size="icon"
+      class="md:hidden text-foreground p-0 h-auto w-auto"
+      aria-label="Open menu"
+    >
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <line x1="3" y1="8" x2="21" y2="8"></line>
+        <line x1="3" y1="16" x2="21" y2="16"></line>
+      </svg>
+    </SheetTrigger>
+    <SheetContent side="right" class="p-6 bg-background border-l border-foreground/8">
+      <SheetHeader class="p-0 mb-6">
+        <SheetTitle class="font-human text-lg">Conduit</SheetTitle>
+        <SheetDescription class="font-code text-xs tracking-wide">
+          Human connection, digital craft
+        </SheetDescription>
+      </SheetHeader>
+      <NavigationMenu class="max-w-none w-full">
+        <NavigationMenuList class="flex-col items-start gap-2 w-full">
+          <NavigationMenuItem class="w-full">
+            <NavigationMenuLink href="/surfaces" class="w-full justify-start" variant="trigger">
+              Surfaces
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem class="w-full">
+            <NavigationMenuLink href="/about" class="w-full justify-start" variant="trigger">
+              About
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem class="w-full">
+            <NavigationMenuLink href={workHref} class="w-full justify-start" variant="trigger">
+              Work
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem class="w-full">
+            <NavigationMenuLink
+              href="/contact"
+              class="w-full justify-start text-accent"
+              variant="trigger"
+            >
+              Start a conversation
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </SheetContent>
+  </Sheet>
+</header>

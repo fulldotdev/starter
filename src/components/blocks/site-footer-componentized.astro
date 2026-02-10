@@ -1,0 +1,30 @@
+---
+import { Icon } from "@/components/ui/icon"
+import { List, ListItem } from "@/components/ui/list"
+---
+
+<footer class="border-t border-foreground/8 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+    <span class="font-code">&copy; 2026 Conduit</span>
+    <List class="list-none flex items-center gap-6 space-y-0">
+      <ListItem class="m-0 gap-1.5 items-center">
+        <a href="#" class="hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+          <Icon name="twitter" class="text-xs" />
+          <span>Twitter</span>
+        </a>
+      </ListItem>
+      <ListItem class="m-0 gap-1.5 items-center">
+        <a href="#" class="hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+          <Icon name="linkedin" class="text-xs" />
+          <span>LinkedIn</span>
+        </a>
+      </ListItem>
+      <ListItem class="m-0 gap-1.5 items-center">
+        <a href="#" class="hover:text-foreground transition-colors inline-flex items-center gap-1.5">
+          <Icon name="dribbble" class="text-xs" />
+          <span>Dribbble</span>
+        </a>
+      </ListItem>
+    </List>
+  </div>
+</footer>

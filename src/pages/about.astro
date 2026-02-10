@@ -1,0 +1,343 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conduit — About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-background text-foreground overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 md:px-10 py-5 flex items-center justify-between nav-glass">
+      <a href="/" class="font-human text-lg tracking-tight text-foreground">Conduit</a>
+      <div class="hidden md:flex items-center gap-8 text-xs">
+        <a href="/surfaces" class="text-muted-foreground hover:text-foreground transition-colors duration-300 tracking-wide">Surfaces</a>
+        <a href="/about" class="text-foreground transition-colors duration-300 tracking-wide">About</a>
+        <a href="/#work" class="text-muted-foreground hover:text-foreground transition-colors duration-300 tracking-wide">Work</a>
+        <a href="/contact" class="nav-btn">Start a conversation</a>
+      </div>
+      <button class="md:hidden text-foreground" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+      </button>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-code text-xs tracking-widest text-foreground/35 mb-4 reveal" style="animation-delay:0.2s">Our story</p>
+        <h1 class="font-human text-4xl md:text-6xl lg:text-7xl leading-[1.02] max-w-4xl reveal" style="animation-delay:0.3s">
+          15 people who believe technology should feel <em class="italic text-accent">warm</em>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ==================== TEAM IMAGE ==================== -->
+    <section class="px-6 pb-20 md:pb-28">
+      <div class="max-w-5xl mx-auto">
+        <div class="team-hero-image aspect-[21/9] rounded-xl overflow-hidden scroll-reveal">
+          <div class="placeholder-inner">
+            <svg class="w-12 h-12 text-foreground/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            <span class="text-xs text-foreground/20 mt-2">Team photo — all of us, somewhere beautiful</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ORIGIN STORY ==================== -->
+    <section class="py-20 md:py-32 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12">
+          <div class="md:col-span-4">
+            <p class="font-code text-xs tracking-widest text-foreground/35 mb-3 scroll-reveal">The beginning</p>
+            <h2 class="font-human text-3xl leading-tight scroll-reveal">
+              How Conduit <em class="italic text-accent">began</em>
+            </h2>
+          </div>
+          <div class="md:col-span-7 md:col-start-6 space-y-5 text-base text-muted-foreground leading-relaxed scroll-reveal">
+            <p>
+              In 2014, our founder Alex watched a hospital receptionist apologize to a patient for the third time in five minutes. The software she was using — expensive, enterprise-grade software — was so confusing that it was getting between her and the person she was trying to help.
+            </p>
+            <p>
+              That moment crystallized something. Technology was supposed to <span class="text-foreground font-medium">connect people</span>, not separate them. And yet so much of what gets built treats humans as an afterthought — as "users" to be managed rather than people to be served.
+            </p>
+            <p>
+              Conduit was founded on a simple conviction: the best technology is the kind that disappears into the experience, leaving space for what matters — <span class="text-accent font-medium">genuine human connection</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VALUES — BENTO ==================== -->
+    <section class="py-20 md:py-32 px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-code text-xs tracking-widest text-foreground/35 mb-3 scroll-reveal">What guides us</p>
+        <h2 class="font-human text-3xl md:text-4xl leading-tight mb-14 scroll-reveal">
+          Our values
+        </h2>
+        <div class="values-grid">
+          <div class="value-card value-large human-surface rounded-xl p-8 md:p-10 scroll-reveal">
+            <span class="font-code text-[10px] tracking-widest text-foreground/25">01</span>
+            <h3 class="font-human text-2xl md:text-3xl mt-4 mb-4">People before pixels</h3>
+            <p class="text-base text-muted-foreground leading-relaxed">
+              Every decision starts with a person. Not a user story, not a JIRA ticket — a real human being with real feelings and real needs. This is non-negotiable.
+            </p>
+          </div>
+          <div class="value-card digital-surface rounded-xl p-8 scroll-reveal">
+            <span class="font-code text-[10px] tracking-widest text-digital-label">02</span>
+            <h3 class="font-human text-xl mt-4 mb-3 text-digital-fg">Craft over speed</h3>
+            <p class="text-sm text-digital-muted leading-relaxed">
+              We'd rather ship one thing beautifully than three things hastily. Quality is a form of respect — for the work, for the client, for the people who use it.
+            </p>
+          </div>
+          <div class="value-card human-surface rounded-xl p-8 scroll-reveal">
+            <span class="font-code text-[10px] tracking-widest text-foreground/25">03</span>
+            <h3 class="font-human text-xl mt-4 mb-3">Honest always</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">
+              We'll tell you if we're the wrong fit. We'll tell you if your idea needs rethinking. Honest counsel is more valuable than polite agreement.
+            </p>
+          </div>
+          <div class="value-card digital-surface rounded-xl p-8 scroll-reveal">
+            <span class="font-code text-[10px] tracking-widest text-digital-label">04</span>
+            <h3 class="font-human text-xl mt-4 mb-3 text-digital-fg">Stay curious</h3>
+            <p class="text-sm text-digital-muted leading-relaxed">
+              Technology changes. People don't. We're endlessly curious about both — staying sharp on the craft while deepening our understanding of the humans we serve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOUNDER ==================== -->
+    <section class="py-20 md:py-32 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-4">
+            <div class="founder-image aspect-[3/4] rounded-xl overflow-hidden scroll-reveal">
+              <div class="placeholder-inner">
+                <svg class="w-10 h-10 text-foreground/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span class="text-xs text-foreground/20 mt-2">Alex Chen, Founder</span>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-7 md:col-start-6">
+            <div class="scroll-reveal">
+              <p class="font-code text-xs tracking-widest text-foreground/35 mb-3">Meet the founder</p>
+              <h2 class="font-human text-3xl md:text-4xl leading-tight mb-6">Alex Chen</h2>
+              <div class="space-y-4 text-base text-muted-foreground leading-relaxed">
+                <p>
+                  Before starting Conduit, Alex spent a decade as an engineer at companies where "move fast and break things" was gospel. It worked for growth metrics. It didn't work for the people using the products.
+                </p>
+                <p>
+                  Today, Alex leads a team of fifteen — designers, engineers, and strategists who share a belief that software should make life feel <span class="text-foreground font-medium">more human</span>, not less. On weekends you'll find them hiking, reading, or arguing about typography over coffee.
+                </p>
+              </div>
+              <!-- Founder video inline -->
+              <div class="mt-8 flex items-center gap-4">
+                <div class="w-14 h-14 rounded-full bg-foreground/8 flex items-center justify-center cursor-pointer hover:bg-accent/10 transition-colors group">
+                  <svg class="w-5 h-5 text-accent group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <div>
+                  <span class="font-human text-sm font-bold">Watch: Why I started Conduit</span>
+                  <span class="font-code text-xs text-muted-foreground block mt-0.5">2:34</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TEAM GRID ==================== -->
+    <section class="py-20 md:py-32 px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="font-code text-xs tracking-widest text-foreground/35 mb-3 scroll-reveal">The team</p>
+        <h2 class="font-human text-3xl md:text-4xl leading-tight mb-14 scroll-reveal">
+          The humans behind the <em class="italic text-accent">bridge</em>
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="team-member scroll-reveal">
+            <div class="team-photo aspect-square rounded-lg">
+              <div class="placeholder-inner">
+                <svg class="w-6 h-6 text-foreground/12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+            </div>
+            <h3 class="font-human text-sm font-bold mt-3">Alex Chen</h3>
+            <p class="font-code text-[10px] text-muted-foreground mt-0.5">Founder & Lead</p>
+          </div>
+          <div class="team-member scroll-reveal">
+            <div class="team-photo aspect-square rounded-lg">
+              <div class="placeholder-inner"><svg class="w-6 h-6 text-foreground/12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            </div>
+            <h3 class="font-human text-sm font-bold mt-3">Maya Patel</h3>
+            <p class="font-code text-[10px] text-muted-foreground mt-0.5">Design Director</p>
+          </div>
+          <div class="team-member scroll-reveal">
+            <div class="team-photo aspect-square rounded-lg">
+              <div class="placeholder-inner"><svg class="w-6 h-6 text-foreground/12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            </div>
+            <h3 class="font-human text-sm font-bold mt-3">Sam Torres</h3>
+            <p class="font-code text-[10px] text-muted-foreground mt-0.5">Engineering Lead</p>
+          </div>
+          <div class="team-member scroll-reveal">
+            <div class="team-photo aspect-square rounded-lg">
+              <div class="placeholder-inner"><svg class="w-6 h-6 text-foreground/12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            </div>
+            <h3 class="font-human text-sm font-bold mt-3">Rin Nakamura</h3>
+            <p class="font-code text-[10px] text-muted-foreground mt-0.5">UX Research</p>
+          </div>
+          <div class="team-member scroll-reveal">
+            <div class="team-photo aspect-square rounded-lg">
+              <div class="placeholder-inner"><svg class="w-6 h-6 text-foreground/12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            </div>
+            <h3 class="font-human text-sm font-bold mt-3">Jordan Ellis</h3>
+            <p class="font-code text-[10px] text-muted-foreground mt-0.5">Full-Stack Dev</p>
+          </div>
+          <div class="team-member scroll-reveal">
+            <div class="team-photo aspect-square rounded-lg">
+              <div class="placeholder-inner"><svg class="w-6 h-6 text-foreground/12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            </div>
+            <h3 class="font-human text-sm font-bold mt-3">Leah Kim</h3>
+            <p class="font-code text-[10px] text-muted-foreground mt-0.5">Brand Strategy</p>
+          </div>
+          <div class="team-member scroll-reveal">
+            <div class="team-photo aspect-square rounded-lg">
+              <div class="placeholder-inner"><svg class="w-6 h-6 text-foreground/12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            </div>
+            <h3 class="font-human text-sm font-bold mt-3">Kai Brennan</h3>
+            <p class="font-code text-[10px] text-muted-foreground mt-0.5">Frontend Dev</p>
+          </div>
+          <div class="team-member scroll-reveal">
+            <div class="team-photo aspect-square rounded-lg">
+              <div class="placeholder-inner"><svg class="w-6 h-6 text-foreground/12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            </div>
+            <h3 class="font-human text-sm font-bold mt-3">Priya Sharma</h3>
+            <p class="font-code text-[10px] text-muted-foreground mt-0.5">Project Lead</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="py-20 md:py-28 px-6">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="font-human text-3xl md:text-5xl leading-[1.08] mb-6 scroll-reveal">
+          Want to work with <em class="italic text-accent">people who care</em>?
+        </h2>
+        <p class="text-base text-muted-foreground max-w-md mx-auto mb-10 scroll-reveal">
+          We're always interested in meeting teams who share our values. Let's find out if we're right for each other.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
+          <a href="/contact" class="cta-primary">
+            <span>Get in touch</span>
+            <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="border-t border-foreground/8 py-10 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+        <span class="font-code">&copy; 2026 Conduit</span>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-foreground transition-colors">Twitter</a>
+          <a href="#" class="hover:text-foreground transition-colors">LinkedIn</a>
+          <a href="#" class="hover:text-foreground transition-colors">Dribbble</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --radius: 0.625rem;
+    --background: oklch(0.97 0.01 80);
+    --foreground: oklch(0.18 0.015 55);
+    --card: oklch(0.95 0.01 80);
+    --card-foreground: oklch(0.18 0.015 55);
+    --popover: oklch(0.97 0.01 80);
+    --popover-foreground: oklch(0.18 0.015 55);
+    --primary: oklch(0.65 0.12 70);
+    --primary-foreground: oklch(0.98 0 0);
+    --secondary: oklch(0.94 0.01 80);
+    --secondary-foreground: oklch(0.22 0.01 55);
+    --muted: oklch(0.93 0.01 80);
+    --muted-foreground: oklch(0.5 0.02 55);
+    --accent: oklch(0.94 0.01 80);
+    --accent-foreground: oklch(0.22 0.01 55);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(0.985 0 0);
+    --border: oklch(0.85 0.015 75 / 50%);
+    --input: oklch(0.85 0.015 75 / 50%);
+    --ring: oklch(0.65 0.12 70);
+  }
+</style>
+
+<style>
+  .font-human { font-family: 'Libre Baskerville', Georgia, serif; }
+  .font-code { font-family: 'JetBrains Mono', monospace; }
+  body { font-family: 'Libre Baskerville', Georgia, serif; font-size: 16px; }
+
+  .text-accent { color: oklch(0.65 0.12 70); }
+  .bg-accent { background-color: oklch(0.65 0.12 70); }
+  .text-digital-muted { color: oklch(0.52 0.015 240); }
+  .text-digital-fg { color: oklch(0.88 0.01 240); }
+  .text-digital-label { color: oklch(0.6 0.03 240); }
+
+  .nav-glass { backdrop-filter: blur(16px); background: oklch(0.97 0.01 80 / 85%); border-bottom: 1px solid oklch(0.18 0.015 55 / 6%); }
+  .nav-btn { padding: 0.45rem 1.2rem; border: 1px solid oklch(0.65 0.12 70 / 40%); border-radius: 6px; color: oklch(0.65 0.12 70); font-family: 'Libre Baskerville', serif; font-size: 0.75rem; transition: all 0.3s; }
+  .nav-btn:hover { background: oklch(0.65 0.12 70 / 6%); border-color: oklch(0.65 0.12 70 / 70%); }
+
+  .human-surface { background: oklch(0.955 0.012 78); border: 1px solid oklch(0.88 0.015 75 / 40%); }
+  .digital-surface { background: oklch(0.16 0.01 240); color: oklch(0.88 0.01 240); border: 1px solid oklch(0.26 0.01 240); }
+
+  .team-hero-image, .founder-image {
+    background: linear-gradient(135deg, oklch(0.92 0.015 78) 0%, oklch(0.88 0.02 75) 100%);
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid oklch(0.88 0.015 75 / 40%);
+  }
+  .team-photo {
+    background: linear-gradient(135deg, oklch(0.93 0.012 78) 0%, oklch(0.9 0.015 75) 100%);
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid oklch(0.88 0.015 75 / 30%);
+    transition: border-color 0.3s;
+  }
+  .team-member:hover .team-photo { border-color: oklch(0.65 0.12 70 / 25%); }
+  .placeholder-inner { display: flex; flex-direction: column; align-items: center; }
+
+  .values-grid {
+    display: grid; grid-template-columns: 1fr; gap: 6px;
+  }
+  @media (min-width: 768px) {
+    .values-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto auto; }
+    .value-large { grid-column: 1 / 3; }
+  }
+
+  .cta-primary {
+    display: inline-flex; align-items: center;
+    padding: 0.85rem 1.75rem; background: oklch(0.65 0.12 70); color: white; border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; font-weight: 500; transition: all 0.3s;
+  }
+  .cta-primary:hover { background: oklch(0.58 0.12 70); transform: translateY(-2px); box-shadow: 0 8px 25px oklch(0.65 0.12 70 / 20%); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .scroll-reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+  .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+
+<script>
+  const reveals = document.querySelectorAll('.scroll-reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  reveals.forEach(el => observer.observe(el));
+</script>
