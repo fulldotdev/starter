@@ -1,0 +1,47 @@
+---
+import type { HTMLAttributes, HTMLTag } from "astro/types"
+
+import { cn } from "@/lib/utils"
+
+import NavigationMenuViewport from "./NavigationMenuViewport.astro"
+
+type Props = {
+  as?: HTMLTag
+  class?: string
+  viewport?: boolean
+  delayOpen?: number
+  delayClose?: number
+  openOnFocus?: boolean
+} & HTMLAttributes<"nav">
+
+const {
+  as: Tag = "nav",
+  class: className = "",
+  viewport = true,
+  delayOpen,
+  delayClose,
+  openOnFocus,
+  ...rest
+} = Astro.props as Props
+---
+
+<Tag
+  {...rest}
+  data-slot="navigation-menu"
+  data-viewport={viewport}
+  data-delay-open={delayOpen}
+  data-delay-close={delayClose}
+  data-open-on-focus={openOnFocus}
+  class={cn("relative", className)}
+>
+  <slot />
+  {viewport && <NavigationMenuViewport />}
+</Tag>
+
+<script>
+  import { createNavigationMenu } from "@data-slot/navigation-menu"
+
+  document
+    .querySelectorAll('[data-slot="navigation-menu"]')
+    .forEach((el) => createNavigationMenu(el))
+</script>
