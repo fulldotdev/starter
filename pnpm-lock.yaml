@@ -11,6 +11,18 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.6.0
         version: 3.6.0
+      '@data-slot/accordion':
+        specifier: ^0.2.57
+        version: 0.2.57
+      '@data-slot/core':
+        specifier: ^0.2.57
+        version: 0.2.57
+      '@data-slot/navigation-menu':
+        specifier: ^0.2.57
+        version: 0.2.57
+      '@data-slot/tabs':
+        specifier: ^0.2.57
+        version: 0.2.57
       '@fontsource/inter':
         specifier: ^5.2.8
         version: 5.2.8
@@ -255,6 +267,18 @@ packages:
   '@capsizecss/unpack@3.0.1':
     resolution: {integrity: sha512-8XqW8xGn++Eqqbz3e9wKuK7mxryeRjs4LOHLxbh2lwKeSbuNR4NFifDZT4KzvjU6HMOPbiNTsWpniK5EJfTWkg==}
     engines: {node: '>=18'}
+
+  '@data-slot/accordion@0.2.57':
+    resolution: {integrity: sha512-FogjRB0z4dvcwnzfb2abdxHOFaron0UERwDyTVzFDv0kfM+HS0HhVS4mumB3T2SZRDNMcFS600THOH83L4kDlg==}
+
+  '@data-slot/core@0.2.57':
+    resolution: {integrity: sha512-rqWkKo/Hv4Ah0vdTbylQ9Btex8P2kmtA3bAoAyITYcz4yDKA5Bx/qFvH+c/dRKwTx/wCJLQD10xv6qxGNSj1lw==}
+
+  '@data-slot/navigation-menu@0.2.57':
+    resolution: {integrity: sha512-cKWxbiQWZyDFAbeIngFLecs4GVpZYCow1SCOT7RNYYq1KHddsEb+/bBKlpkeOgW3qX04OW834gaTIc2CAvWBMg==}
+
+  '@data-slot/tabs@0.2.57':
+    resolution: {integrity: sha512-X3BmF4MqZq1SBlLnPr6p12XIuc7CIv8QlKU3sAuliAP1e2Mx7paBIacKzW/YrifA3AS3Rp8TWExOZmNig1uz5Q==}
 
   '@dotenvx/dotenvx@1.51.2':
     resolution: {integrity: sha512-+693mNflujDZxudSEqSNGpn92QgFhJlBn9q2mDQ9yGWyHuz3hZ8B5g3EXCwdAz4DMJAI+OFCIbfEFZS+YRdrEA==}
@@ -3655,6 +3679,20 @@ snapshots:
   '@capsizecss/unpack@3.0.1':
     dependencies:
       fontkit: 2.0.4
+
+  '@data-slot/accordion@0.2.57':
+    dependencies:
+      '@data-slot/core': 0.2.57
+
+  '@data-slot/core@0.2.57': {}
+
+  '@data-slot/navigation-menu@0.2.57':
+    dependencies:
+      '@data-slot/core': 0.2.57
+
+  '@data-slot/tabs@0.2.57':
+    dependencies:
+      '@data-slot/core': 0.2.57
 
   '@dotenvx/dotenvx@1.51.2':
     dependencies:
