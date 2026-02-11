@@ -1,13 +1,25 @@
 ---
+import { Layout } from "lucide-static"
 
+import "@/styles/global.css"
+
+import { LayoutBody, LayoutHead, LayoutMain } from "@/components/ui/layout"
 ---
 
-<html>
-  <head> </head>
-  <body> </body>
-</html>
+<Layout>
+  <LayoutHead>
+    <!-- Fonts -->
+  </LayoutHead>
+  <LayoutBody>
+    <!-- Header -->
+    <LayoutMain>
+      <!-- Sections -->
+    </LayoutMain>
+    <!-- Footer -->
+  </LayoutBody>
+</Layout>
 
-<style is:global>
+<style>
   :root {
     --radius: 0.625rem;
     --background: oklch(1 0 0);
