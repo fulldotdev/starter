@@ -18,7 +18,7 @@ export default function (options: Options): AstroIntegration {
   return {
     name: "fulldev/ui",
     hooks: {
-      "astro:config:setup": ({ updateConfig }) => {
+      "astro:config:setup": ({ updateConfig, injectScript }) => {
         updateConfig({
           site: options.site,
           image: {
@@ -62,6 +62,7 @@ export default function (options: Options): AstroIntegration {
             plugins: [tailwindcss()],
           },
         })
+        injectScript("page-ssr", 'import "@/styles/global.css";')
       },
     },
   }
