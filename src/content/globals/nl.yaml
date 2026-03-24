@@ -1,3 +1,32 @@
-# Global data for the nl locale
-header: {}
-footer: {}
+locale: nl
+siteName: Fulldev Starter
+logo:
+  src: ../../assets/fulldev-mark.svg
+  alt: Fulldev Starter
+announcement:
+  label: Starter
+  text: Houd pagina's, globals en CloudCannon vanaf het begin synchroon.
+navigation:
+  - label: Home
+    href: /
+  - label: Over
+    href: /about
+  - label: Dienst
+    href: /services/web-platform
+  - label: Contact
+    href: /contact
+cta:
+  label: Bekijk landing
+  href: /launch-week
+  variant: default
+tagline: Een kleine Astro-starter voor teams die hun contentmodel expliciet willen houden.
+contact:
+  - label: E-mail
+    value: hallo@example.com
+    href: mailto:hallo@example.com
+  - label: Telefoon
+    value: +31 20 123 4567
+    href: tel:+31201234567
+social:
+  - label: GitHub
+    href: https://github.com/

@@ -1,27 +1,31 @@
 ---
+import type { GlobalSchema } from "@/schemas/global"
 import type { HomeSchema } from "@/schemas/layouts/home"
-import {
-  Layout,
-  LayoutBody,
-  LayoutHead,
-  LayoutMain,
-} from "@/components/ui/layout"
-import Footer from "@/components/blocks/footer.astro"
-import Header from "@/components/blocks/header.astro"
+import Cta from "@/components/blocks/cta.astro"
+import Features from "@/components/blocks/features.astro"
+import Hero from "@/components/blocks/hero.astro"
+import { Container } from "@/components/ui/container"
+import BaseLayout from "@/components/layouts/base.astro"
 
-type Props = HomeSchema
+interface Props {
+  page: HomeSchema
+  global: GlobalSchema
+}
 
-const page = Astro.props
-const global = Astro.locals.global
+const { page, global } = Astro.props
 ---
 
-<Layout>
-  <LayoutHead {...page} />
-  <LayoutBody>
-    <Header />
-    <LayoutMain>
-      <!-- Write the home page layout here -->
-    </LayoutMain>
-    <Footer />
-  </LayoutBody>
-</Layout>
+<BaseLayout global={global} page={page}>
+  <Container class="space-y-20">
+    <Hero data={page.hero} />
+    <Features
+      items={page.features}
+      layout="grid"
+    />
+    <Cta
+      title={page.ctaPanel.title}
+      description={page.ctaPanel.description}
+      cta={page.ctaPanel.cta}
+    />
+  </Container>
+</BaseLayout>

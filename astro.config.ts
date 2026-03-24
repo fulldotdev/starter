@@ -1,16 +1,16 @@
 import { defineConfig } from "astro/config"
 
-import fulldevIntegration from "./src/lib/integration"
+import starterIntegration from "./src/lib/integration"
 
 export default defineConfig({
   integrations: [
-    fulldevIntegration({
-      site: "https://ui.full.dev",
-      name: "fulldev/ui",
-      favicon: "src/assets/logo-fulldev.svg",
+    starterIntegration({
+      site: "https://example.com",
+      name: "Fulldev Starter",
+      favicon: "src/assets/fulldev-mark.svg",
       i18n: {
         defaultLocale: "en",
-        locales: ["en", "nl", "de"],
+        locales: ["en", "nl"],
       },
     }),
   ],

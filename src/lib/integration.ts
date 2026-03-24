@@ -16,26 +16,24 @@ export interface Options {
 
 export default function (options: Options): AstroIntegration {
   return {
-    name: "fulldev/ui",
+    name: "starter/ui",
     hooks: {
       "astro:config:setup": ({ updateConfig, injectScript }) => {
         updateConfig({
           site: options.site,
           image: {
             responsiveStyles: true,
-            breakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
-            layout: "full-width",
-            objectFit: "contain",
-            objectPosition: "center",
+            breakpoints: [640, 960, 1280, 1600, 1920],
           },
           prefetch: {
-            prefetchAll: true,
-          },
-          devToolbar: {
-            enabled: false,
+            prefetchAll: false,
           },
           i18n: {
-            routing: "manual",
+            routing: {
+              fallbackType: "redirect",
+              prefixDefaultLocale: false,
+              redirectToDefaultLocale: false,
+            },
             ...options.i18n,
           },
           integrations: [

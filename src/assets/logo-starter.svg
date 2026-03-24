@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Fulldev Starter</title>
+  <rect width="128" height="128" rx="28" fill="#101828" />
+  <path d="M28 92 64 24l36 68H84.6L64 52.3 43.4 92H28Z" fill="#F2F4F7" />
+  <circle cx="64" cy="92" r="10" fill="#98A2B3" />
+</svg>

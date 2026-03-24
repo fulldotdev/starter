@@ -1,23 +1,37 @@
 ---
+import type { GlobalSchema } from "@/schemas/global"
 import type { LandingSchema } from "@/schemas/layouts/landing"
-import {
-  Layout,
-  LayoutBody,
-  LayoutHead,
-  LayoutMain,
-} from "@/components/ui/layout"
+import Features from "@/components/blocks/features.astro"
+import Grid from "@/components/blocks/grid.astro"
+import Hero from "@/components/blocks/hero.astro"
+import List from "@/components/blocks/list.astro"
+import Article from "@/components/blocks/article.astro"
+import { Container } from "@/components/ui/container"
+import BaseLayout from "@/components/layouts/base.astro"
 
-type Props = LandingSchema
+interface Props {
+  page: LandingSchema
+  global: GlobalSchema
+}
 
-const page = Astro.props
-const global = Astro.locals.global
+const { page, global } = Astro.props
 ---
 
-<Layout>
-  <LayoutHead {...page} />
-  <LayoutBody>
-    <LayoutMain>
-      <!-- Write the landing page layout here -->
-    </LayoutMain>
-  </LayoutBody>
-</Layout>
+<BaseLayout
+  global={global}
+  page={page}
+  mainClass="min-h-screen flex items-center"
+  showFooter={false}
+  showHeader={false}
+>
+  <Container class="max-w-4xl space-y-16">
+    <Hero data={page.hero} />
+    <Grid class="gap-8">
+      <List items={page.proofPoints} title="Proof points" />
+      <Features items={page.faq} />
+    </Grid>
+    <Article>
+      <slot />
+    </Article>
+  </Container>
+</BaseLayout>

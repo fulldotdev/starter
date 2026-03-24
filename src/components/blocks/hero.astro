@@ -1,0 +1,86 @@
+---
+import { Image as AstroImage } from "astro:assets"
+
+import Button from "@/components/ui/button/button.astro"
+
+interface HeroCta {
+  label: string
+  href: string
+  variant?: "default" | "secondary" | "outline" | "ghost"
+}
+
+interface HeroImage {
+  src: ImageMetadata
+  alt: string
+}
+
+interface HeroData {
+  eyebrow?: string
+  title: string
+  description: string
+  primaryCta: HeroCta
+  secondaryCta?: HeroCta
+  image?: HeroImage
+}
+
+interface Props {
+  data: HeroData
+}
+
+const { data } = Astro.props
+---
+
+<section class="relative">
+  <div
+    class="pointer-events-none absolute inset-x-0 -top-32 -bottom-32 overflow-visible"
+    aria-hidden="true"
+  >
+    <div class="bg-primary/[0.07] absolute top-0 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full blur-[120px]">
+    </div>
+  </div>
+
+  <div class="relative mx-auto max-w-3xl space-y-8 text-center">
+    {
+      data.eyebrow && (
+        <p class="text-muted-foreground text-xs font-medium uppercase tracking-[0.2em]">
+          {data.eyebrow}
+        </p>
+      )
+    }
+    <div class="space-y-5">
+      <h1 class="text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
+        {data.title}
+      </h1>
+      <p class="text-muted-foreground mx-auto max-w-xl text-lg leading-relaxed">
+        {data.description}
+      </p>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+      <Button href={data.primaryCta.href} size="lg" variant={data.primaryCta.variant}>
+        {data.primaryCta.label}
+      </Button>
+      {
+        data.secondaryCta && (
+          <Button
+            href={data.secondaryCta.href}
+            size="lg"
+            variant={data.secondaryCta.variant}
+          >
+            {data.secondaryCta.label}
+          </Button>
+        )
+      }
+    </div>
+    {
+      data.image && (
+        <AstroImage
+          src={data.image.src}
+          alt={data.image.alt}
+          class="mx-auto mt-4 rounded-lg"
+          widths={[640, 1280]}
+          sizes="(min-width: 768px) 640px, 100vw"
+        />
+      )
+    }
+  </div>
+</section>

@@ -1,3 +1,32 @@
-# Global data for the default locale
-header: {}
-footer: {}
+locale: en
+siteName: Fulldev Starter
+logo:
+  src: ../../assets/fulldev-mark.svg
+  alt: Fulldev Starter
+announcement:
+  label: Starter
+  text: Keep pages, globals, and CloudCannon in sync from the start.
+navigation:
+  - label: Home
+    href: /
+  - label: About
+    href: /about
+  - label: Service
+    href: /services/web-platform
+  - label: Contact
+    href: /contact
+cta:
+  label: Start a page type
+  href: /launch-week
+  variant: default
+tagline: A small Astro starter for teams that want a content model they can explain and evolve.
+contact:
+  - label: Email
+    value: hello@example.com
+    href: mailto:hello@example.com
+  - label: Phone
+    value: +31 20 123 4567
+    href: tel:+31201234567
+social:
+  - label: GitHub
+    href: https://github.com/

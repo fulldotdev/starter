@@ -1,0 +1,39 @@
+---
+interface IntroData {
+  eyebrow?: string
+  title: string
+  description: string
+}
+
+interface Props {
+  data: IntroData
+}
+
+const { data } = Astro.props
+---
+
+<section class="relative">
+  <div
+    class="pointer-events-none absolute inset-x-0 -top-24 -bottom-24 overflow-visible"
+    aria-hidden="true"
+  >
+    <div class="bg-primary/[0.05] absolute top-0 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full blur-[120px]">
+    </div>
+  </div>
+
+  <div class="relative mx-auto max-w-3xl space-y-5 text-center">
+    {
+      data.eyebrow && (
+        <p class="text-muted-foreground text-xs font-medium uppercase tracking-[0.2em]">
+          {data.eyebrow}
+        </p>
+      )
+    }
+    <h1 class="text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl">
+      {data.title}
+    </h1>
+    <p class="text-muted-foreground mx-auto max-w-xl text-lg leading-relaxed">
+      {data.description}
+    </p>
+  </div>
+</section>

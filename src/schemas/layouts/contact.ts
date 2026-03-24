@@ -1,17 +1,13 @@
 import { z, type SchemaContext } from "astro:content"
 
-export const contactSchema = ({ image }: SchemaContext) =>
-  z.object({
-    slug: z.string().optional(),
-    name: z.string(),
-    seo: z.object({
-      title: z.string(),
-      description: z.string(),
-      image: z.object({
-        src: image(),
-        alt: z.string(),
-      }).optional(),
-    }),
+import { baseLayoutSchema } from "@/schemas/layouts/base"
+import { contactMethodSchema, sectionIntroSchema } from "@/schemas/shared"
+
+export const contactSchema = (ctx: SchemaContext) =>
+  baseLayoutSchema(ctx).extend({
+    intro: sectionIntroSchema,
+    methods: z.array(contactMethodSchema).min(2),
+    availability: z.array(z.string().min(1)).min(2),
   })
 
 export type ContactSchema = z.infer<ReturnType<typeof contactSchema>>

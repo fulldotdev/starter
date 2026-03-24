@@ -1,27 +1,31 @@
 ---
+import type { GlobalSchema } from "@/schemas/global"
 import type { AboutSchema } from "@/schemas/layouts/about"
-import {
-  Layout,
-  LayoutBody,
-  LayoutHead,
-  LayoutMain,
-} from "@/components/ui/layout"
-import Footer from "@/components/blocks/footer.astro"
-import Header from "@/components/blocks/header.astro"
+import Features from "@/components/blocks/features.astro"
+import Intro from "@/components/blocks/intro.astro"
+import Article from "@/components/blocks/article.astro"
+import { Container } from "@/components/ui/container"
+import BaseLayout from "@/components/layouts/base.astro"
 
-type Props = AboutSchema
+interface Props {
+  page: AboutSchema
+  global: GlobalSchema
+}
 
-const page = Astro.props
-const global = Astro.locals.global
+const { page, global } = Astro.props
+const principleItems = page.principles.map((principle) => ({
+  title: principle,
+  description: "",
+}))
 ---
 
-<Layout>
-  <LayoutHead {...page} />
-  <LayoutBody>
-    <Header />
-    <LayoutMain>
-      <!-- Write the about page layout here -->
-    </LayoutMain>
-    <Footer />
-  </LayoutBody>
-</Layout>
+<BaseLayout global={global} page={page}>
+  <Container class="space-y-20">
+    <Intro data={page.intro} />
+    <Features items={principleItems} layout="grid" title="Principles" />
+    <Features items={page.milestones} layout="grid" title="How the starter is wired" />
+    <Article>
+      <slot />
+    </Article>
+  </Container>
+</BaseLayout>

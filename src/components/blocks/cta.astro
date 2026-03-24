@@ -1,0 +1,39 @@
+---
+import Button from "@/components/ui/button/button.astro"
+
+interface Cta {
+  label: string
+  href: string
+  variant?: "default" | "secondary" | "outline" | "ghost"
+}
+
+interface Props {
+  title: string
+  description: string
+  cta: Cta
+}
+
+const { title, description, cta } = Astro.props
+---
+
+<section class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-6 py-14 text-center shadow-sm backdrop-blur-md sm:px-12 sm:py-20">
+  <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div class="bg-primary/[0.08] absolute -bottom-20 left-1/2 h-[300px] w-[600px] -translate-x-1/2 rounded-full blur-[100px]">
+    </div>
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),transparent_35%)]"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-xl space-y-4">
+    <h2 class="text-2xl font-medium tracking-tight sm:text-3xl">
+      {title}
+    </h2>
+    <p class="text-muted-foreground text-sm leading-relaxed">
+      {description}
+    </p>
+    <div class="pt-2">
+      <Button href={cta.href} size="lg" variant={cta.variant}>
+        {cta.label}
+      </Button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,69 @@
+---
+import type { GlobalSchema } from "@/schemas/global"
+import type { BaseLayoutSchema } from "@/schemas/layouts/base"
+import { cn } from "@/lib/utils"
+import {
+  Layout,
+  LayoutBody,
+  LayoutHead,
+  LayoutMain,
+} from "@/components/ui/layout"
+import Footer from "@/components/blocks/footer.astro"
+import Header from "@/components/blocks/header.astro"
+
+interface Props {
+  page: BaseLayoutSchema
+  global: GlobalSchema
+  mainClass?: string
+  showFooter?: boolean
+  showHeader?: boolean
+}
+
+const {
+  page,
+  global,
+  mainClass,
+  showFooter = true,
+  showHeader = true,
+} = Astro.props
+---
+
+<Layout>
+  <LayoutHead
+    canonical={page.seo.canonical}
+    description={page.seo.description}
+    image={page.seo.image}
+    name={global.siteName}
+    nofollow={page.seo.nofollow}
+    noindex={page.seo.noindex}
+    title={page.seo.title}
+  />
+  <LayoutBody>
+    {
+      showHeader && (
+        <Header
+          announcement={global.announcement}
+          cta={global.cta}
+          logo={global.logo}
+          navigation={global.navigation}
+          siteName={global.siteName}
+        />
+      )
+    }
+    <LayoutMain class={cn("py-16 md:py-24", mainClass)}>
+      <slot />
+    </LayoutMain>
+    {
+      showFooter && (
+        <Footer
+          contact={global.contact}
+          logo={global.logo}
+          navigation={global.navigation}
+          siteName={global.siteName}
+          social={global.social}
+          tagline={global.tagline}
+        />
+      )
+    }
+  </LayoutBody>
+</Layout>

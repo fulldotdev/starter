@@ -11,7 +11,8 @@ const { class: className, lang, ...props } = Astro.props
 ---
 
 <html
-  class={cn("bg-background text-foreground scroll-smooth", className)}
+  class={cn("dark bg-background text-foreground scroll-smooth", className)}
+  data-theme="dark"
   data-slot="layout"
   lang={Astro.currentLocale}
   {...props}

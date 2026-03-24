@@ -1,155 +1,51 @@
 paths:
   uploads: src/assets/
   uploads_use_relative_path: true
-timezone: Etc/UTC
+timezone: Europe/Amsterdam
 collections_config:
   pages:
     path: src/content/pages
-    url: "/[full_slug|unless=href][href|if=href]/"
+    url: "/[full_slug]/"
     name: Pages
     icon: article
     disable_add: false
-    disable_add_folder: true
-    disable_file_actions: true
+    disable_add_folder: false
+    disable_file_actions: false
     _enabled_editors:
       - visual
       - content
-  reviews:
-    path: src/content/pages/reviews
-    name: Reviews
-    icon: star
+  globals:
+    path: src/content/globals
+    name: Globals
+    icon: public
     disable_add: false
     disable_add_folder: true
-    disable_file_actions: true
+    disable_file_actions: false
     _enabled_editors:
       - data
 collection_groups:
   - heading: Content
     collections:
       - pages
-      - menu
-      - agenda
-      - reviews
-_structures:
-  sections:
-    id_key: block
-    values:
-      - label: Reviews
-        value:
-          block: reviews-3
-        _inputs:
-          refs:
-            type: multiselect
-            options:
-              values: collections.reviews
-              empty_type: array
+      - globals
 _inputs:
-  id:
-    hidden: true
-  class:
-    hidden: true
-  block:
-    hidden: true
-  size:
-    hidden: true
   type:
-    hidden: true
-  variant:
-    hidden: true
-  background:
-    hidden: true
-  align:
-    hidden: true
-  glob:
-    hidden: true
-  icon:
-    hidden: true
-  refs:
-    type: multiselect
-    options:
-      values: collections.pages
-      empty_type: array
-  ref:
     type: select
     options:
-      values: collections.pages
-      empty_type: string
-  title:
-    type: text
-    options:
-      empty_type: string
-  description:
-    type: textarea
-    options:
-      empty_type: string
-  href:
-    type: url
-    label: Link
-    options:
-      empty_type: string
-  tagline:
-    type: text
-    options:
-      empty_type: string
-  rating:
-    type: range
-    options:
-      empty_type: number
-      min: 0
-      max: 5
-      step: 0.1
-  sections:
-    type: array
-    options:
-      empty_type: array
-      disable_add: true
-      disable_remove: true
-      disable_reorder: false
-  list:
-    type: array
-    options:
-      empty_type: array
-      disable_add: false
-      disable_remove: false
-      disable_reorder: false
-  list[*]:
-    type: text
-    options:
-      empty_type: string
-  socials:
-    type: array
-    options:
-      empty_type: array
-      disable_add: false
-      disable_remove: false
-      disable_reorder: false
-  socials[*]:
-    type: url
-    options:
-      empty_type: string
-  links:
-    type: array
-    options:
-      empty_type: array
-      disable_add: false
-      disable_remove: false
-      disable_reorder: false
-  buttons:
-    type: array
-    options:
-      empty_type: array
-      max_items: 2
-      disable_add: false
-      disable_remove: false
-      disable_reorder: false
-  link.href:
-    type: url
-    options:
+      values:
+        - home
+        - about
+        - service
+        - contact
+        - landing
       required: true
-  link.text:
+  name:
     type: text
     options:
       required: true
+  slug:
+    type: text
+    comment: Optional route override. Leave empty to use the file path.
   seo.title:
     type: text
     options:
@@ -158,86 +54,218 @@ _inputs:
     type: textarea
     options:
       required: true
-  src:
+  seo.canonical:
+    type: url
+  seo.noindex:
+    type: checkbox
+  seo.nofollow:
+    type: checkbox
+  seo.image.src:
     type: image
     options:
       mime_type: image/webp
       resize_style: contain
-      width: 2560
-      height: 2560
-  images:
+      width: 2400
+      height: 1600
+  seo.image.alt:
+    type: text
+  hero.eyebrow:
+    type: text
+  hero.title:
+    type: text
+  hero.description:
+    type: textarea
+  hero.primaryCta.label:
+    type: text
+  hero.primaryCta.href:
+    type: url
+  hero.primaryCta.variant:
+    type: select
+    options:
+      values:
+        - default
+        - secondary
+        - outline
+        - ghost
+  hero.secondaryCta.label:
+    type: text
+  hero.secondaryCta.href:
+    type: url
+  hero.secondaryCta.variant:
+    type: select
+    options:
+      values:
+        - default
+        - secondary
+        - outline
+        - ghost
+  hero.image.src:
+    type: image
+    options:
+      mime_type: image/webp
+      resize_style: contain
+      width: 2400
+      height: 1600
+  hero.image.alt:
+    type: text
+  intro.eyebrow:
+    type: text
+  intro.title:
+    type: text
+  intro.description:
+    type: textarea
+  summary.eyebrow:
+    type: text
+  summary.title:
+    type: text
+  summary.description:
+    type: textarea
+  features:
     type: array
     options:
       empty_type: array
-      disable_add: false
-      disable_remove: false
-      disable_reorder: false
-  logo:
-    type: object
+  features[*].title:
+    type: text
+  features[*].description:
+    type: textarea
+  ctaPanel.title:
+    type: text
+  ctaPanel.description:
+    type: textarea
+  ctaPanel.cta.label:
+    type: text
+  ctaPanel.cta.href:
+    type: url
+  ctaPanel.cta.variant:
+    type: select
     options:
-      empty_type: object
-  logos:
+      values:
+        - default
+        - secondary
+        - outline
+        - ghost
+  principles:
     type: array
     options:
       empty_type: array
-      disable_add: false
-      disable_remove: false
-      disable_reorder: false
+  principles[*]:
+    type: text
+  milestones:
+    type: array
+    options:
+      empty_type: array
+  milestones[*].title:
+    type: text
+  milestones[*].description:
+    type: textarea
+  deliverables:
+    type: array
+    options:
+      empty_type: array
+  deliverables[*]:
+    type: text
+  process:
+    type: array
+    options:
+      empty_type: array
+  process[*].title:
+    type: text
+  process[*].description:
+    type: textarea
+  methods:
+    type: array
+    options:
+      empty_type: array
+  methods[*].label:
+    type: text
+  methods[*].value:
+    type: text
+  methods[*].href:
+    type: url
+  availability:
+    type: array
+    options:
+      empty_type: array
+  availability[*]:
+    type: text
+  proofPoints:
+    type: array
+    options:
+      empty_type: array
+  proofPoints[*]:
+    type: text
+  faq:
+    type: array
+    options:
+      empty_type: array
+  faq[*].title:
+    type: text
+  faq[*].description:
+    type: textarea
+  locale:
+    type: select
+    options:
+      values:
+        - en
+        - nl
+      required: true
+  siteName:
+    type: text
+    options:
+      required: true
   logo.src:
     type: image
     options:
       mime_type: image/webp
       resize_style: contain
-      width: 2560
-      height: 2560
+      width: 1600
+      height: 1600
   logo.alt:
     type: text
-    options:
-      empty_type: string
-  logo.text:
+  announcement.label:
     type: text
+  announcement.text:
+    type: text
+  navigation:
+    type: array
     options:
-      empty_type: string
-  logo.href:
+      empty_type: array
+  navigation[*].label:
+    type: text
+  navigation[*].href:
     type: url
-    options:
-      empty_type: string
-  logos[*].src:
-    type: image
-    options:
-      mime_type: image/webp
-      resize_style: contain
-      width: 2560
-      height: 2560
-  logos[*].alt:
+  cta.label:
     type: text
-    options:
-      empty_type: string
-  logos[*].text:
-    type: text
-    options:
-      empty_type: string
-  logos[*].href:
+  cta.href:
     type: url
+  cta.variant:
+    type: select
     options:
-      empty_type: string
-  html:
-    type: html
-    label: Content
+      values:
+        - default
+        - secondary
+        - outline
+        - ghost
+  tagline:
+    type: textarea
+  contact:
+    type: array
     options:
-      allow_resize: true
-      initial_height: 400
-      allow_custom_markup: false
-      remove_custom_markup: false
-      blockquote: true
-      bold: true
-      bulletedlist: true
-      format: p h1 h2 h3
-      image_size_attributes: false
-      italic: true
-      underline: true
-      undo: true
-      empty_type: string
+      empty_type: array
+  contact[*].label:
+    type: text
+  contact[*].value:
+    type: text
+  contact[*].href:
+    type: url
+  social:
+    type: array
+    options:
+      empty_type: array
+  social[*].label:
+    type: text
+  social[*].href:
+    type: url
 _editables:
   content:
     allow_custom_markup: false
@@ -254,7 +282,7 @@ _editables:
     underline: true
     undo: true
     image: true
-    height: 2560
-    width: 2560
+    height: 2400
+    width: 2400
     resize_style: contain
     mime_type: image/webp

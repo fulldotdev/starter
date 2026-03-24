@@ -1,8 +1,180 @@
 ---
-interface Props {}
+import { Image as AstroImage } from "astro:assets"
+import MenuIcon from "lucide-static/icons/menu.svg"
 
-const props = Astro.props
-const global = Astro.locals.global
+import Button from "@/components/ui/button/button.astro"
+import { Container } from "@/components/ui/container"
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+
+interface Announcement {
+  label: string
+  text: string
+}
+
+interface LinkItem {
+  label: string
+  href: string
+}
+
+interface Cta {
+  label: string
+  href: string
+  variant?: "default" | "secondary" | "outline" | "ghost"
+}
+
+interface Logo {
+  src: ImageMetadata
+  alt: string
+}
+
+interface Props {
+  announcement?: Announcement
+  cta?: Cta
+  logo: Logo
+  navigation: LinkItem[]
+  siteName: string
+}
+
+const { announcement, cta, logo, navigation, siteName } = Astro.props
+const currentPath = Astro.url.pathname
+
+const normalizePath = (pathname: string) =>
+  pathname.length > 1 && pathname.endsWith("/")
+    ? pathname.slice(0, -1)
+    : pathname
 ---
 
-<!-- Write the header block here -->
+<header class="bg-background/80 sticky top-0 z-50 backdrop-blur-lg">
+  {
+    announcement && (
+      <div class="bg-secondary/70 border-border/50 border-b">
+        <Container class="py-2 text-center text-xs tracking-wide">
+          <p class="text-muted-foreground">
+            <span class="text-foreground font-medium">{announcement.label}</span>
+            {" "}
+            {announcement.text}
+          </p>
+        </Container>
+      </div>
+    )
+  }
+
+  <div class="bg-background/70 border-border/50 border-b backdrop-blur-lg">
+    <Container class="py-4">
+      <div class="flex items-center justify-between gap-4 md:hidden">
+        <a class="flex items-center gap-2.5" href="/">
+          <AstroImage
+            src={logo.src}
+            alt=""
+            aria-hidden="true"
+            class="h-7 w-auto"
+            widths={[56]}
+            sizes="28px"
+          />
+          <span class="text-lg font-semibold tracking-tight">{siteName}</span>
+        </a>
+        <Sheet>
+          <SheetTrigger size="icon-sm" variant="ghost">
+            <MenuIcon class="size-4" />
+          </SheetTrigger>
+          <SheetContent class="px-6 py-16 text-left" side="right">
+            <div class="flex flex-col gap-8">
+              <div class="space-y-3">
+                <div class="flex items-center gap-2.5">
+                  <AstroImage
+                    src={logo.src}
+                    alt=""
+                    aria-hidden="true"
+                    class="h-7 w-auto"
+                    widths={[56]}
+                    sizes="28px"
+                  />
+                  <span class="text-lg font-semibold tracking-tight">{siteName}</span>
+                </div>
+                {
+                  announcement && (
+                    <p class="text-muted-foreground text-sm">
+                      {announcement.text}
+                    </p>
+                  )
+                }
+              </div>
+
+              <nav class="flex flex-col gap-1">
+                {
+                  navigation.map((link) => (
+                    <a
+                      class:list={[
+                        "rounded-md px-3 py-2 text-sm transition-colors",
+                        normalizePath(currentPath) === normalizePath(link.href)
+                          ? "text-foreground"
+                          : "text-muted-foreground hover:text-foreground",
+                      ]}
+                      href={link.href}
+                    >
+                      {link.label}
+                    </a>
+                  ))
+                }
+              </nav>
+
+              {
+                cta && (
+                  <Button href={cta.href} variant={cta.variant}>
+                    {cta.label}
+                  </Button>
+                )
+              }
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+
+      <div class="hidden items-center justify-between gap-6 md:flex">
+        <a class="flex items-center gap-2.5" href="/">
+          <AstroImage
+            src={logo.src}
+            alt=""
+            aria-hidden="true"
+            class="h-7 w-auto"
+            widths={[56]}
+            sizes="28px"
+          />
+          <span class="text-lg font-semibold tracking-tight">{siteName}</span>
+        </a>
+
+        <NavigationMenu class="flex-1 justify-center">
+          <NavigationMenuList class="gap-1">
+            {
+              navigation.map((link) => (
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    active={normalizePath(currentPath) === normalizePath(link.href)}
+                    href={link.href}
+                    variant="trigger"
+                  >
+                    {link.label}
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))
+            }
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        {
+          cta && (
+            <Button href={cta.href} size="sm" variant={cta.variant}>
+              {cta.label}
+            </Button>
+          )
+        }
+      </div>
+    </Container>
+  </div>
+</header>

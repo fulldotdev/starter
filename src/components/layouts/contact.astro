@@ -1,27 +1,32 @@
 ---
+import type { GlobalSchema } from "@/schemas/global"
 import type { ContactSchema } from "@/schemas/layouts/contact"
-import {
-  Layout,
-  LayoutBody,
-  LayoutHead,
-  LayoutMain,
-} from "@/components/ui/layout"
-import Footer from "@/components/blocks/footer.astro"
-import Header from "@/components/blocks/header.astro"
+import ContactList from "@/components/blocks/contact-list.astro"
+import ContactForm from "@/components/blocks/contact-form.astro"
+import Intro from "@/components/blocks/intro.astro"
+import List from "@/components/blocks/list.astro"
+import Article from "@/components/blocks/article.astro"
+import { Container } from "@/components/ui/container"
+import BaseLayout from "@/components/layouts/base.astro"
 
-type Props = ContactSchema
+interface Props {
+  page: ContactSchema
+  global: GlobalSchema
+}
 
-const page = Astro.props
-const global = Astro.locals.global
+const { page, global } = Astro.props
 ---
 
-<Layout>
-  <LayoutHead {...page} />
-  <LayoutBody>
-    <Header />
-    <LayoutMain>
-      <!-- Write the contact page layout here -->
-    </LayoutMain>
-    <Footer />
-  </LayoutBody>
-</Layout>
+<BaseLayout global={global} page={page}>
+  <Container class="space-y-20">
+    <Intro data={page.intro} />
+    <section class="space-y-6">
+      <ContactList items={page.methods} />
+      <List items={page.availability} title="Availability" />
+    </section>
+    <ContactForm />
+    <Article>
+      <slot />
+    </Article>
+  </Container>
+</BaseLayout>
