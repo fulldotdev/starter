@@ -6,11 +6,12 @@
     "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
-    "check": "astro check",
+    "check": "prettier --check . && astro check",
     "preview": "astro preview",
     "build": "astro build",
     "build:prod": "astro check && astro build",
-    "build:test": "astro check && astro build && astro preview --host"
+    "build:test": "astro check && astro build && astro preview --host",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
@@ -37,5 +38,6 @@
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.0"
-  }
+  },
+  "packageManager": "pnpm@11.28.0"
 }
