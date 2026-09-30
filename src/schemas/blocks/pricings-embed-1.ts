@@ -11,4 +11,6 @@ export const pricingsEmbed1Schema = (ctx: SchemaContext) =>
     .partial()
     .strict()
 
-export type PricingsEmbed1Schema = z.infer<ReturnType<typeof pricingsEmbed1Schema>>
+export type PricingsEmbed1Schema = z.infer<
+  ReturnType<typeof pricingsEmbed1Schema>
+>
